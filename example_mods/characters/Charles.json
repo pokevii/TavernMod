@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				120
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "CharlesIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				191,
+				109
+			],
+			"anim": "singLeft",
+			"fps": 24,
+			"name": "CharlesLeftNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-44,
+				106
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "CharlesRightNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				167,
+				107
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "CharlesLeftNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-109,
+				13
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "CharlesDownNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				43,
+				384
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "CharlesUpNote",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Charles",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-charles",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		152,
+		1
+	],
+	"camera_position": [
+		60,
+		-110
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

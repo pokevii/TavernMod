@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-55,
+				-155
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "RainIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				-160
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "RainLeftNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-61,
+				-163
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RainRightNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-55,
+				-180
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "RainDownNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-47,
+				-135
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "RainUpNote",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/RainFnF2P32",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-rainp3",
+	"flip_x": false,
+	"healthbar_colors": [
+		115,
+		0,
+		15
+	],
+	"camera_position": [
+		20,
+		90
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}
