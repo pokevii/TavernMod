@@ -1,5 +1,5 @@
 {
-	"storyName": "Ordinary Green boy",
+	"storyName": "doomed from the start",
 	"hideFreeplay": false,
 	"weekBackground": "tavern_outside",
 	"freeplayColor": [
@@ -11,14 +11,14 @@
 	"startUnlocked": true,
 	"hideStoryMode": false,
 	"weekCharacters": [
-		"Jayce",
+		"TimFNF",
 		"Blockhead",
 		"gf"
 	],
 	"songs": [
 		[
-			"Bread and Circuses",
-			"jayce",
+			"Home",
+			"tim",
 			[
 				146,
 				113,
@@ -26,8 +26,8 @@
 			]
 		],
 		[
-			"Chrome",
-			"jayce",
+			"w2s2",
+			"tim",
 			[
 				146,
 				113,
@@ -35,8 +35,8 @@
 			]
 		],
 		[
-			"Amalgamation",
-			"jayce",
+			"Sawed",
+			"tim",
 			[
 				146,
 				113,
@@ -44,5 +44,5 @@
 			]
 		]
 	],
-	"weekName": "Jayce's Week"
+	"weekName": "Tim's Week"
 }

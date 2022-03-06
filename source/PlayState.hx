@@ -208,6 +208,8 @@ class PlayState extends MusicBeatState
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 	var bgGhouls:BGSprite;
 
+	var sil:BGSprite;
+
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
@@ -659,13 +661,19 @@ class PlayState extends MusicBeatState
 			
 			case 'tavern_outside': //TAVERN Jayce stage
 				{
-					defaultCamZoom = 0.85;
-					var bg:FlxSprite = new FlxSprite(-1800, -1000).loadGraphic(Paths.image('tavern_outside/sketch'));
-					bg.setGraphicSize(Std.int(bg.width * 0.5));
-					bg.antialiasing = true;
-					bg.scrollFactor.set(0.9, 0.9);
-					bg.active = false;
+					defaultCamZoom = 0.8;
+					var x:Int = -480;
+					var y:Int = -430;
+
+					var bg:BGSprite = new BGSprite('tavern_outside/week1Alt', x, y, 0.7, 0.7);
 					add(bg);
+
+					//he spelled silhouettes wrong. dumbass. everyone go harass this stupid mother fucker on twitter
+					sil = new BGSprite('tavern_outside/Silouhette', x+900, y+730, 0.7, 0.7, ['Silouhette0']); //x+1120, y+760 = 640, 330 
+					add(sil);
+
+					var glow:BGSprite = new BGSprite('tavern_outside/week1AltLight', x, y, 0.7, 0.7);
+					add(glow);
 				}
 
 			case 'pyramid': //TAVERN Heaven stage
@@ -3538,7 +3546,7 @@ class PlayState extends MusicBeatState
 					//manual tweaking for blockhead's sing right notes (neanderthal implementation)
 					if(boyfriend.curCharacter.startsWith('Blockhead') && note.isSustainNote && animToPlay == 'singRIGHT'){
 						trace("frameIndex = " + boyfriend.animation.frameIndex);
-						if(boyfriend.animation.frameIndex > 160){ //why 160 bruh?? it works though
+						if(boyfriend.animation.frameIndex > 161){ //why 161 bruh?? it works though
 							boyfriend.playAnim('singRIGHT' + daAlt, true);
 						}
 					} else {
@@ -3874,6 +3882,11 @@ class PlayState extends MusicBeatState
 		}
 
 		if(curBeat % 2 == 0) {
+			if(curStage == 'tavern_outside'){
+				if(!ClientPrefs.lowQuality){
+					sil.dance();
+				}
+			}
 			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))
 			{
 				boyfriend.dance();

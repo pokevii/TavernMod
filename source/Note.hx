@@ -96,6 +96,8 @@ class Note extends FlxSprite
 						missHealth = 0.3;
 					}
 					hitCausesMiss = true;
+				case 'Gun Note':
+					//reloadNote('GUN');
 				case 'No Animation':
 					noAnimation = true;
 			}
