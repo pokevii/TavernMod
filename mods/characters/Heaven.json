@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				27,
+				-1
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Heaven Down Anim",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				14,
+				41
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Heaven Up Anim",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				92,
+				1
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Heaven Left Anim",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Heaven Idle Anim",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				2,
+				-10
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Heaven Right Anim",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Heaven_Assets",
+	"position": [
+		0,
+		100
+	],
+	"healthicon": "heaven",
+	"flip_x": false,
+	"healthbar_colors": [
+		34,
+		121,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

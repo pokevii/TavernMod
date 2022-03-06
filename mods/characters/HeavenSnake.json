@@ -1,0 +1,142 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				230,
+				110
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Snake Idle Anim",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				140,
+				127
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Snake Left Anim",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				124,
+				120
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Snake Down Anim",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				138,
+				59
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Snake Right Anim",
+			"indices": []
+		},
+		{
+			"offsets": [
+				140,
+				127
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [
+				0,
+				1,
+				2,
+				3
+			],
+			"name": "Snake Left Anim"
+		},
+		{
+			"offsets": [
+				139,
+				59
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				0,
+				1,
+				2,
+				3
+			],
+			"name": "Snake Right Anim"
+		},
+		{
+			"offsets": [
+				236,
+				160
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-loop",
+			"indices": [
+				0,
+				1,
+				2,
+				3
+			],
+			"name": "Snake Up Anim"
+		},
+		{
+			"offsets": [
+				124,
+				120
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"indices": [
+				0,
+				1,
+				2,
+				3
+			],
+			"name": "Snake Down Anim"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				236,
+				160
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Snake Up Anim",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/HeavenSnake_Assets",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "heaven_snake",
+	"flip_x": false,
+	"healthbar_colors": [
+		36,
+		85,
+		22
+	],
+	"camera_position": [
+		-40,
+		-60
+	],
+	"sing_duration": 4,
+	"scale": 0.95
+}

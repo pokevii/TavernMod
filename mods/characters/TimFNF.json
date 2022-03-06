@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				24,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "TimLeftNote"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				-39
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "TimDownNote",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				6,
+				23
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "TimUpNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				5
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "TimIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				-8
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "TimRightNote",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/TimFNF",
+	"position": [
+		0,
+		190
+	],
+	"healthicon": "icon-tim",
+	"flip_x": false,
+	"healthbar_colors": [
+		61,
+		60,
+		61
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
