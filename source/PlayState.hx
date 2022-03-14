@@ -218,6 +218,7 @@ class PlayState extends MusicBeatState
 	var bgGhouls:BGSprite;
 
 	var sil:BGSprite;
+	var tgb:BGSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -741,6 +742,34 @@ class PlayState extends MusicBeatState
 					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 75, ypos + 60, 0.97, 0.97);
 					bench.scale.set(xscale, yscale);
 					add(bench);
+				}
+
+			case 'backstreets': // TAVERN Rain stage
+				{
+					defaultCamZoom = 0.7;
+					var x:Int = -1375;
+					var y:Int = -950;
+
+					var farcloud:BGSprite = new BGSprite('backstreets/part1/CloudsBACK', x, y, 0.7, 0.7);
+					add(farcloud);
+
+					var cloud:BGSprite = new BGSprite('backstreets/part1/CloudsFRONT', x, y, 0.8, 0.8);
+					add(cloud);
+
+					var backbuildings:BGSprite = new BGSprite('backstreets/part1/BBBuildingsP1', x, y, 0.85, 0.85);
+					add(backbuildings);
+
+					var ground:BGSprite = new BGSprite('backstreets/part1/ground', x, y, 1, 1);
+					add(ground);
+
+					var mainbuilding:BGSprite = new BGSprite('backstreets/part1/building', x, y, 0.95, 0.95);
+					add(mainbuilding);
+
+					tgb = new BGSprite('backstreets/part1/TGBStage1COLOURED', x + 660, y + 890, 0.95, 0.95, ['TGBStage1COLOURED0']);
+					add(tgb);
+
+					var table:BGSprite = new BGSprite('backstreets/part1/table', x, y, 1, 1);
+					add(table);
 				}
 		}
 
@@ -3201,6 +3230,9 @@ class PlayState extends MusicBeatState
 		if (isDad)
 		{
 			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
+
+			// switch (curStage) {}
+
 			camFollow.x += dad.cameraPosition[0];
 			camFollow.y += dad.cameraPosition[1];
 			tweenCamIn();
@@ -3217,6 +3249,9 @@ class PlayState extends MusicBeatState
 					camFollow.y = boyfriend.getMidpoint().y - 200;
 				case 'school' | 'schoolEvil':
 					camFollow.x = boyfriend.getMidpoint().x - 200;
+					camFollow.y = boyfriend.getMidpoint().y - 200;
+				case 'backstreets':
+					camFollow.x = boyfriend.getMidpoint().x - 100;
 					camFollow.y = boyfriend.getMidpoint().y - 200;
 			}
 			camFollow.x -= boyfriend.cameraPosition[0];
@@ -4359,11 +4394,14 @@ class PlayState extends MusicBeatState
 
 		if (curBeat % 2 == 0)
 		{
-			if (curStage == 'tavern_outside')
+			if (!ClientPrefs.lowQuality)
 			{
-				if (!ClientPrefs.lowQuality)
+				switch (curStage)
 				{
-					sil.dance();
+					case 'tavern_outside':
+						sil.dance();
+					case 'backstreets':
+						tgb.dance();
 				}
 			}
 			if (boyfriend.animation.curAnim.name != null && !boyfriend.animation.curAnim.name.startsWith("sing"))
