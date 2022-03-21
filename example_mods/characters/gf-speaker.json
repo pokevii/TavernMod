@@ -1,0 +1,156 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-196,
+				-455
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SpeakerLeft"
+		},
+		{
+			"offsets": [
+				-196,
+				-396
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SpeakerDown"
+		},
+		{
+			"offsets": [
+				-195,
+				-430
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "SpeakerUp"
+		},
+		{
+			"offsets": [
+				-196,
+				-335
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "SpeakerIdle"
+		},
+		{
+			"offsets": [
+				-195,
+				-443
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "cheer",
+			"indices": [],
+			"name": "SpeakerYay"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-195,
+				-435
+			],
+			"anim": "miss",
+			"fps": 24,
+			"name": "SpeakerMiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-196,
+				-335
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "SpeakerIdle0"
+		},
+		{
+			"offsets": [
+				-195,
+				-463
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "SpeakerRight"
+		},
+		{
+			"offsets": [
+				-196,
+				-335
+			],
+			"indices": [
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31
+			],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "SpeakerIdle0"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/gf-speaker",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "speaker",
+	"flip_x": false,
+	"healthbar_colors": [
+		25,
+		25,
+		25
+	],
+	"camera_position": [
+		150,
+		350
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}

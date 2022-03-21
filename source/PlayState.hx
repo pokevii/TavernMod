@@ -1,8 +1,5 @@
 package;
 
-#if desktop
-import Discord.DiscordClient;
-#end
 import Achievements;
 import DialogueBoxPsych;
 import FunkinLua;
@@ -26,6 +23,9 @@ import flixel.addons.effects.FlxTrailArea;
 import flixel.addons.effects.chainable.FlxEffectSprite;
 import flixel.addons.effects.chainable.FlxWaveEffect;
 import flixel.addons.transition.FlxTransitionableState;
+import flixel.effects.particles.FlxEmitter.FlxTypedEmitter;
+import flixel.effects.particles.FlxEmitter;
+import flixel.effects.particles.FlxParticle;
 import flixel.graphics.atlas.FlxAtlas;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
@@ -52,6 +52,9 @@ import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
 
+#if desktop
+import Discord.DiscordClient;
+#end
 #if sys
 import sys.FileSystem;
 #end
@@ -693,17 +696,17 @@ class PlayState extends MusicBeatState
 			case 'tavern_outside': // TAVERN Jayce stage
 				{
 					defaultCamZoom = 0.8;
-					var x:Int = -480;
+					var x:Int = -600;
 					var y:Int = -430;
 
-					var bg:BGSprite = new BGSprite('tavern_outside/week1Alt', x, y, 0.7, 0.7);
+					var bg:BGSprite = new BGSprite('tavern_outside/week1Alt', x, y, 0.9, 0.9);
 					add(bg);
 
 					// he spelled silhouettes wrong. dumbass. everyone go harass this stupid mother fucker on twitter
-					sil = new BGSprite('tavern_outside/Silouhette', x + 900, y + 730, 0.7, 0.7, ['Silouhette0']); // x+1120, y+760 = 640, 330
+					sil = new BGSprite('tavern_outside/Silouhette', x + 900, y + 730, 0.9, 0.9, ['Silouhette0']); // x+1120, y+760 = 640, 330
 					add(sil);
 
-					var glow:BGSprite = new BGSprite('tavern_outside/week1AltLight', x, y, 0.7, 0.7);
+					var glow:BGSprite = new BGSprite('tavern_outside/week1AltLight', x, y, 0.9, 0.9);
 					add(glow);
 				}
 
@@ -744,7 +747,7 @@ class PlayState extends MusicBeatState
 					add(bench);
 				}
 
-			case 'backstreets': // TAVERN Rain stage
+			case 'backstreets': // TAVERN Rain stage 1
 				{
 					defaultCamZoom = 0.7;
 					var x:Int = -1375;
@@ -769,6 +772,33 @@ class PlayState extends MusicBeatState
 					add(tgb);
 
 					var table:BGSprite = new BGSprite('backstreets/part1/table', x, y, 1, 1);
+					add(table);
+				}
+			case 'backstreets_drizzle': // TAVERN Rain stage 2
+				{
+					defaultCamZoom = 0.7;
+					var x:Int = -1375;
+					var y:Int = -950;
+
+					var farcloud:BGSprite = new BGSprite('backstreets/part2/CloudsBACK', x, y, 0.7, 0.7);
+					add(farcloud);
+
+					var cloud:BGSprite = new BGSprite('backstreets/part2/CloudsFRONT', x, y, 0.8, 0.8);
+					add(cloud);
+
+					var backbuildings:BGSprite = new BGSprite('backstreets/part2/BBBuildingsP1', x, y, 0.85, 0.85);
+					add(backbuildings);
+
+					var ground:BGSprite = new BGSprite('backstreets/part2/ground', x, y, 1, 1);
+					add(ground);
+
+					var mainbuilding:BGSprite = new BGSprite('backstreets/part2/building', x, y, 0.95, 0.95);
+					add(mainbuilding);
+
+					tgb = new BGSprite('backstreets/part2/TGBStage2', x + 660, y + 890, 0.95, 0.95, ['TGBStage2COLOURED0']);
+					add(tgb);
+
+					var table:BGSprite = new BGSprite('backstreets/part2/table', x, y, 1, 1);
 					add(table);
 				}
 		}
@@ -904,6 +934,14 @@ class PlayState extends MusicBeatState
 			case 'schoolEvil':
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069); // nice
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
+
+				/*case 'backstreets_drizzle':
+					var rainParticles:FlxTypedEmitter<FlxParticle> = new FlxEmitter(-500, -500, 500);
+					rainParticles.makeParticles(12, 12, FlxColor.CYAN, 1000);
+					// rainParticles.velocity.set(50, 40, 60, 80, -400, -600, 400, 600);
+					rainParticles.acceleration.set(0, 0, 0, 0, 400, 400, 800, 800);
+					add(rainParticles);
+					rainParticles.start(false, 0.15); */
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); // Checks for json/Psych Engine dialogue
@@ -973,6 +1011,19 @@ class PlayState extends MusicBeatState
 
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
+
+		if (curStage == 'backstreets_drizzle')
+		{
+			var rainParticles:FlxTypedEmitter<FlxParticle> = new FlxEmitter(-600, -600, 500);
+			rainParticles.launchMode = FlxEmitterMode.SQUARE;
+			// rainParticles.velocity.set(0, 1200, 0, -300, 0, 0, 2000, 2000);
+			rainParticles.makeParticles(12, 18, FlxColor.CYAN, 1000);
+			// rainParticles.velocity.set(50, 40, 60, 80, -400, -600, 400, 600);
+			rainParticles.acceleration.set(100, 0, 600, 600, 800, 800, 1200, 1200);
+			rainParticles.lifespan.set(7.0);
+			add(rainParticles);
+			rainParticles.start(false, 0.05);
+		}
 
 		// startCountdown();
 
@@ -3252,7 +3303,7 @@ class PlayState extends MusicBeatState
 				case 'school' | 'schoolEvil':
 					camFollow.x = boyfriend.getMidpoint().x - 200;
 					camFollow.y = boyfriend.getMidpoint().y - 200;
-				case 'backstreets':
+				case 'backstreets' | 'backstreets_drizzle':
 					camFollow.x = boyfriend.getMidpoint().x - 100;
 					camFollow.y = boyfriend.getMidpoint().y - 200;
 			}
@@ -4402,7 +4453,7 @@ class PlayState extends MusicBeatState
 				{
 					case 'tavern_outside':
 						sil.dance();
-					case 'backstreets':
+					case 'backstreets' | 'backstreets_drizzle':
 						tgb.dance();
 				}
 			}

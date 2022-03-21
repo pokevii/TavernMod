@@ -24735,19 +24735,10 @@
 				"bpm": 170,
 				"changeBPM": false,
 				"mustHitSection": true
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 170,
-				"changeBPM": false,
-				"mustHitSection": true
 			}
 		],
 		"player2": "Jayce",
-		"player3": "gf",
+		"player3": "gf-speaker",
 		"eventObjects": [
 			{
 				"type": "BPM Change",

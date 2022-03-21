@@ -139,7 +139,7 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
 
-		leftArrow = new FlxSprite(FlxG.width * 0.3, FlxG.height * 0.03);
+		leftArrow = new FlxSprite(FlxG.width * 0.65, FlxG.height * 0.6);
 		leftArrow.frames = ui_tex;
 		leftArrow.animation.addByPrefix('idle', "arrow left");
 		leftArrow.animation.addByPrefix('press', "arrow push left");
@@ -153,7 +153,7 @@ class StoryMenuState extends MusicBeatState
 		for (i in 0...CoolUtil.difficultyStuff.length)
 		{
 			var sprDifficulty:FlxSprite = new FlxSprite(leftArrow.x + 60,
-				leftArrow.y).loadGraphic(Paths.image('menudifficulties/' + CoolUtil.difficultyStuff[i][0].toLowerCase()));
+				leftArrow.y + (i * 100)).loadGraphic(Paths.image('menudifficulties/' + CoolUtil.difficultyStuff[i][0].toLowerCase()));
 			sprDifficulty.x += (308 - sprDifficulty.width) / 2;
 			sprDifficulty.ID = i;
 			sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
@@ -250,9 +250,9 @@ class StoryMenuState extends MusicBeatState
 				leftArrow.animation.play('idle');
 
 			if (controls.UI_UP_P && selectingDifficulty)
-				changeDifficulty(1);
-			if (controls.UI_DOWN_P && selectingDifficulty)
 				changeDifficulty(-1);
+			if (controls.UI_DOWN_P && selectingDifficulty)
+				changeDifficulty(1);
 
 			if (controls.ACCEPT)
 			{
@@ -361,13 +361,10 @@ class StoryMenuState extends MusicBeatState
 
 		sprDifficultyGroup.forEach(function(spr:FlxSprite)
 		{
-			spr.visible = false;
+			spr.visible = true;
 			if (curDifficulty == spr.ID)
 			{
-				spr.visible = true;
-				spr.alpha = 0;
-				spr.y = leftArrow.y - 15;
-				FlxTween.tween(spr, {y: leftArrow.y + 15, alpha: 1}, 0.07);
+				leftArrow.y = spr.y;
 			}
 		});
 
@@ -455,10 +452,10 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.x -= FlxG.width * 0.35;
 
 		// Random position and angle shit
-		txtTracklist.angle = FlxG.random.int(-10, 10);
+		txtTracklist.angle = FlxG.random.int(-8, 8);
 		txtTracklist.x += FlxG.random.int(-12, 12);
 		txtTracklist.y = bgSprite.y + 485;
-		txtTracklist.y += FlxG.random.int(-35, 35);
+		txtTracklist.y += FlxG.random.int(-15, 15);
 
 		tracksSprite.angle = txtTracklist.angle + FlxG.random.int(-4, 4);
 		tracksSprite.y = txtTracklist.y - 65;
