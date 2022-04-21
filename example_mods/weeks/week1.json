@@ -3,9 +3,9 @@
 	"hideFreeplay": false,
 	"weekBackground": "tavern_outside",
 	"freeplayColor": [
-		146,
-		113,
-		253
+		76,
+		250,
+		76
 	],
 	"weekBefore": "tutorial",
 	"startUnlocked": true,

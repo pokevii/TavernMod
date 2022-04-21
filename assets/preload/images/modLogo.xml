@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="modLogo.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="modLogo0000" x="50" y="50" width="764" height="690" frameX="-29" frameY="-26" frameWidth="822" frameHeight="742"/>
+	<SubTexture name="modLogo0001" x="864" y="50" width="822" height="742"/>
+	<SubTexture name="modLogo0002" x="50" y="842" width="795" height="719" frameX="-13" frameY="-12" frameWidth="822" frameHeight="742"/>
+	<SubTexture name="modLogo0003" x="895" y="842" width="783" height="708" frameX="-19" frameY="-17" frameWidth="822" frameHeight="742"/>
+</TextureAtlas>
