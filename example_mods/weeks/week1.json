@@ -2,47 +2,47 @@
 	"storyName": "Ordinary Green boy",
 	"hideFreeplay": false,
 	"weekBackground": "tavern_outside",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		76,
 		250,
 		76
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": false,
-	"weekCharacters": [
-		"Jayce",
-		"Blockhead",
-		"gf"
-	],
 	"songs": [
 		[
 			"Bread and Circuses",
 			"jayce",
 			[
-				146,
-				113,
-				253
+				76,
+				250,
+				76
 			]
 		],
 		[
 			"Chrome",
 			"jayce",
 			[
-				146,
-				113,
-				253
+				76,
+				250,
+				76
 			]
 		],
 		[
 			"Amalgamation",
 			"jayce",
 			[
-				146,
-				113,
-				253
+				76,
+				250,
+				76
 			]
 		]
+	],
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"Jayce",
+		"Blockhead",
+		"gf"
 	],
 	"weekName": "Jayce's Week"
 }

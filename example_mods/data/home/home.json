@@ -2763,11 +2763,11 @@
 			}
 		],
 		"player2": "TimFNF",
-		"player3": "gf",
+		"player3": "gf-speaker",
 		"song": "Home",
 		"needsVoices": true,
 		"sections": 0,
-		"stage": "pyramid",
+		"stage": "cabin",
 		"validScore": true,
 		"bpm": 149.983,
 		"speed": 2.3

@@ -45,13 +45,14 @@ class FreeplayState extends MusicBeatState
 
 	private var iconArray:Array<HealthIcon> = [];
 
-	private var bgGroup = new FlxGroup();
-	private var recordGroup = new FlxGroup();
-	private var jukeboxGroup = new FlxGroup();
+	private var arrowGroup:FlxGroup;
 
 	var bgScroll:FlxBackdrop;
 	var record:FlxSprite;
 	var jukebox:FlxSprite;
+	var arrowL:FlxSprite;
+	var arrowR:FlxSprite;
+
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 	var bgColorTween:FlxTween;
@@ -64,7 +65,7 @@ class FreeplayState extends MusicBeatState
 		WeekData.reloadWeekFiles(false);
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("usin the jukebox", null);
 		#end
 
 		for (i in 0...WeekData.weeksList.length)
@@ -105,7 +106,6 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 		bgScroll = new FlxBackdrop(Paths.image('freeplayBG'), 0, 0, true, true);
-		bgGroup.add(bgScroll);
 		add(bgScroll);
 
 		record = new FlxSprite(FlxG.width * (1 / 3), FlxG.height * 0.35).loadGraphic(Paths.image('freeplayRecordS'));
@@ -117,9 +117,24 @@ class FreeplayState extends MusicBeatState
 		jukebox.setGraphicSize(FlxG.width, FlxG.height);
 		add(jukebox);
 
-		jukeText = new FlxText(FlxG.width * 0.2, FlxG.height * 0.81, 0, "TEST", 32);
-		jukeText.setFormat(Paths.font("lcd.ttf"), 64, FlxColor.LIME, LEFT);
+		jukeText = new FlxText(FlxG.width * 0.2, FlxG.height * 0.79, 0, "TEST", 32);
+		jukeText.setFormat(Paths.font("lcd.ttf"), 80, FlxColor.LIME, LEFT);
 		add(jukeText);
+
+		arrowL = new FlxSprite(jukeText.x - 90, FlxG.height * 0.77);
+		arrowL.frames = Paths.getSparrowAtlas('freeplayArrow');
+		arrowL.antialiasing = ClientPrefs.globalAntialiasing;
+		arrowL.animation.addByPrefix('press', 'arrow0', 24, false);
+		arrowL.setGraphicSize(45, 80);
+		add(arrowL);
+
+		arrowR = new FlxSprite(FlxG.width * 0.81, arrowL.y);
+		arrowR.frames = Paths.getSparrowAtlas('freeplayArrow');
+		arrowR.flipX = true;
+		arrowR.antialiasing = ClientPrefs.globalAntialiasing;
+		arrowR.animation.addByPrefix('press', 'arrow0', 24, false);
+		arrowR.setGraphicSize(45, 80);
+		add(arrowR);
 
 		/*
 			grpSongs = new FlxTypedGroup<Alphabet>();
@@ -164,6 +179,7 @@ class FreeplayState extends MusicBeatState
 		if (curSelected >= songs.length)
 			curSelected = 0;
 		record.color = songs[curSelected].color;
+		bgScroll.color = songs[curSelected].color;
 		intendedColor = record.color;
 		changeSelection();
 		changeDiff();
@@ -270,10 +286,14 @@ class FreeplayState extends MusicBeatState
 
 		if (controls.UI_LEFT_P)
 		{
+			arrowL.animation.stop();
+			arrowL.animation.play('press');
 			changeSelection(-shiftMult);
 		}
 		if (controls.UI_RIGHT_P)
 		{
+			arrowR.animation.stop();
+			arrowR.animation.play('press');
 			changeSelection(shiftMult);
 		}
 

@@ -692,10 +692,19 @@ class PlayState extends MusicBeatState
 						add(unknownSubstance);
 					}
 				}
-
-			case 'tavern_outside': // TAVERN Jayce stage
+			case 'tavern_outside':
 				{
-					defaultCamZoom = 0.8;
+					defaultCamZoom = 0.9;
+					var x:Int = -600;
+					var y:Int = -430;
+
+					var bg:BGSprite = new BGSprite('tavern_outside/week1', x, y, 1, 1);
+					add(bg);
+				}
+
+			case 'tavern_night': // TAVERN Jayce stage
+				{
+					defaultCamZoom = 0.9;
 					var x:Int = -600;
 					var y:Int = -430;
 
@@ -708,6 +717,15 @@ class PlayState extends MusicBeatState
 
 					var glow:BGSprite = new BGSprite('tavern_outside/week1AltLight', x, y, 0.9, 0.9);
 					add(glow);
+				}
+
+			case 'cabin': // TAVERN Tim stage
+				{
+					defaultCamZoom = 0.8;
+					var x:Int = -500;
+					var y:Int = -630;
+					var bg:BGSprite = new BGSprite('cabin/bg', x, y, 1, 1);
+					add(bg);
 				}
 
 			case 'pyramid': // TAVERN Heaven stage
@@ -774,6 +792,7 @@ class PlayState extends MusicBeatState
 					var table:BGSprite = new BGSprite('backstreets/part1/table', x, y, 1, 1);
 					add(table);
 				}
+
 			case 'backstreets_drizzle': // TAVERN Rain stage 2
 				{
 					defaultCamZoom = 0.7;
@@ -1236,6 +1255,8 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'bread-and-circuses':
 					startVideo('week1-intro');
+				case 'home':
+					startVideo('week2-intro');
 
 				default:
 					startCountdown();
@@ -3284,7 +3305,11 @@ class PlayState extends MusicBeatState
 		{
 			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
 
-			// switch (curStage) {}
+			switch (curStage)
+			{
+				case 'cabin':
+					camFollow.y = dad.getMidpoint().y - 150;
+			}
 
 			camFollow.x += dad.cameraPosition[0];
 			camFollow.y += dad.cameraPosition[1];
@@ -3302,6 +3327,9 @@ class PlayState extends MusicBeatState
 					camFollow.y = boyfriend.getMidpoint().y - 200;
 				case 'school' | 'schoolEvil':
 					camFollow.x = boyfriend.getMidpoint().x - 200;
+					camFollow.y = boyfriend.getMidpoint().y - 200;
+				case 'cabin':
+					camFollow.x = boyfriend.getMidpoint().x - 370;
 					camFollow.y = boyfriend.getMidpoint().y - 200;
 				case 'backstreets' | 'backstreets_drizzle':
 					camFollow.x = boyfriend.getMidpoint().x - 100;
@@ -4451,7 +4479,7 @@ class PlayState extends MusicBeatState
 			{
 				switch (curStage)
 				{
-					case 'tavern_outside':
+					case 'tavern_night':
 						sil.dance();
 					case 'backstreets' | 'backstreets_drizzle':
 						tgb.dance();

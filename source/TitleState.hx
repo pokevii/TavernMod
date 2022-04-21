@@ -537,8 +537,8 @@ class TitleState extends MusicBeatState
 		if (!skippedIntro)
 		{
 			remove(logoSpr);
-
 			remove(credGroup);
+			FlxG.camera.flash(FlxColor.WHITE, 0.5);
 			skippedIntro = true;
 		}
 	}

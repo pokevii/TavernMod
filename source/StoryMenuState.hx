@@ -404,16 +404,16 @@ class StoryMenuState extends MusicBeatState
 			bullShit++;
 		}
 
-		bgSprite.visible = true;
-		var assetName:String = leWeek.weekBackground;
-		if (assetName == null || assetName.length < 1)
-		{
-			bgSprite.visible = false;
-		}
-		else
-		{
-			bgSprite.loadGraphic(Paths.image('menubackgrounds/menu_' + assetName));
-		}
+		bgSprite.visible = false;
+		/*var assetName:String = leWeek.weekBackground;
+			if (assetName == null || assetName.length < 1)
+			{
+				bgSprite.visible = false;
+			}
+			else
+			{
+				bgSprite.loadGraphic(Paths.image('menubackgrounds/menu_' + assetName));
+		}*/
 		updateText();
 	}
 

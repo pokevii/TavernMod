@@ -2374,12 +2374,13 @@
 				"mustHitSection": false
 			}
 		],
-		"player3": "gf",
+		"player3": "gf-speaker",
 		"song": "W2S2",
+		"stage": "cabin",
 		"validScore": true,
 		"sections": 0,
 		"needsVoices": true,
-		"speed": 2,
+		"speed": 2.4,
 		"bpm": 144.986
 	}
 }

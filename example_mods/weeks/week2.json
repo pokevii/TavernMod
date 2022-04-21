@@ -2,47 +2,47 @@
 	"storyName": "doomed from the start",
 	"hideFreeplay": false,
 	"weekBackground": "tavern_outside",
+	"weekBefore": "week1",
 	"freeplayColor": [
-		146,
-		113,
-		253
+			80,
+			80,
+			133
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": false,
-	"weekCharacters": [
-		"TimFNF",
-		"Blockhead",
-		"gf"
-	],
 	"songs": [
 		[
 			"Home",
 			"tim",
 			[
-				146,
-				113,
-				253
+				80,
+				80,
+				133
 			]
 		],
 		[
 			"w2s2",
 			"tim",
 			[
-				146,
-				113,
-				253
+				80,
+				80,
+				133
 			]
 		],
 		[
 			"Sawed",
 			"tim",
 			[
-				146,
-				113,
-				253
+				80,
+				80,
+				133
 			]
 		]
+	],
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"TimFNF",
+		"Blockhead",
+		"gf"
 	],
 	"weekName": "Tim's Week"
 }

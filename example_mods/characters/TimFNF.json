@@ -60,7 +60,7 @@
 	"image": "characters/TimFNF",
 	"position": [
 		0,
-		190
+		350
 	],
 	"healthicon": "icon-tim",
 	"flip_x": false,

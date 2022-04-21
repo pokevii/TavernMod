@@ -1,7 +1,1 @@
-tutorial:0:gf
-bread and circuses:1:Jayce
-chrome:1:Jayce
-amalgamation:1:Jayce
-home:2:TimFNF
-sawed:2:TimGunFNF
 atomic nightmare:10:Jayce
