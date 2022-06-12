@@ -5,5 +5,8 @@ To run the mod, go to the root of the folder in File Explorer (usually named Tav
 This creates an executable in a new folder called "export", so your first time running this command will take a while in order to build the exe.
 
 Artists: Adz, DeadFromHeaven, LuigiGoesHard69
+
 Programmers: Pokevii
+
 Music: LuigiGoesHard69, Jayce
+
