@@ -24,23 +24,31 @@ class CreditsState extends MusicBeatState
 	private var iconArray:Array<AttachedSprite> = [];
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
+		['Vs. Tavern Team'],
+		['pokevii',				'poke',			'Main Coder & Charter',								'https://twitter.com/pokevii_',			0xFFC4C4C4],
+		['Luggi',				'luggi',		'Composer, Background & Key Art Artist',			'https://twitter.com/LuigiFan54321',	0xFFC4C4C4],
+		['Jayce',				'jayce',		'Composer',						'https://www.youtube.com/channel/UCKpBWqM_jiXJyum5YcsWlyg',	0xFFC4C4C4],
+		['Adz', 				'adz',			'Character Animator/Artist, Background & Panel Arist',		'https://twitter.com/AdzDuffRain',		0xFFC4C4C4],
+		['DeadFromHeaven',		'dead',			'Week 3 Artist & Musician',							'https://twitter.com/DeadFromHeaven',	0xFFC4C4C4],
+		['Zoey',				'zoey',			'Week 4 Musician',									'https://twitter.com/fuckimsotired',	0xFFC4C4C4],
+		[''],
 		['Psych Engine Team'],
-		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFFFDD33],
-		['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',				'https://twitter.com/river_oaken',		0xFFC30085],
+		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFC4C4C4],
+		['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',				'https://twitter.com/river_oaken',		0xFFC4C4C4],
 		[''],
 		['Engine Contributors'],
-		['shubs',				'shubs',			'New Input System Programmer',						'https://twitter.com/yoshubs',			0xFF4494E6],
-		['PolybiusProxy',		'polybiusproxy',	'.MP4 Video Loader Extension',						'https://twitter.com/polybiusproxy',	0xFFE01F32],
-		['gedehari',			'gedehari',			'Chart Editor\'s Sound Waveform base',				'https://twitter.com/gedehari',			0xFFFF9300],
-		['Keoiki',				'keoiki',			'Note Splash Animations',							'https://twitter.com/Keoiki_',			0xFFFFFFFF],
-		['SandPlanet',			'sandplanet',		'Mascot\'s Owner\nMain Supporter of the Engine',		'https://twitter.com/SandPlanetNG',		0xFFD10616],
-		['bubba',				'bubba',		'Guest Composer for "Hot Dilf"',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw',	0xFF61536A],
+		['shubs',				'shubs',			'New Input System Programmer',						'https://twitter.com/yoshubs',			0xFFC4C4C4],
+		['PolybiusProxy',		'polybiusproxy',	'.MP4 Video Loader Extension',						'https://twitter.com/polybiusproxy',	0xFFC4C4C4],
+		['gedehari',			'gedehari',			'Chart Editor\'s Sound Waveform base',				'https://twitter.com/gedehari',			0xFFC4C4C4],
+		['Keoiki',				'keoiki',			'Note Splash Animations',							'https://twitter.com/Keoiki_',			0xFFC4C4C4],
+		['SandPlanet',			'sandplanet',		'Mascot\'s Owner\nMain Supporter of the Engine',		'https://twitter.com/SandPlanetNG',		0xFFC4C4C4],
+		['bubba',				'bubba',		'Guest Composer for "Hot Dilf"',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw',	0xFFC4C4C4],
 		[''],
 		["Funkin' Crew"],
-		['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",				'https://twitter.com/ninja_muffin99',	0xFFF73838],
-		['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",					'https://twitter.com/PhantomArcade3K',	0xFFFFBB1B],
-		['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",					'https://twitter.com/evilsk8r',			0xFF53E52C],
-		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3]
+		['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",				'https://twitter.com/ninja_muffin99',	0xFFC4C4C4],
+		['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",					'https://twitter.com/PhantomArcade3K',	0xFFC4C4C4],
+		['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",					'https://twitter.com/evilsk8r',			0xFFC4C4C4],
+		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFFC4C4C4]
 	];
 
 	var bg:FlxSprite;
@@ -55,7 +63,7 @@ class CreditsState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		bg = new FlxSprite().loadGraphic(Paths.image('creditsFrame'));
 		add(bg);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
@@ -86,6 +94,9 @@ class CreditsState extends MusicBeatState
 			}
 		}
 
+		//setting this to true makes it happen in all the other menus for some reason???
+		FlxG.mouse.visible = false;
+
 		descText = new FlxText(50, 600, 1180, "", 32);
 		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.scrollFactor.set();
@@ -110,10 +121,12 @@ class CreditsState extends MusicBeatState
 
 		if (upP)
 		{
+			bg.y += 210;
 			changeSelection(-1);
 		}
 		if (downP)
 		{
+			bg.y -= 210;
 			changeSelection(1);
 		}
 
@@ -136,10 +149,14 @@ class CreditsState extends MusicBeatState
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 		do {
 			curSelected += change;
-			if (curSelected < 0)
+			if (curSelected < 0) {
 				curSelected = creditsStuff.length - 1;
-			if (curSelected >= creditsStuff.length)
+				bg.y = -3580;
+				}
+			if (curSelected >= creditsStuff.length) {
 				curSelected = 0;
+				bg.y = 0;
+				}
 		} while(unselectableCheck(curSelected));
 
 		var newColor:Int = creditsStuff[curSelected][4];

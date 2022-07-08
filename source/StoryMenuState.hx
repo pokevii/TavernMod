@@ -77,9 +77,26 @@ class StoryMenuState extends MusicBeatState
 
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
-		var bgBar:FlxSprite = new FlxSprite(-100, -100).loadGraphic(Paths.image("storymenu/week select"));
+		var bgBar:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image("storymenu/frontTable"));
 		bgBar.antialiasing = ClientPrefs.globalAntialiasing;
 		bgBar.setGraphicSize(Std.int(bgBar.width * 0.9));
+
+		//background drinks
+		var bgBackDrink1:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("storymenu/backDrink1"));
+		var bgBackDrink2:FlxSprite = new FlxSprite(20, 0).loadGraphic(Paths.image("storymenu/backDrink2"));
+		var bgBackDrink3:FlxSprite = new FlxSprite(-20, 0).loadGraphic(Paths.image("storymenu/backDrink3"));
+		var bgBackDrink4:FlxSprite = new FlxSprite(-100, -120).loadGraphic(Paths.image("storymenu/backDrink4"));
+
+		add(bgBackDrink1);
+		add(bgBackDrink2);
+		add(bgBackDrink3);
+		add(bgBackDrink4);
+
+		var bgBarColor:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image("storymenu/background"));
+		bgBarColor.antialiasing = ClientPrefs.globalAntialiasing;
+		bgBarColor.setGraphicSize(Std.int(bgBarColor.width * 1.0));
+
+		add(bgBarColor);
 		add(bgBar);
 
 		bgSprite = new FlxSprite(0, 56);
@@ -162,7 +179,6 @@ class StoryMenuState extends MusicBeatState
 		changeDifficulty();
 
 		difficultySelectors.add(sprDifficultyGroup);
-
 		rightArrow = new FlxSprite(leftArrow.x + 376, leftArrow.y);
 		rightArrow.frames = ui_tex;
 		rightArrow.animation.addByPrefix('idle', 'arrow right');

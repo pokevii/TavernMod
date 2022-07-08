@@ -696,9 +696,10 @@ class PlayState extends MusicBeatState
 				{
 					defaultCamZoom = 0.9;
 					var x:Int = -600;
-					var y:Int = -430;
+					var y:Int = -460;
 
 					var bg:BGSprite = new BGSprite('tavern_outside/week1', x, y, 1, 1);
+					bg.scale.set(1.2, 1.2);
 					add(bg);
 				}
 
@@ -706,16 +707,20 @@ class PlayState extends MusicBeatState
 				{
 					defaultCamZoom = 0.9;
 					var x:Int = -600;
-					var y:Int = -430;
+					var y:Int = -460;
 
 					var bg:BGSprite = new BGSprite('tavern_outside/week1Alt', x, y, 0.9, 0.9);
+					bg.scale.set(1.2, 1.2);
 					add(bg);
 
 					// he spelled silhouettes wrong. dumbass. everyone go harass this stupid mother fucker on twitter
-					sil = new BGSprite('tavern_outside/Silouhette', x + 900, y + 730, 0.9, 0.9, ['Silouhette0']); // x+1120, y+760 = 640, 330
+					// FUCK YOU!!!!
+					sil = new BGSprite('tavern_outside/Silouhette', x + 933, y + 735, 0.9, 0.9, ['Silouhette0']); // x+1120, y+760 = 640, 330
+					sil.scale.set(1.2, 1.2);
 					add(sil);
 
 					var glow:BGSprite = new BGSprite('tavern_outside/week1AltLight', x, y, 0.9, 0.9);
+					glow.scale.set(1.2, 1.2);
 					add(glow);
 				}
 
@@ -723,8 +728,9 @@ class PlayState extends MusicBeatState
 				{
 					defaultCamZoom = 0.8;
 					var x:Int = -500;
-					var y:Int = -630;
+					var y:Int = -900;
 					var bg:BGSprite = new BGSprite('cabin/bg', x, y, 1, 1);
+					bg.scale.set(1.5, 1.5);
 					add(bg);
 				}
 

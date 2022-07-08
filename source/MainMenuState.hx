@@ -31,7 +31,14 @@ class MainMenuState extends MusicBeatState
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
-	var optionShit:Array<String> = ['story_mode', 'freeplay', #if ACHIEVEMENTS_ALLOWED 'awards', #end 'credits', #if !switch 'donate', #end 'options'];
+	var optionShit:Array<String> = [
+		'story_mode',
+		'freeplay',
+		#if ACHIEVEMENTS_ALLOWED 'awards', #end
+		'credits',
+		//#if !switch 'donate', #end
+		'options'
+	];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -57,14 +64,24 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
+		//drawing
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
+		var bg:FlxSprite = new FlxSprite(-40).loadGraphic(Paths.image('menuBG'));
 		bg.scrollFactor.set(0, yScroll);
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
+		bg.setGraphicSize(Std.int(bg.width * 0.77));
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
+
+		//frame
+		var frameBg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('menuFrame'));
+		frameBg.scrollFactor.set(0, yScroll);
+		frameBg.setGraphicSize(Std.int(frameBg.width * 0.72));
+		frameBg.screenCenter();
+		frameBg.antialiasing = ClientPrefs.globalAntialiasing;
+
 		add(bg);
+		add(frameBg);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);
@@ -177,12 +194,6 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
-				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
-				}
-				else
-				{
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 
@@ -222,7 +233,6 @@ class MainMenuState extends MusicBeatState
 							});
 						}
 					});
-				}
 			}
 			#if desktop
 			else if (FlxG.keys.justPressed.SEVEN)

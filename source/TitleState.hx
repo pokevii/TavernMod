@@ -513,16 +513,16 @@ class TitleState extends MusicBeatState
 				case 12:
 					deleteCoolText();
 				// credTextShit.visible = false;
-				// credTextShit.text = "Friday";
+				// credTextShit.text = "FNF";
 				// credTextShit.screenCenter();
 				case 13:
-					addMoreText('Friday');
+					addMoreText('FNF');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Night');
-				// credTextShit.text += '\nNight';
+					addMoreText('Vs.');
+				// credTextShit.text += '\nVs.';
 				case 15:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('The Tavern'); // credTextShit.text += '\nThe Tavern';
 				case 16:
 					FlxG.camera.flash(FlxColor.WHITE, 0.5);
 					skipIntro();

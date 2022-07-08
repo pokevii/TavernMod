@@ -8,7 +8,7 @@
 	<SubTexture name="doorIdle0003" x="5960" y="50" width="1920" height="1080"/>
 	<SubTexture name="doorIdle0004" x="50" y="1180" width="1920" height="1080"/>
 	<SubTexture name="doorIdle0005" x="2020" y="1180" width="1920" height="1080"/>
-	<SubTexture name="doorIdle0006" x="3990" y="1180" width="1920" height="1080"/>
+	<SubTexture name="doorOpen0006" x="3990" y="1180" width="1920" height="1080"/>
 	<SubTexture name="doorOpen0007" x="5960" y="1180" width="1920" height="1080"/>
 	<SubTexture name="doorOpen0008" x="50" y="2310" width="1920" height="1080"/>
 	<SubTexture name="doorOpen0009" x="2020" y="2310" width="1920" height="1080"/>
