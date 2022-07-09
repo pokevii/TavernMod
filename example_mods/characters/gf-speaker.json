@@ -1,76 +1,69 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-196,
 				-455
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SpeakerLeft"
+			"fps": 24,
+			"name": "SpeakerLeft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-196,
 				-396
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "SpeakerDown"
+			"fps": 24,
+			"name": "SpeakerDown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-195,
 				-430
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SpeakerUp"
-		},
-		{
-			"offsets": [
-				-196,
-				-335
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "SpeakerIdle"
+			"name": "SpeakerUp",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-195,
 				-443
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "cheer",
-			"indices": [],
-			"name": "SpeakerYay"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-195,
-				-435
-			],
-			"anim": "miss",
 			"fps": 24,
-			"name": "SpeakerMiss",
+			"name": "SpeakerYay",
 			"indices": []
 		},
 		{
 			"offsets": [
+				-195,
+				-435
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "miss",
+			"indices": [],
+			"name": "SpeakerMiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
 				-196,
 				-335
 			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "SpeakerIdle0",
 			"indices": [
 				0,
 				1,
@@ -88,28 +81,28 @@
 				13,
 				14,
 				15
-			],
-			"fps": 24,
-			"anim": "danceLeft",
-			"loop": false,
-			"name": "SpeakerIdle0"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-195,
 				-463
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "SpeakerRight"
+			"fps": 24,
+			"name": "SpeakerRight",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-196,
 				-335
 			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "SpeakerIdle0",
 			"indices": [
 				16,
 				17,
@@ -127,11 +120,18 @@
 				29,
 				30,
 				31
+			]
+		},
+		{
+			"offsets": [
+				-196,
+				-335
 			],
+			"indices": [],
 			"fps": 24,
-			"anim": "danceRight",
-			"loop": false,
-			"name": "SpeakerIdle0"
+			"anim": "idle",
+			"loop": true,
+			"name": "SpeakerIdle"
 		}
 	],
 	"no_antialiasing": false,

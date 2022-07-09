@@ -40,6 +40,8 @@ class FreeplayState extends MusicBeatState
 	var intendedScore:Int = 0;
 	var intendedRating:Float = 0;
 
+	var curIcon:Int = 0;
+
 	private var grpSongs:FlxTypedGroup<Alphabet>;
 	private var curPlaying:Bool = false;
 
@@ -50,6 +52,7 @@ class FreeplayState extends MusicBeatState
 	var bgScroll:FlxBackdrop;
 	var record:FlxSprite;
 	var jukebox:FlxSprite;
+	var jukeboxBack:FlxSprite;
 	var arrowL:FlxSprite;
 	var arrowR:FlxSprite;
 
@@ -108,11 +111,16 @@ class FreeplayState extends MusicBeatState
 		bgScroll = new FlxBackdrop(Paths.image('freeplayBG'), 0, 0, true, true);
 		add(bgScroll);
 
-		record = new FlxSprite(FlxG.width * (1 / 3), FlxG.height * 0.35).loadGraphic(Paths.image('freeplayRecordS'));
+		jukeboxBack = new FlxSprite(-320, -180).loadGraphic(Paths.image('freeplay/backJukebox'));
+		jukeboxBack.antialiasing = ClientPrefs.globalAntialiasing;
+		jukeboxBack.setGraphicSize(FlxG.width, FlxG.height);
+		add(jukeboxBack);
+
+		record = new FlxSprite(FlxG.width * (1 / 3), FlxG.height * 0.42).loadGraphic(Paths.image('freeplayRecordS'));
 		record.antialiasing = ClientPrefs.globalAntialiasing;
 		add(record);
 
-		jukebox = new FlxSprite(-320, -180).loadGraphic(Paths.image('freeplayJukebox'));
+		jukebox = new FlxSprite(-320, -180).loadGraphic(Paths.image('freeplay/frontJukebox'));
 		jukebox.antialiasing = ClientPrefs.globalAntialiasing;
 		jukebox.setGraphicSize(FlxG.width, FlxG.height);
 		add(jukebox);
@@ -135,31 +143,10 @@ class FreeplayState extends MusicBeatState
 		arrowR.animation.addByPrefix('press', 'arrow0', 24, false);
 		arrowR.setGraphicSize(45, 80);
 		add(arrowR);
-
-		/*
-			grpSongs = new FlxTypedGroup<Alphabet>();
-			add(grpSongs);
-
-			for (i in 0...songs.length)
-			{
-				/*var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
-					songText.isMenuItem = true;
-					songText.targetY = i;
-					grpSongs.add(songText);
-
-				Paths.currentModDirectory = songs[i].folder;
-				var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
-				icon.sprTracker = songText;
-
-				// using a FlxGroup is too much fuss!
-				iconArray.push(icon);
-				add(icon);
-
-				// songText.x += 40;
-				// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-				// songText.screenCenter(X);
-			}
-		 */
+			
+		/*var icon:HealthIcon = new HealthIcon(songs[curIcon].songCharacter);
+		icon.sprTracker = jukeText;
+		add(icon);*/
 
 		WeekData.setDirectoryFromWeek();
 
@@ -244,6 +231,7 @@ class FreeplayState extends MusicBeatState
 					num++;
 			}
 	}*/
+
 	var instPlaying:Int = -1;
 
 	private static var vocals:FlxSound = null;

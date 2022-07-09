@@ -74,6 +74,8 @@ class TitleState extends MusicBeatState
 			}
 		}
 
+		FlxG.mouse.visible = false;
+
 		// Gonna finish this later, probably
 		#end
 		FlxG.game.focusLostFramerate = 60;

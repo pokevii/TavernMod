@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="backBuilding.png">
+	<!-- Created with Adobe Animate version 22.0.7.214 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="backBuildings0000" x="50" y="50" width="1426" height="420"/>
+	<SubTexture name="backBuildings0001" x="1526" y="50" width="1426" height="420"/>
+	<SubTexture name="backBuildings0002" x="3002" y="50" width="1426" height="420"/>
+	<SubTexture name="backBuildings0003" x="4478" y="50" width="1426" height="420"/>
+	<SubTexture name="backBuildings0004" x="5954" y="50" width="1426" height="420"/>
+	<SubTexture name="backBuildings0005" x="50" y="520" width="1426" height="420"/>
+	<SubTexture name="backBuildings0006" x="1526" y="520" width="1426" height="420"/>
+	<SubTexture name="backBuildings0007" x="3002" y="520" width="1426" height="420"/>
+	<SubTexture name="backBuildings0008" x="4478" y="520" width="1426" height="420"/>
+	<SubTexture name="backBuildings0009" x="5954" y="520" width="1426" height="420"/>
+	<SubTexture name="backBuildings0010" x="50" y="990" width="1426" height="420"/>
+	<SubTexture name="backBuildings0011" x="1526" y="990" width="1426" height="420"/>
+	<SubTexture name="backBuildings0012" x="3002" y="990" width="1426" height="420"/>
+	<SubTexture name="backBuildings0013" x="4478" y="990" width="1426" height="420"/>
+	<SubTexture name="backBuildings0014" x="5954" y="990" width="1426" height="420"/>
+	<SubTexture name="backBuildings0015" x="50" y="1460" width="1426" height="420"/>
+	<SubTexture name="backBuildings0016" x="1526" y="1460" width="1426" height="420"/>
+	<SubTexture name="backBuildings0017" x="3002" y="1460" width="1426" height="420"/>
+	<SubTexture name="backBuildings0018" x="4478" y="1460" width="1426" height="420"/>
+	<SubTexture name="backBuildings0019" x="5954" y="1460" width="1426" height="420"/>
+</TextureAtlas>

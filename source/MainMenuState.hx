@@ -59,6 +59,8 @@ class MainMenuState extends MusicBeatState
 		FlxG.cameras.add(camAchievement);
 		FlxCamera.defaultCameras = [camGame];
 
+		FlxG.mouse.visible = false;
+
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
@@ -67,16 +69,16 @@ class MainMenuState extends MusicBeatState
 		//drawing
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
 		var bg:FlxSprite = new FlxSprite(-40).loadGraphic(Paths.image('menuBG'));
-		bg.scrollFactor.set(0, yScroll);
-		bg.setGraphicSize(Std.int(bg.width * 0.77));
+		bg.scrollFactor.set(0, 0);
+		bg.setGraphicSize(Std.int(bg.width * 0.70));
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 
 		//frame
 		var frameBg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('menuFrame'));
-		frameBg.scrollFactor.set(0, yScroll);
-		frameBg.setGraphicSize(Std.int(frameBg.width * 0.72));
+		frameBg.scrollFactor.set(0, 0);
+		frameBg.setGraphicSize(Std.int(frameBg.width * 0.68));
 		frameBg.screenCenter();
 		frameBg.antialiasing = ClientPrefs.globalAntialiasing;
 

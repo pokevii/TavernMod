@@ -20,6 +20,7 @@ class CreditsState extends MusicBeatState
 {
 	var curSelected:Int = 1;
 
+	private var isCredits:Bool = true; 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private var iconArray:Array<AttachedSprite> = [];
 
@@ -51,7 +52,14 @@ class CreditsState extends MusicBeatState
 		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFFC4C4C4]
 	];
 
+	//bg is irrelevant but removing it will break some of the colour tween code
 	var bg:FlxSprite;
+
+	var bgNonHover:FlxSprite;
+	var freshHover:FlxSprite;
+	var madmanHover:FlxSprite;
+
+	var creditsFrame:FlxSprite;
 	var descText:FlxText;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
@@ -62,9 +70,27 @@ class CreditsState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
+		
+		bg = new FlxSprite().loadGraphic(Paths.image('creditsBg'));
 
-		bg = new FlxSprite().loadGraphic(Paths.image('creditsFrame'));
-		add(bg);
+		creditsFrame = new FlxSprite().loadGraphic(Paths.image('creditsFrame'));
+		creditsFrame.antialiasing = ClientPrefs.globalAntialiasing;
+
+		bgNonHover = new FlxSprite().loadGraphic(Paths.image('creditsBg'));
+		bgNonHover.antialiasing = ClientPrefs.globalAntialiasing;
+
+		freshHover = new FlxSprite(1067, 326).loadGraphic(Paths.image('freshHover'));
+		freshHover.antialiasing = ClientPrefs.globalAntialiasing;
+		madmanHover = new FlxSprite(319, 3709).loadGraphic(Paths.image('madmanHover'));
+		madmanHover.antialiasing = ClientPrefs.globalAntialiasing;
+
+		freshHover.alpha = 0;
+		madmanHover.alpha = 0;
+
+		add(bgNonHover);
+		add(freshHover);
+		add(madmanHover);
+		add(creditsFrame);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
@@ -94,8 +120,7 @@ class CreditsState extends MusicBeatState
 			}
 		}
 
-		//setting this to true makes it happen in all the other menus for some reason???
-		FlxG.mouse.visible = false;
+		FlxG.mouse.visible = true;
 
 		descText = new FlxText(50, 600, 1180, "", 32);
 		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -103,6 +128,8 @@ class CreditsState extends MusicBeatState
 		descText.borderSize = 2.4;
 		add(descText);
 
+
+		//doesnt matter but idk what will happen if i remove this LOL
 		bg.color = creditsStuff[curSelected][4];
 		intendedColor = bg.color;
 		changeSelection();
@@ -121,12 +148,18 @@ class CreditsState extends MusicBeatState
 
 		if (upP)
 		{
-			bg.y += 210;
+			bgNonHover.y += 210;
+			freshHover.y += 210;
+			madmanHover.y += 210;
+			creditsFrame.y += 210;
 			changeSelection(-1);
 		}
 		if (downP)
 		{
-			bg.y -= 210;
+			bgNonHover.y -= 210;
+			freshHover.y -= 210;
+			madmanHover.y -= 210;
+			creditsFrame.y -= 210;
 			changeSelection(1);
 		}
 
@@ -141,6 +174,19 @@ class CreditsState extends MusicBeatState
 		if(controls.ACCEPT) {
 			CoolUtil.browserLoad(creditsStuff[curSelected][3]);
 		}
+
+		//remember to add boolean to use in mouse click
+		if (FlxG.mouse.overlaps(freshHover) || FlxG.mouse.overlaps(madmanHover)) {
+			freshHover.alpha = 1;
+			madmanHover.alpha = 1;
+			if (FlxG.mouse.pressed) {
+				//put stickynote with code here (change alpha)
+			}
+		} else {
+			freshHover.alpha = 0;
+			madmanHover.alpha = 0;
+		}
+
 		super.update(elapsed);
 	}
 
@@ -151,11 +197,17 @@ class CreditsState extends MusicBeatState
 			curSelected += change;
 			if (curSelected < 0) {
 				curSelected = creditsStuff.length - 1;
-				bg.y = -3580;
+				bgNonHover.y = -3600;
+				freshHover.y = -3600;
+				madmanHover.y = 116;
+				creditsFrame.y = -3570;
 				}
 			if (curSelected >= creditsStuff.length) {
 				curSelected = 0;
-				bg.y = 0;
+				bgNonHover.y = 0;
+				freshHover.y = 326;
+				madmanHover.y = 3715;
+				creditsFrame.y = 0;
 				}
 		} while(unselectableCheck(curSelected));
 

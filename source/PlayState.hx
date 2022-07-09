@@ -729,6 +729,7 @@ class PlayState extends MusicBeatState
 					defaultCamZoom = 0.8;
 					var x:Int = -500;
 					var y:Int = -900;
+
 					var bg:BGSprite = new BGSprite('cabin/bg', x, y, 1, 1);
 					bg.scale.set(1.5, 1.5);
 					add(bg);
@@ -741,6 +742,7 @@ class PlayState extends MusicBeatState
 					var ypos:Int = -550;
 					var xscale:Float = 1;
 					var yscale:Float = 1;
+
 					var bg:BGSprite = new BGSprite('pyramid/HeavenBG_Sky', xpos + 100, ypos, 0.6, 0.6);
 					bg.scale.set(xscale, yscale);
 					add(bg);
@@ -769,6 +771,41 @@ class PlayState extends MusicBeatState
 					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 75, ypos + 60, 0.97, 0.97);
 					bench.scale.set(xscale, yscale);
 					add(bench);
+				}
+
+			case 'city': // TAVERN Kodi Stage
+				{
+					defaultCamZoom = 0.7;
+					var x:Int = 0;
+					var y:Int = 0;
+
+					var bg:BGSprite = new BGSprite('city/sky', x, y, 0.5, 0.5);
+					add(bg);
+					bg.scale.set(1.5, 1.5);
+					var moon:BGSprite = new BGSprite('city/moon', x - 350, y - 75, 1, 1);
+					moon.scale.set(0.9, 0.9);
+					add(moon);
+
+					var clouds:BGSprite = new BGSprite('city/clouds', x, y, 0.7, 0.7);
+					clouds.scale.set(1.3, 1.3);
+					add(clouds);
+
+					//how to shitself 2022
+					var bdingsBck:BGSprite = new BGSprite('city/buildings/buildingBack', x - 15, y, 0.6, 0.6);
+					bdingsBck.scale.set(1.4, 1.4);
+					add(bdingsBck);		
+
+					var bdingsMdl:BGSprite = new BGSprite('city/buildings/buildingMiddle', x - 50, y, 0.7, 0.7);
+					bdingsMdl.scale.set(1.4, 1.4);
+					add(bdingsMdl);
+
+					var bdingsFrnt:BGSprite = new BGSprite('city/buildings/buildingFront', x, y - 25, 0.8, 0.8);
+					bdingsFrnt.scale.set(1.4, 1.4);
+					add(bdingsFrnt);
+
+					var cityFG:BGSprite = new BGSprite('city/foreground', x, y - 45, 1, 1);
+					cityFG.scale.set(1.5, 1.5);
+					add(cityFG);
 				}
 
 			case 'backstreets': // TAVERN Rain stage 1

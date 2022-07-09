@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-9,
 				30
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "KodiIdle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "KodiIdle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				20,
 				-33
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "KodiLeftNote",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "KodiLeftNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-49,
 				10
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "KodiRightNote",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "KodiRightNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-30,
 				-62
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "KodiDownNote",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "KodiDownNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				22,
 				41
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "KodiUpNote",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "KodiUpNote"
 		}
 	],
 	"no_antialiasing": false,
@@ -62,7 +62,7 @@
 		0,
 		0
 	],
-	"healthicon": "KodiIcons",
+	"healthicon": "icon-kodi",
 	"flip_x": false,
 	"healthbar_colors": [
 		255,

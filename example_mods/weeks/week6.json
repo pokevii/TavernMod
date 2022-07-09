@@ -1,0 +1,48 @@
+{
+	"storyName": "Rain",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Water",
+			"icon-rain",
+			[
+				155,
+				0,
+				15
+			]
+		],
+		[
+			"Typhoon",
+			"icon-rainp2",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Bookworm",
+			"icon-rainp3",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Rain's Week"
+}
