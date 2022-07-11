@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="safeDoor.png">
+	<!-- Created with Adobe Animate version 22.0.7.214 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="doorOpen0000" x="50" y="50" width="961" height="650"/>
+	<SubTexture name="doorOpen0001" x="1061" y="50" width="961" height="650"/>
+	<SubTexture name="doorOpen0002" x="2072" y="50" width="961" height="650"/>
+	<SubTexture name="doorOpen0003" x="3083" y="50" width="961" height="650"/>
+	<SubTexture name="doorOpen0004" x="4094" y="50" width="961" height="650"/>
+	<SubTexture name="doorOpen0005" x="5105" y="50" width="961" height="650"/>
+	<SubTexture name="doorOpen0006" x="6116" y="50" width="961" height="650"/>
+	<SubTexture name="doorOpen0007" x="7127" y="50" width="961" height="650"/>
+	<SubTexture name="doorOpen0008" x="50" y="750" width="961" height="650"/>
+	<SubTexture name="doorOpen0009" x="1061" y="750" width="961" height="650"/>
+	<SubTexture name="doorOpen0010" x="2072" y="750" width="961" height="650"/>
+	<SubTexture name="doorOpen0011" x="3083" y="750" width="961" height="650"/>
+	<SubTexture name="doorOpen0012" x="4094" y="750" width="961" height="650"/>
+	<SubTexture name="doorOpen0013" x="5105" y="750" width="961" height="650"/>
+	<SubTexture name="doorOpen0014" x="6116" y="750" width="961" height="650"/>
+	<SubTexture name="doorOpen0015" x="7127" y="750" width="961" height="650"/>
+	<SubTexture name="doorOpen0016" x="50" y="1450" width="961" height="650"/>
+	<SubTexture name="doorOpen0017" x="1061" y="1450" width="961" height="650"/>
+	<SubTexture name="doorOpen0018" x="2072" y="1450" width="961" height="650"/>
+	<SubTexture name="doorOpen0019" x="3083" y="1450" width="961" height="650"/>
+	<SubTexture name="doorOpen0020" x="4094" y="1450" width="961" height="650"/>
+	<SubTexture name="doorOpen0021" x="5105" y="1450" width="961" height="650"/>
+	<SubTexture name="doorOpen0022" x="6116" y="1450" width="961" height="650"/>
+	<SubTexture name="doorOpen0023" x="7127" y="1450" width="961" height="650"/>
+</TextureAtlas>

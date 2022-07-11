@@ -694,34 +694,50 @@ class PlayState extends MusicBeatState
 				}
 			case 'tavern_outside':
 				{
-					defaultCamZoom = 0.9;
+					defaultCamZoom = 0.6;
 					var x:Int = -600;
 					var y:Int = -460;
 
-					var bg:BGSprite = new BGSprite('tavern_outside/week1', x, y, 1, 1);
-					bg.scale.set(1.2, 1.2);
+					var bg:BGSprite = new BGSprite('tavern_outside/week1', x - 155, y - 115, 1, 1);
+					bg.scale.set(1.4, 1.4);
 					add(bg);
+
+					var shadow:BGSprite = new BGSprite('tavern_outside/shadow', x + 650, y + 1275, 1, 1);
+					shadow.scale.set(0.8, 0.7);
+					add(shadow);
+
+					var bhShadow:BGSprite = new BGSprite('tavern_outside/shadow', x + 1500, y + 1285, 1, 1);
+					bhShadow.scale.set(0.8, 0.8);
+					add(bhShadow);
 				}
 
 			case 'tavern_night': // TAVERN Jayce stage
 				{
-					defaultCamZoom = 0.9;
+					defaultCamZoom = 0.7;
 					var x:Int = -600;
 					var y:Int = -460;
 
-					var bg:BGSprite = new BGSprite('tavern_outside/week1Alt', x, y, 0.9, 0.9);
-					bg.scale.set(1.2, 1.2);
+					var bg:BGSprite = new BGSprite('tavern_outside/week1Alt', x - 155, y - 115, 1, 1);
+					bg.scale.set(1.4, 1.4);
 					add(bg);
 
 					// he spelled silhouettes wrong. dumbass. everyone go harass this stupid mother fucker on twitter
 					// FUCK YOU!!!!
-					sil = new BGSprite('tavern_outside/Silouhette', x + 933, y + 735, 0.9, 0.9, ['Silouhette0']); // x+1120, y+760 = 640, 330
-					sil.scale.set(1.2, 1.2);
+					sil = new BGSprite('tavern_outside/Silouhette', x + 824, y + 628, 1, 1, ['Silouhette0']); // x+1120, y+760 = 640, 330
+					sil.scale.set(1.4, 1.4);
 					add(sil);
 
-					var glow:BGSprite = new BGSprite('tavern_outside/week1AltLight', x, y, 0.9, 0.9);
-					glow.scale.set(1.2, 1.2);
+					var glow:BGSprite = new BGSprite('tavern_outside/week1AltLight', x - 155, y - 115, 1, 1);
+					glow.scale.set(1.4, 1.4);
 					add(glow);
+
+					var shadow:BGSprite = new BGSprite('tavern_outside/shadow', x + 658, y + 1275, 1, 1);
+					shadow.scale.set(0.8, 0.7);
+					add(shadow);
+
+					var bhShadow:BGSprite = new BGSprite('tavern_outside/shadow', x + 1475, y + 1285, 1, 1);
+					bhShadow.scale.set(0.8, 0.8);
+					add(bhShadow);
 				}
 
 			case 'cabin': // TAVERN Tim stage
@@ -730,9 +746,17 @@ class PlayState extends MusicBeatState
 					var x:Int = -500;
 					var y:Int = -900;
 
-					var bg:BGSprite = new BGSprite('cabin/bg', x, y, 1, 1);
+					var bg:BGSprite = new BGSprite('cabin/bg', x, y - 100, 1, 1);
 					bg.scale.set(1.5, 1.5);
 					add(bg);
+
+					var shadow:BGSprite = new BGSprite('cabin/shadow', x + 825, y + 1560, 1, 1);
+					shadow.scale.set(0.9, 0.8);
+					add(shadow);
+
+					var bhShadow:BGSprite = new BGSprite('cabin/shadow', x + 1790, y + 1710, 1, 1);
+					bhShadow.scale.set(0.8, 0.8);
+					add(bhShadow);
 				}
 
 			case 'pyramid': // TAVERN Heaven stage
@@ -773,6 +797,33 @@ class PlayState extends MusicBeatState
 					add(bench);
 				}
 
+			case 'stadium': // TAVERN Charles Stage
+				{
+					defaultCamZoom = 0.5;
+					var x:Int = -400;
+					var y:Int = 0;
+
+					var floor:BGSprite = new BGSprite('stadium/Floor', x + 195, y + 260, 1, 1);
+					floor.scale.set(1.3, 1.3);
+					add(floor);
+					var chair:BGSprite = new BGSprite('stadium/Chairs', x + 255, y - 650, 1, 1);
+					add(chair);
+					var audience:BGSprite = new BGSprite('stadium/CharlesAudience', x + 550, y - 925, 1, 1);
+					add(audience);
+					var stage:BGSprite = new BGSprite('stadium/Stage', x - 1000, y - 1050, 1, 1);
+					add(stage);
+					var hoop:BGSprite = new BGSprite('stadium/BasketBallHoop', x + 1200, y - 950, 1, 1);
+					add(hoop);
+
+					var shadow:BGSprite = new BGSprite('stadium/shadow', x + 895, y + 500, 1, 1);
+					shadow.scale.set(1, 1.2);
+					add(shadow);
+
+					var bhShadow:BGSprite = new BGSprite('stadium/shadow', x + 1990, y + 570, 1, 1);
+					bhShadow.scale.set(0.8, 0.8);
+					add(bhShadow);
+				}
+
 			case 'city': // TAVERN Kodi Stage
 				{
 					defaultCamZoom = 0.7;
@@ -785,7 +836,6 @@ class PlayState extends MusicBeatState
 					var moon:BGSprite = new BGSprite('city/moon', x - 350, y - 75, 1, 1);
 					moon.scale.set(0.9, 0.9);
 					add(moon);
-
 					var clouds:BGSprite = new BGSprite('city/clouds', x, y, 0.7, 0.7);
 					clouds.scale.set(1.3, 1.3);
 					add(clouds);
@@ -794,18 +844,23 @@ class PlayState extends MusicBeatState
 					var bdingsBck:BGSprite = new BGSprite('city/buildings/buildingBack', x - 15, y, 0.6, 0.6);
 					bdingsBck.scale.set(1.4, 1.4);
 					add(bdingsBck);		
-
 					var bdingsMdl:BGSprite = new BGSprite('city/buildings/buildingMiddle', x - 50, y, 0.7, 0.7);
 					bdingsMdl.scale.set(1.4, 1.4);
 					add(bdingsMdl);
-
 					var bdingsFrnt:BGSprite = new BGSprite('city/buildings/buildingFront', x, y - 25, 0.8, 0.8);
 					bdingsFrnt.scale.set(1.4, 1.4);
 					add(bdingsFrnt);
-
 					var cityFG:BGSprite = new BGSprite('city/foreground', x, y - 45, 1, 1);
 					cityFG.scale.set(1.5, 1.5);
 					add(cityFG);
+
+					var shadow:BGSprite = new BGSprite('city/shadow', x + 300, y + 895, 1, 1);
+					shadow.scale.set(0.7, 0.8);
+					add(shadow);
+
+					var bhShadow:BGSprite = new BGSprite('city/shadow', x + 1263, y + 885, 1, 1);
+					bhShadow.scale.set(0.8, 0.8);
+					add(bhShadow);
 				}
 
 			case 'backstreets': // TAVERN Rain stage 1

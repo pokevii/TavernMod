@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				88,
+				-17
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "JayceLeftNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				-55
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "JayceDownNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-21,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "JayceUpNote",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-38,
+				-20
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "JayceDefaultIdle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-29,
+				-25
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "JayceRightNote"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/JayceRimLight",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "jayce",
+	"flip_x": false,
+	"healthbar_colors": [
+		10,
+		159,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1.2
+}

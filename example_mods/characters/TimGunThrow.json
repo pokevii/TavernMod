@@ -1,29 +1,29 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "TimGunThrowAnimation0",
+			"anim": "idle",
 			"indices": [
 				0,
 				1
-			]
+			],
+			"name": "TimGunThrowAnimation0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "throw",
+			"loop": false,
 			"fps": 24,
-			"name": "TimGunThrowAnimation0",
-			"indices": []
+			"anim": "throw",
+			"indices": [],
+			"name": "TimGunThrowAnimation0"
 		}
 	],
 	"no_antialiasing": false,
@@ -40,8 +40,8 @@
 		60
 	],
 	"camera_position": [
-		0,
-		0
+		-90,
+		170
 	],
 	"sing_duration": 4,
 	"scale": 1

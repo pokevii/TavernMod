@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				24,
 				2
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "TimLeftNote"
+			"fps": 24,
+			"name": "TimLeftNote",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-7,
 				-39
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "TimDownNote",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "TimDownNote"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				6,
 				23
 			],
-			"anim": "singUP",
+			"loop": true,
 			"fps": 24,
-			"name": "TimUpNote",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "TimUpNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				5
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "TimIdle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "TimIdle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-9,
 				-8
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "TimRightNote",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "TimRightNote"
 		}
 	],
 	"no_antialiasing": false,
@@ -70,8 +70,8 @@
 		61
 	],
 	"camera_position": [
-		0,
-		0
+		20,
+		60
 	],
 	"sing_duration": 6.1,
 	"scale": 1
