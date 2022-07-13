@@ -178,10 +178,12 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
 					CustomFadeTransition.nextCamera = transCamera;
-					if(PlayState.isStoryMode) {
+					if(PlayState.isStoryMode && PlayState.isFreeplay == false) {
 						MusicBeatState.switchState(new StoryMenuState());
-					} else {
+					} else if (PlayState.isStoryMode == false && PlayState.isFreeplay) {
 						MusicBeatState.switchState(new FreeplayState());
+					} else {
+						MusicBeatState.switchState(new SafeState());
 					}
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					PlayState.usedPractice = false;

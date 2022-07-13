@@ -77,26 +77,37 @@ class StoryMenuState extends MusicBeatState
 
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
-		var bgBar:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image("storymenu/frontTable"));
+		var bgBar:FlxSprite = new FlxSprite(-100, -95).loadGraphic(Paths.image("storymenu/frontTable"));
+		bgBar.scale.set(1.5, 0.7);
 		bgBar.antialiasing = ClientPrefs.globalAntialiasing;
-		bgBar.setGraphicSize(Std.int(bgBar.width * 0.9));
+
+
+		//BAR BACKGROUND
+		var bgBarColor:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image("storymenu/background"));
+		add(bgBarColor);
 
 		//background drinks
-		var bgBackDrink1:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image("storymenu/backDrink1"));
-		var bgBackDrink2:FlxSprite = new FlxSprite(20, 0).loadGraphic(Paths.image("storymenu/backDrink2"));
-		var bgBackDrink3:FlxSprite = new FlxSprite(-20, 0).loadGraphic(Paths.image("storymenu/backDrink3"));
-		var bgBackDrink4:FlxSprite = new FlxSprite(-100, -120).loadGraphic(Paths.image("storymenu/backDrink4"));
+		var bgBackDrink1:FlxSprite = new FlxSprite(220, 275).loadGraphic(Paths.image("storymenu/backDrink1"));
+		bgBackDrink1.scale.set(0.6, 0.6);
+		var bgBackDrink2:FlxSprite = new FlxSprite(105, 215).loadGraphic(Paths.image("storymenu/backDrink2"));
+		bgBackDrink2.scale.set(0.7, 0.7);
+		var bgBackDrink3:FlxSprite = new FlxSprite(1150, 50).loadGraphic(Paths.image("storymenu/backDrink3"));
+		bgBackDrink3.scale.set(0.7, 0.7);
+		var bgBackDrink4:FlxSprite = new FlxSprite(-100, 185).loadGraphic(Paths.image("storymenu/backDrink4"));
+		bgBackDrink4.scale.set(0.7, 0.7);
 
 		add(bgBackDrink1);
 		add(bgBackDrink2);
 		add(bgBackDrink3);
 		add(bgBackDrink4);
 
-		var bgBarColor:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image("storymenu/background"));
+		var bgTap:FlxSprite = new FlxSprite(435, 170).loadGraphic(Paths.image("storymenu/backDrinkTap"));
+		bgTap.scale.set(0.8, 0.8);
+		add(bgTap);
+		
 		bgBarColor.antialiasing = ClientPrefs.globalAntialiasing;
 		bgBarColor.setGraphicSize(Std.int(bgBarColor.width * 1.0));
 
-		add(bgBarColor);
 		add(bgBar);
 
 		bgSprite = new FlxSprite(0, 56);
@@ -162,6 +173,7 @@ class StoryMenuState extends MusicBeatState
 		leftArrow.animation.addByPrefix('press', "arrow push left");
 		leftArrow.animation.play('idle');
 		leftArrow.antialiasing = ClientPrefs.globalAntialiasing;
+		leftArrow.scale.set(-1, 1);
 		difficultySelectors.add(leftArrow);
 
 		sprDifficultyGroup = new FlxTypedGroup<FlxSprite>();
@@ -170,7 +182,7 @@ class StoryMenuState extends MusicBeatState
 		for (i in 0...CoolUtil.difficultyStuff.length)
 		{
 			var sprDifficulty:FlxSprite = new FlxSprite(leftArrow.x + 60,
-				leftArrow.y + (i * 100)).loadGraphic(Paths.image('menudifficulties/' + CoolUtil.difficultyStuff[i][0].toLowerCase()));
+				275 + (i * 100)).loadGraphic(Paths.image('menudifficulties/' + CoolUtil.difficultyStuff[i][0].toLowerCase()));
 			sprDifficulty.x += (308 - sprDifficulty.width) / 2;
 			sprDifficulty.ID = i;
 			sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
@@ -185,12 +197,9 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
 		rightArrow.animation.play('idle');
 		rightArrow.antialiasing = ClientPrefs.globalAntialiasing;
+		rightArrow.scale.set(-1, 1);
 		difficultySelectors.add(rightArrow);
-
-		// add(bgYellow);
-		// add(bgSprite);
-		// add(grpWeekCharacters);
-
+		
 		tracksSprite = new FlxSprite(FlxG.width * 0.07, bgSprite.y + 385).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.globalAntialiasing;
 		add(tracksSprite);
@@ -255,16 +264,6 @@ class StoryMenuState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 
-			if (controls.UI_UP && selectingDifficulty)
-				rightArrow.animation.play('press')
-			else
-				rightArrow.animation.play('idle');
-
-			if (controls.UI_DOWN && selectingDifficulty)
-				leftArrow.animation.play('press');
-			else
-				leftArrow.animation.play('idle');
-
 			if (controls.UI_UP_P && selectingDifficulty)
 				changeDifficulty(-1);
 			if (controls.UI_DOWN_P && selectingDifficulty)
@@ -274,6 +273,8 @@ class StoryMenuState extends MusicBeatState
 			{
 				if (selectingDifficulty)
 				{
+					leftArrow.animation.play('press');
+					rightArrow.animation.play('press');
 					selectWeek();
 				}
 				else
@@ -302,6 +303,7 @@ class StoryMenuState extends MusicBeatState
 				MusicBeatState.switchState(new MainMenuState());
 			}
 		}
+		rightArrow.y = leftArrow.y;
 
 		super.update(elapsed);
 
@@ -342,6 +344,7 @@ class StoryMenuState extends MusicBeatState
 			// Nevermind that's stupid lmao
 			PlayState.storyPlaylist = songArray;
 			PlayState.isStoryMode = true;
+			PlayState.isFreeplay = false;
 			selectedWeek = true;
 
 			var diffic = CoolUtil.difficultyStuff[curDifficulty][1];
@@ -464,13 +467,12 @@ class StoryMenuState extends MusicBeatState
 
 		txtTracklist.text = txtTracklist.text.toUpperCase();
 
-		txtTracklist.screenCenter(X);
-		txtTracklist.x -= FlxG.width * 0.35;
-
 		// Random position and angle shit
-		txtTracklist.angle = FlxG.random.int(-8, 8);
-		txtTracklist.x += FlxG.random.int(-12, 12);
-		txtTracklist.y = bgSprite.y + 485;
+		txtTracklist.angle = FlxG.random.int(-4, 4);
+		txtTracklist.screenCenter(X);
+		txtTracklist.x -= FlxG.width * 0.36;
+		//txtTracklist.x += FlxG.random.int(-12, 12);
+		txtTracklist.y = bgSprite.y + 280;
 		txtTracklist.y += FlxG.random.int(-15, 15);
 
 		tracksSprite.angle = txtTracklist.angle + FlxG.random.int(-4, 4);

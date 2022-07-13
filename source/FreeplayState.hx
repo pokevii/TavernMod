@@ -338,10 +338,11 @@ class FreeplayState extends MusicBeatState
 				curDifficulty = 1;
 				trace('Couldnt find file');
 		}
-			trace(poop);
+			trace(poop);//poop means the songname then difficulty (e.g. blammed-hard)
 
-			PlayState.SONG = Song.loadFromJson(poop, songLowercase);
+			PlayState.SONG = Song.loadFromJson(poop, songLowercase);//im assuming poop here means the json itself while songLowercase is the folder name.
 			PlayState.isStoryMode = false;
+			PlayState.isFreeplay = true;
 			PlayState.storyDifficulty = curDifficulty;
 
 			PlayState.storyWeek = songs[curSelected].week;

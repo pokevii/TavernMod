@@ -12,6 +12,7 @@ import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.tweens.FlxTween;
+import flixel.FlxSubState;
 import lime.utils.Assets;
 
 using StringTools;
@@ -21,17 +22,18 @@ class CreditsState extends MusicBeatState
 	var curSelected:Int = 1;
 
 	private var isCredits:Bool = true; 
+	private var isNote:Bool = false;
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private var iconArray:Array<AttachedSprite> = [];
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
 		['Vs. Tavern Team'],
-		['pokevii',				'poke',			'Main Coder & Charter',								'https://twitter.com/pokevii_',			0xFFC4C4C4],
-		['Luggi',				'luggi',		'Composer, Background & Key Art Artist',			'https://twitter.com/LuigiFan54321',	0xFFC4C4C4],
-		['Jayce',				'jayce',		'Composer',						'https://www.youtube.com/channel/UCKpBWqM_jiXJyum5YcsWlyg',	0xFFC4C4C4],
-		['Adz', 				'adz',			'Character Animator/Artist, Background & Panel Arist',		'https://twitter.com/AdzDuffRain',		0xFFC4C4C4],
-		['DeadFromHeaven',		'dead',			'Week 3 Artist & Musician',							'https://twitter.com/DeadFromHeaven',	0xFFC4C4C4],
-		['Zoey',				'zoey',			'Week 4 Musician',									'https://twitter.com/fuckimsotired',	0xFFC4C4C4],
+		['pokevii',				'poke',			'Main Coder & Charter',								'https://twitter.com/pokevii_',				0xFFC4C4C4],
+		['Luggi',				'luggi',		'Main Musician, Coder, Background & Key Art Artist','https://twitter.com/LuigiFan54321',		0xFFC4C4C4],
+		['Jayce',				'jayce',		'Main Musician',				'https://www.youtube.com/channel/UCKpBWqM_jiXJyum5YcsWlyg',		0xFFC4C4C4],
+		['Adz', 				'adz',			'Character Animator/Artist, Background & Panel Arist',		'https://twitter.com/AdzDuffRain',	0xFFC4C4C4],
+		['DeadFromHeaven',		'dead',			'Week 3 Artist & Musician',							'https://twitter.com/DeadFromHeaven',		0xFFC4C4C4],
+		['Zoey',				'zoey',			'Week 4 Musician',									'https://twitter.com/fuckimsotired',		0xFFC4C4C4],
 		[''],
 		['Psych Engine Team'],
 		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFC4C4C4],
@@ -42,7 +44,7 @@ class CreditsState extends MusicBeatState
 		['PolybiusProxy',		'polybiusproxy',	'.MP4 Video Loader Extension',						'https://twitter.com/polybiusproxy',	0xFFC4C4C4],
 		['gedehari',			'gedehari',			'Chart Editor\'s Sound Waveform base',				'https://twitter.com/gedehari',			0xFFC4C4C4],
 		['Keoiki',				'keoiki',			'Note Splash Animations',							'https://twitter.com/Keoiki_',			0xFFC4C4C4],
-		['SandPlanet',			'sandplanet',		'Mascot\'s Owner\nMain Supporter of the Engine',		'https://twitter.com/SandPlanetNG',		0xFFC4C4C4],
+		['SandPlanet',			'sandplanet',		'Mascot\'s Owner\nMain Supporter of the Engine',		'https://twitter.com/SandPlanetNG',	0xFFC4C4C4],
 		['bubba',				'bubba',		'Guest Composer for "Hot Dilf"',	'https://www.youtube.com/channel/UCxQTnLmv0OAS63yzk9pVfaw',	0xFFC4C4C4],
 		[''],
 		["Funkin' Crew"],
@@ -52,12 +54,16 @@ class CreditsState extends MusicBeatState
 		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFFC4C4C4]
 	];
 
+	var note:String; //which note was clickedon
+
 	//bg is irrelevant but removing it will break some of the colour tween code
 	var bg:FlxSprite;
 
 	var bgNonHover:FlxSprite;
 	var freshHover:FlxSprite;
 	var madmanHover:FlxSprite;
+	var letsPubHover:FlxSprite;
+	var timRainHover:FlxSprite;
 
 	var creditsFrame:FlxSprite;
 	var descText:FlxText;
@@ -81,15 +87,26 @@ class CreditsState extends MusicBeatState
 
 		freshHover = new FlxSprite(1067, 326).loadGraphic(Paths.image('freshHover'));
 		freshHover.antialiasing = ClientPrefs.globalAntialiasing;
-		madmanHover = new FlxSprite(319, 3709).loadGraphic(Paths.image('madmanHover'));
+
+		madmanHover = new FlxSprite(319, 3715).loadGraphic(Paths.image('madmanHover'));
 		madmanHover.antialiasing = ClientPrefs.globalAntialiasing;
+
+		letsPubHover = new FlxSprite(613, 439).loadGraphic(Paths.image('letsPubHover'));
+		letsPubHover.antialiasing = ClientPrefs.globalAntialiasing;
+
+		timRainHover = new FlxSprite(440, 1055).loadGraphic(Paths.image('timRainHover'));
+		timRainHover.antialiasing = ClientPrefs.globalAntialiasing;
 
 		freshHover.alpha = 0;
 		madmanHover.alpha = 0;
+		letsPubHover.alpha = 0;
+		timRainHover.alpha = 0;
 
 		add(bgNonHover);
+		add(letsPubHover);
 		add(freshHover);
 		add(madmanHover);
+		add(timRainHover);
 		add(creditsFrame);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
@@ -151,6 +168,8 @@ class CreditsState extends MusicBeatState
 			bgNonHover.y += 210;
 			freshHover.y += 210;
 			madmanHover.y += 210;
+			letsPubHover.y += 210;
+			timRainHover.y += 210;
 			creditsFrame.y += 210;
 			changeSelection(-1);
 		}
@@ -159,6 +178,8 @@ class CreditsState extends MusicBeatState
 			bgNonHover.y -= 210;
 			freshHover.y -= 210;
 			madmanHover.y -= 210;
+			letsPubHover.y -= 210;
+			timRainHover.y -= 210;
 			creditsFrame.y -= 210;
 			changeSelection(1);
 		}
@@ -176,15 +197,53 @@ class CreditsState extends MusicBeatState
 		}
 
 		//remember to add boolean to use in mouse click
-		if (FlxG.mouse.overlaps(freshHover) || FlxG.mouse.overlaps(madmanHover)) {
+		if (FlxG.mouse.overlaps(freshHover)) {
 			freshHover.alpha = 1;
-			madmanHover.alpha = 1;
-			if (FlxG.mouse.pressed) {
-				//put stickynote with code here (change alpha)
+			note = "fresh";
+			if (FlxG.mouse.pressed && isNote == false) {
+				isNote = true;
+				openSubState(new StickyNoteSubState(note));
+				FlxG.sound.play(Paths.sound('vine'), 0.7);
 			}
 		} else {
+			isNote = false;
 			freshHover.alpha = 0;
+		}
+		if (FlxG.mouse.overlaps(madmanHover)) {
+			madmanHover.alpha = 1;
+			note = "madMan";
+			if (FlxG.mouse.pressed && isNote == false) {
+				openSubState(new StickyNoteSubState(note));
+				FlxG.sound.play(Paths.sound('vine'), 0.7);
+				isNote = true;
+			}
+		} else {
 			madmanHover.alpha = 0;
+			isNote = false;
+		}
+		if (FlxG.mouse.overlaps(letsPubHover)) {
+			letsPubHover.alpha = 1;
+			note = "letsPub";
+			if (FlxG.mouse.pressed && isNote == false) {
+				openSubState(new StickyNoteSubState(note));
+				FlxG.sound.play(Paths.sound('vine'), 0.7);
+				isNote = true;
+			}
+		} else {
+			letsPubHover.alpha = 0;
+			isNote = false;
+		}
+		if (FlxG.mouse.overlaps(timRainHover)) {
+			timRainHover.alpha = 1;
+			note = "timRain";
+			if (FlxG.mouse.pressed && isNote == false) {
+				openSubState(new StickyNoteSubState(note));
+				FlxG.sound.play(Paths.sound('vine'), 0.7);
+				isNote = true;
+			}
+		} else {
+			timRainHover.alpha = 0;
+			isNote = false;
 		}
 
 		super.update(elapsed);
@@ -199,6 +258,8 @@ class CreditsState extends MusicBeatState
 				curSelected = creditsStuff.length - 1;
 				bgNonHover.y = -3600;
 				freshHover.y = -3600;
+				letsPubHover.y = -3600;
+				timRainHover.y = -3600;
 				madmanHover.y = 116;
 				creditsFrame.y = -3570;
 				}
@@ -206,7 +267,9 @@ class CreditsState extends MusicBeatState
 				curSelected = 0;
 				bgNonHover.y = 0;
 				freshHover.y = 326;
-				madmanHover.y = 3715;
+				letsPubHover.y = 439;
+				timRainHover.y = 1054;
+				madmanHover.y = 3718;
 				creditsFrame.y = 0;
 				}
 		} while(unselectableCheck(curSelected));
@@ -238,6 +301,7 @@ class CreditsState extends MusicBeatState
 				}
 			}
 		}
+
 		descText.text = creditsStuff[curSelected][2];
 	}
 

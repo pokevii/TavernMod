@@ -117,6 +117,7 @@ class PlayState extends MusicBeatState
 	public static var isPixelStage:Bool = false;
 	public static var SONG:SwagSong = null;
 	public static var isStoryMode:Bool = false;
+	public static var isFreeplay:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
@@ -268,6 +269,7 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
+		FlxG.mouse.visible = false;
 		#if MODS_ALLOWED
 		Paths.destroyLoadedImages(resetSpriteCache);
 		#end
