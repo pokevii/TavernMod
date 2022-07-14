@@ -34,7 +34,7 @@ class SafeState extends MusicBeatState {
 	var madManComb:String;
 	var letsPubComb:String;
 	var tRComb:String;
-	var selectedSong:String;
+	var selectedSong:String = "";
 
 	var doorTimer:Int; //lets the door animation play before switching to the song
 	var correctComb:Bool = false; //prevents shadow from showing
@@ -42,6 +42,9 @@ class SafeState extends MusicBeatState {
 	var safeDoorClosed:FlxSprite;
 	var safeDoorOpen:BGSprite;
 	var keyPad:FlxSprite;
+
+	var mmEntered:Bool;
+	var test:FlxSprite;
 
 	var sh0:FlxSprite;
 	var sh1:FlxSprite;
@@ -84,6 +87,8 @@ class SafeState extends MusicBeatState {
 		safeDoorClosed = new FlxSprite(-10, 5).loadGraphic(Paths.image('safe/safeDoorClosed'));
 		safeDoorClosed.alpha = 1;
 		add(safeDoorClosed);
+
+		test = new FlxSprite(0, 0).loadGraphic(Paths.image('notes/download'));
 
 		//theres probably a better way to code this but im 2 lazy and sleepy LOL
 		sh1 = new FlxSprite(691, 254).loadGraphic(Paths.image('safe/buttonShadow'));
@@ -281,10 +286,11 @@ class SafeState extends MusicBeatState {
 					safeDoorOpen.alpha = 1;
 					safeDoorClosed.alpha = 0;
 					safeDoorOpen.y = 5;
-					safeText.text = "";
 					doorTimer = 90;
 					correctComb = true;
-					selectedSong = "blammed";
+					selectedSong = 'blammed';
+					mmEntered = true;
+					safeText.text = "";
 				} else {
 					safeText.text = "";
 					correctComb = false;
@@ -295,27 +301,27 @@ class SafeState extends MusicBeatState {
 
 		if (doorTimer <= 0)
 		{
-			selectUnlock();
+		}
+
+		if (selectedSong == 'blammed') {
+			selectUnlock('blammed');
 		}
 		super.update(elapsed);
 	}
 
-	} public function selectUnlock() {
-		var hard:Int = 1;
+	} public function selectUnlock(name:String) {
+		var hard:Int = 2;
 
-		if (selectedSong == "blammed") {
-			hard = 3;
-		}
-
-		var songNameAndDif:String = Highscore.formatSong("blammed", hard);
+		var songNameAndDif:String = Highscore.formatSong(selectedSong, hard);
 
 		PlayState.isStoryMode = false;
+		PlayState.isFreeplay = false;
 		PlayState.storyDifficulty = hard;
-		PlayState.SONG = Song.loadFromJson(songNameAndDif, "blammed"); //either a direct string or a weird fuckign variable will idk
+		PlayState.SONG = Song.loadFromJson(songNameAndDif, name); //either a direct string or a weird fuckign variable will idk
 
 		LoadingState.loadAndSwitchState(new PlayState(), true);
 		FreeplayState.destroyFreeplayVocals();
 	}
 }
 
-//[file_contents,assets/data//.json]
+//[file_contents,assets/data//blammed.json]
