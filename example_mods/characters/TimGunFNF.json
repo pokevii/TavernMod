@@ -81,7 +81,7 @@
 	"no_antialiasing": false,
 	"image": "characters/TimGunFNF",
 	"position": [
-		0,
+		40,
 		350
 	],
 	"healthicon": "tim_gun",
@@ -92,7 +92,7 @@
 		60
 	],
 	"camera_position": [
-		0,
+		-20,
 		0
 	],
 	"sing_duration": 6.1,

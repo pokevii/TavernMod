@@ -288,7 +288,7 @@ class SafeState extends MusicBeatState {
 					safeDoorOpen.y = 5;
 					doorTimer = 90;
 					correctComb = true;
-					selectedSong = 'blammed';
+					selectedSong = 'undead';
 					mmEntered = true;
 					safeText.text = "";
 				} else {
@@ -303,14 +303,14 @@ class SafeState extends MusicBeatState {
 		{
 		}
 
-		if (selectedSong == 'blammed') {
-			selectUnlock('blammed');
+		if (selectedSong == 'undead') {
+			selectUnlock('undead');
 		}
 		super.update(elapsed);
 	}
 
 	} public function selectUnlock(name:String) {
-		var hard:Int = 2;
+		var hard:Int = 1;
 
 		var songNameAndDif:String = Highscore.formatSong(selectedSong, hard);
 

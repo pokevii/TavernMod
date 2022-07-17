@@ -1,62 +1,62 @@
 {
 	"animations": [
 		{
-			"loop": false,
-			"offsets": [
-				-55,
-				-155
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "RainIdle",
-			"indices": []
-		},
-		{
-			"loop": false,
 			"offsets": [
 				-50,
 				-160
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "RainLeftNote",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "RainLeftNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-62,
 				-99
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "RainRightNote",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "RainRightNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-55,
 				-185
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "RainDownNote",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "RainDownNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-55,
 				-130
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "RainUpNote",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "RainUpNote"
+		},
+		{
+			"offsets": [
+				-55,
+				-155
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "RainIdle"
 		}
 	],
-	"no_antialiasing": false,
+	"no_antialiasing": true,
 	"image": "characters/RainFnF2P2",
 	"position": [
 		-150,

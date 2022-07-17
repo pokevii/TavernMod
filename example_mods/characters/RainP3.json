@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				-55,
-				-155
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "RainIdle"
-		},
-		{
 			"offsets": [
 				-50,
 				-160
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "RainLeftNote"
+			"fps": 24,
+			"name": "RainLeftNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-61,
 				-163
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RainRightNote"
+			"fps": 24,
+			"name": "RainRightNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-55,
 				-180
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "RainDownNote"
+			"fps": 24,
+			"name": "RainDownNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-47,
 				-135
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
+			"fps": 24,
+			"name": "RainUpNote",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-55,
+				-155
+			],
 			"indices": [],
-			"name": "RainUpNote"
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "RainIdle"
 		}
 	],
 	"no_antialiasing": false,

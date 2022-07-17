@@ -3,68 +3,80 @@
 		{
 			"loop": false,
 			"offsets": [
-				-196,
-				-455
+				0,
+				-54
 			],
 			"anim": "singLEFT",
 			"fps": 24,
-			"name": "SpeakerLeft",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-196,
-				-396
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "SpeakerDown",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-195,
-				-430
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "SpeakerUp",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-195,
-				-443
-			],
-			"anim": "cheer",
-			"fps": 24,
-			"name": "SpeakerYay",
+			"name": "GF Left Note",
 			"indices": []
 		},
 		{
 			"offsets": [
-				-195,
-				-435
+				0,
+				-75
 			],
 			"loop": false,
 			"fps": 24,
-			"anim": "miss",
+			"anim": "singRIGHT",
 			"indices": [],
-			"name": "SpeakerMiss"
+			"name": "GF Right Note"
+		},
+		{
+			"offsets": [
+				0,
+				-55
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "GF Up Note"
+		},
+		{
+			"offsets": [
+				0,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "GF Down Note"
+		},
+		{
+			"offsets": [
+				0,
+				-55
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "sad",
+			"indices": [],
+			"name": "gf sad"
+		},
+		{
+			"offsets": [
+				0,
+				-59
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "cheer",
+			"indices": [],
+			"name": "GF Cheer"
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-196,
-				-335
+				0,
+				0
 			],
 			"anim": "danceLeft",
 			"fps": 24,
-			"name": "SpeakerIdle0",
+			"name": "GF Dancing Beat",
 			"indices": [
+				30,
 				0,
 				1,
 				2,
@@ -78,32 +90,21 @@
 				10,
 				11,
 				12,
-				13,
-				14,
-				15
+				13
 			]
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-195,
-				-463
-			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "SpeakerRight",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-196,
-				-335
+				0,
+				0
 			],
 			"anim": "danceRight",
 			"fps": 24,
-			"name": "SpeakerIdle0",
+			"name": "GF Dancing Beat",
 			"indices": [
+				14,
+				15,
 				16,
 				17,
 				18,
@@ -117,28 +118,15 @@
 				26,
 				27,
 				28,
-				29,
-				30,
-				31
+				29
 			]
-		},
-		{
-			"offsets": [
-				-196,
-				-335
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "idle",
-			"loop": true,
-			"name": "SpeakerIdle"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/gf-speaker",
+	"image": "characters/gf-speakerV2",
 	"position": [
-		0,
-		0
+		195,
+		320
 	],
 	"healthicon": "speaker",
 	"flip_x": false,
@@ -148,8 +136,8 @@
 		25
 	],
 	"camera_position": [
-		150,
-		350
+		-164,
+		170
 	],
 	"sing_duration": 4,
 	"scale": 1.1

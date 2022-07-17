@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
-			"loop": false,
-			"offsets": [
-				0,
-				120
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "CharlesIdle",
-			"indices": []
-		},
-		{
-			"loop": false,
 			"offsets": [
 				191,
 				109
 			],
-			"anim": "singLeft",
+			"loop": false,
 			"fps": 24,
-			"name": "CharlesLeftNote",
-			"indices": []
+			"anim": "singLeft",
+			"indices": [],
+			"name": "CharlesLeftNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-44,
 				106
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "CharlesRightNote",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "CharlesRightNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				167,
 				107
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "CharlesLeftNote",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "CharlesLeftNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-109,
 				13
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "CharlesDownNote",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "CharlesDownNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				43,
 				384
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "CharlesUpNote",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "CharlesUpNote"
+		},
+		{
+			"offsets": [
+				0,
+				120
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "CharlesIdle"
 		}
 	],
 	"no_antialiasing": false,
