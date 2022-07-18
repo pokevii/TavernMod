@@ -109,6 +109,8 @@ class CreditsState extends MusicBeatState
 		add(timRainHover);
 		add(creditsFrame);
 
+		AlphaCharacter.swapSprite('whiteAlphabet');
+
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 

@@ -1357,6 +1357,10 @@ class PlayState extends MusicBeatState
 					startVideo('week1-intro');
 				case 'home':
 					startVideo('week2-intro');
+				case 'haze':
+					startVideo('week5-intro');
+				case 'water':
+					startVideo('week6-intro');
 
 				default:
 					startCountdown();
