@@ -20,9 +20,7 @@ using StringTools;
 class CreditsState extends MusicBeatState
 {
 	var curSelected:Int = 1;
-
-	var underswap:Alphabet = new Alphabet(0, 0, '', false, false, 1, 1, 'whiteAlphabet');
-
+	
 	private var isCredits:Bool = true; 
 	private var isNote:Bool = false;
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -117,7 +115,7 @@ class CreditsState extends MusicBeatState
 		for (i in 0...creditsStuff.length)
 		{
 			var isSelectable:Bool = !unselectableCheck(i);
-			var optionText:Alphabet = new Alphabet(0, 70 * i, creditsStuff[i][0], !isSelectable, false);
+			var optionText:Alphabet = new Alphabet(0, 70 * i, creditsStuff[i][0], !isSelectable, false, 'whiteAlphabet');
 			optionText.isMenuItem = true;
 			optionText.screenCenter(X);
 			if(isSelectable) {
