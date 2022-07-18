@@ -47,6 +47,9 @@ class SafeState extends MusicBeatState
 	var mmEntered:Bool;
 	var test:FlxSprite;
 
+	var poundEnter:FlxSprite;
+	var starCancel:FlxSprite;
+
 	var sh0:FlxSprite;
 	var sh1:FlxSprite;
 	var sh2:FlxSprite;
@@ -87,6 +90,13 @@ class SafeState extends MusicBeatState
 		add(safeDoorClosed);
 
 		test = new FlxSprite(0, 0).loadGraphic(Paths.image('notes/download'));
+
+		starCancel = new FlxSprite(691, 473).loadGraphic(Paths.image('safe/starCancel'));
+		poundEnter = new FlxSprite(837, 474).loadGraphic(Paths.image('safe/poundEnter'));
+		starCancel.alpha = 0;
+		poundEnter.alpha = 0;
+		add(starCancel);
+		add(poundEnter);
 
 		// theres probably a better way to code this but im 2 lazy and sleepy LOL
 		sh1 = new FlxSprite(691, 254).loadGraphic(Paths.image('safe/buttonShadow'));
@@ -144,6 +154,11 @@ class SafeState extends MusicBeatState
 		safeDoorOpen.y += 1;
 		doorTimer--;
 
+		if (safeText.text != "") {
+			starCancel.alpha = 1;
+			poundEnter.alpha = 1;
+		}
+
 		if (controls.BACK)
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
@@ -156,6 +171,7 @@ class SafeState extends MusicBeatState
 			if (FlxG.mouse.pressed)
 			{
 				// press sound here
+				sh1.alpha = 0;
 			}
 			else if (FlxG.mouse.justReleased)
 			{
@@ -369,11 +385,7 @@ class SafeState extends MusicBeatState
 						correctComb = false;
 				}
 			}
-			else
-			{
-				shPound.alpha = 0;
-			}
-
+			
 			if (safeDoorOpen.animation.finished)
 			{
 				selectUnlock(selectedSong);
@@ -386,6 +398,10 @@ class SafeState extends MusicBeatState
 
 			trace(safeDoorOpen.animation.finished);
 			super.update(elapsed);
+		}
+		else
+		{
+			shPound.alpha = 0;
 		}
 	}
 
