@@ -3,41 +3,42 @@ package;
 #if desktop
 import Discord.DiscordClient;
 #end
+import Achievements;
+import editors.MasterEditorMenu;
+import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.FlxCamera;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.text.FlxText;
 import flixel.math.FlxMath;
+import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxTimer;
 import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
 import lime.app.Application;
-import Achievements;
-import editors.MasterEditorMenu;
 
 using StringTools;
 
-class SafeState extends MusicBeatState {
+class SafeState extends MusicBeatState
+{
 	var bg:FlxSprite;
 	var fresh:FlxSprite;
 	var madMan:FlxSprite;
 	var dota2:FlxSprite;
 	var timRain:FlxSprite;
 
-	var freshComb:String;
-	var madManComb:String;
-	var letsPubComb:String;
-	var tRComb:String;
+	var freshComb:String = "6185198";
+	var madManComb:String = "2242015";
+	var letsPubComb:String = "792013";
+	var tRComb:String = "26";
 	var selectedSong:String = "";
 
-	var doorTimer:Int; //lets the door animation play before switching to the song
-	var correctComb:Bool = false; //prevents shadow from showing
+	var doorTimer:Int; // lets the door animation play before switching to the song
+	var correctComb:Bool = false; // prevents shadow from showing
 
 	var safeDoorClosed:FlxSprite;
 	var safeDoorOpen:BGSprite;
@@ -61,18 +62,15 @@ class SafeState extends MusicBeatState {
 
 	var safeText:FlxText;
 
-	override function create()	{
-		freshComb = "6185198";
-		letsPubComb = "792013";
-		madManComb = "2242015";
-		tRComb = "26";
+	override function create()
+	{
 		doorTimer = -1;
 		FlxG.mouse.visible = true;
 
 		bg = new FlxSprite().loadGraphic(Paths.image('safe/safe'));
 		add(bg);
 
-		dota2 =  new FlxSprite().loadGraphic(Paths.image('safe/safeletsPub'));
+		dota2 = new FlxSprite().loadGraphic(Paths.image('safe/safeletsPub'));
 		dota2.alpha = 0.5;
 		add(dota2);
 
@@ -90,7 +88,7 @@ class SafeState extends MusicBeatState {
 
 		test = new FlxSprite(0, 0).loadGraphic(Paths.image('notes/download'));
 
-		//theres probably a better way to code this but im 2 lazy and sleepy LOL
+		// theres probably a better way to code this but im 2 lazy and sleepy LOL
 		sh1 = new FlxSprite(691, 254).loadGraphic(Paths.image('safe/buttonShadow'));
 		sh2 = new FlxSprite(765, 254).loadGraphic(Paths.image('safe/buttonShadow'));
 		sh3 = new FlxSprite(837, 254).loadGraphic(Paths.image('safe/buttonShadow'));
@@ -131,18 +129,18 @@ class SafeState extends MusicBeatState {
 		add(shStar);
 		add(shPound);
 
-		safeDoorOpen = new BGSprite('safe/safeDoor', 160, 5, 1, 1, ['doorOpen'], false);
+		safeDoorOpen = new BGSprite('safe/safeDoor', 160, 5, 1, 1, ['doorOpen0'], false);
 
 		safeText = new FlxText(700, 100, 0, "", 32);
 		safeText.setFormat(Paths.font("lcd.ttf"), 80, FlxColor.LIME, LEFT);
 		add(safeText);
 
 		super.create();
-    }
+	}
 
 	override function update(elapsed:Float)
 	{
-		safeDoorOpen.alpha -= 0.01;
+		// safeDoorOpen.alpha -= 0.01;
 		safeDoorOpen.y += 1;
 		doorTimer--;
 
@@ -152,164 +150,247 @@ class SafeState extends MusicBeatState {
 			MusicBeatState.switchState(new MainMenuState());
 		}
 
-		if (FlxG.mouse.overlaps(sh1) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh1) && correctComb == false)
+		{
 			sh1.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "1";
 			}
-		} else {
+		}
+		else
+		{
 			sh1.alpha = 0;
 		}
-		if (FlxG.mouse.overlaps(sh2) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh2) && correctComb == false)
+		{
 			sh2.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "2";
 			}
-		} else {
+		}
+		else
+		{
 			sh2.alpha = 0;
 		}
-		if (FlxG.mouse.overlaps(sh3) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh3) && correctComb == false)
+		{
 			sh3.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "3";
 			}
-		} else {
+		}
+		else
+		{
 			sh3.alpha = 0;
 		}
-		if (FlxG.mouse.overlaps(sh4) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh4) && correctComb == false)
+		{
 			sh4.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "4";
 			}
-		} else {
+		}
+		else
+		{
 			sh4.alpha = 0;
 		}
-		if (FlxG.mouse.overlaps(sh5) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh5) && correctComb == false)
+		{
 			sh5.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "5";
 			}
-		} else {
+		}
+		else
+		{
 			sh5.alpha = 0;
 		}
-		if (FlxG.mouse.overlaps(sh6) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh6) && correctComb == false)
+		{
 			sh6.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "6";
 			}
-		} else {
+		}
+		else
+		{
 			sh6.alpha = 0;
 		}
-		if (FlxG.mouse.overlaps(sh7) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh7) && correctComb == false)
+		{
 			sh7.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "7";
 			}
-		} else {
+		}
+		else
+		{
 			sh7.alpha = 0;
 		}
-		if (FlxG.mouse.overlaps(sh8) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh8) && correctComb == false)
+		{
 			sh8.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "8";
 			}
-		} else {
+		}
+		else
+		{
 			sh8.alpha = 0;
 		}
-		if (FlxG.mouse.overlaps(sh9) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh9) && correctComb == false)
+		{
 			sh9.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "9";
 			}
-		} else {
+		}
+		else
+		{
 			sh9.alpha = 0;
 		}
-		if (FlxG.mouse.overlaps(sh0) && correctComb == false) {
+		if (FlxG.mouse.overlaps(sh0) && correctComb == false)
+		{
 			sh0.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text += "0";
 			}
-		} else {
+		}
+		else
+		{
 			sh0.alpha = 0;
 		}
 
-		if (FlxG.mouse.overlaps(shStar) && correctComb == false) {
+		if (FlxG.mouse.overlaps(shStar) && correctComb == false)
+		{
 			shStar.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				// release sound here
 				safeText.text = "";
 			}
-		} else {
+		}
+		else
+		{
 			shStar.alpha = 0;
 		}
 
-		if (FlxG.mouse.overlaps(shPound) && correctComb == false) {
-			shPound.alpha = 0.5;
-			if (FlxG.mouse.pressed) {
-				//press sound here
-			} else if (FlxG.mouse.justReleased) {
-				//release sound here
-				if (safeText.text == tRComb) {
-					add(safeDoorOpen);
-					safeDoorOpen.alpha = 1;
-					safeDoorClosed.alpha = 0;
-					safeDoorOpen.y = 5;
-					doorTimer = 90;
-					correctComb = true;
-					selectedSong = 'undead';
-					mmEntered = true;
-					safeText.text = "";
-				} else {
-					safeText.text = "";
-					correctComb = false;
-				}
-		} else {
-			shPound.alpha = 0;
-		}
-
-		if (doorTimer <= 0)
+		if (FlxG.mouse.overlaps(shPound) && correctComb == false)
 		{
-		}
+			shPound.alpha = 0.5;
+			if (FlxG.mouse.pressed)
+			{
+				// press sound here
+			}
+			else if (FlxG.mouse.justReleased)
+			{
+				trace(safeText.text); // release sound here
+				switch (safeText.text)
+				{
+					// Undead song unlock
+					case '26':
+						openSafe('chrome');
+						trace('opening safe');
+					// Fresh song unlock
+					case '6185198':
+						openSafe('chrome');
+					// Lets Pub song unlock
+					case '792013':
+						openSafe('chrome');
+					// Madman song unlock
+					case '2242015':
+						openSafe('chrome');
+					default:
+						safeText.text = "";
+						correctComb = false;
+				}
+			}
+			else
+			{
+				shPound.alpha = 0;
+			}
 
-		if (selectedSong == 'undead') {
-			selectUnlock('undead');
+			if (safeDoorOpen.animation.finished)
+			{
+				selectUnlock(selectedSong);
+			}
+
+			if (selectedSong == 'undead')
+			{
+				('undead');
+			}
+
+			trace(safeDoorOpen.animation.finished);
+			super.update(elapsed);
 		}
-		super.update(elapsed);
 	}
 
-	} public function selectUnlock(name:String) {
+	public function selectUnlock(name:String)
+	{
 		var hard:Int = 1;
 
 		var songNameAndDif:String = Highscore.formatSong(selectedSong, hard);
@@ -317,11 +398,25 @@ class SafeState extends MusicBeatState {
 		PlayState.isStoryMode = false;
 		PlayState.isFreeplay = false;
 		PlayState.storyDifficulty = hard;
-		PlayState.SONG = Song.loadFromJson(songNameAndDif, name); //either a direct string or a weird fuckign variable will idk
+		PlayState.SONG = Song.loadFromJson(songNameAndDif, name); // either a direct string or a weird fuckign variable will idk
 
 		LoadingState.loadAndSwitchState(new PlayState(), true);
 		FreeplayState.destroyFreeplayVocals();
+		trace("selectUnlock done");
+	}
+
+	private function openSafe(song:String)
+	{
+		add(safeDoorOpen);
+		safeDoorOpen.animation.play("doorOpen0", true);
+		safeDoorOpen.alpha = 1;
+		safeDoorClosed.alpha = 0;
+		safeDoorOpen.y = 5;
+		correctComb = true;
+		selectedSong = song;
+		mmEntered = true;
+		safeText.text = "";
+		trace("safe opened");
 	}
 }
-
-//[file_contents,assets/data//blammed.json]
+// [file_contents,assets/data//blammed.json]
