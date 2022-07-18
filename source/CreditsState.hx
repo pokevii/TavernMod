@@ -21,6 +21,8 @@ class CreditsState extends MusicBeatState
 {
 	var curSelected:Int = 1;
 
+	var underswap:Alphabet = new Alphabet(0, 0, '', false, false, 1, 1, 'whiteAlphabet');
+
 	private var isCredits:Bool = true; 
 	private var isNote:Bool = false;
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -76,7 +78,7 @@ class CreditsState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
-		
+
 		bg = new FlxSprite().loadGraphic(Paths.image('creditsBg'));
 
 		creditsFrame = new FlxSprite().loadGraphic(Paths.image('creditsFrame'));
@@ -108,8 +110,6 @@ class CreditsState extends MusicBeatState
 		add(madmanHover);
 		add(timRainHover);
 		add(creditsFrame);
-
-		AlphaCharacter.swapSprite('whiteAlphabet');
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);

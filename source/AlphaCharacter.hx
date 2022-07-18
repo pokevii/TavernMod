@@ -24,10 +24,10 @@ class AlphaCharacter extends FlxSprite
 
 	private var textSize:Float = 1;
 
-	public function new(x:Float, y:Float, textSize:Float)
+	public function new(x:Float, y:Float, textSize:Float, test:String)
 	{
 		super(x, y);
-		var tex = Paths.getSparrowAtlas(curAlphabet);
+		var tex = Paths.getSparrowAtlas(test);
 		frames = tex;
 
 		setGraphicSize(Std.int(width * textSize));
@@ -35,11 +35,7 @@ class AlphaCharacter extends FlxSprite
 		this.textSize = textSize;
 		antialiasing = ClientPrefs.globalAntialiasing;
 	}
-
-	public function swapSprite(sprite:String) {
-		curAlphabet = sprite;
-	}
-
+	
 	public function createBoldLetter(letter:String)
 	{
 		animation.addByPrefix(letter, letter.toUpperCase() + " bold", 24);
