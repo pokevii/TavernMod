@@ -91,7 +91,7 @@ class SafeState extends MusicBeatState
 
 		test = new FlxSprite(0, 0).loadGraphic(Paths.image('notes/download'));
 
-		starCancel = new FlxSprite(691, 473).loadGraphic(Paths.image('safe/starCancel'));
+		starCancel = new FlxSprite(691, 474).loadGraphic(Paths.image('safe/starCancel'));
 		poundEnter = new FlxSprite(837, 474).loadGraphic(Paths.image('safe/poundEnter'));
 		starCancel.alpha = 0;
 		poundEnter.alpha = 0;
@@ -157,6 +157,9 @@ class SafeState extends MusicBeatState
 		if (safeText.text != "") {
 			starCancel.alpha = 1;
 			poundEnter.alpha = 1;
+		} else if (safeText.text == "") {
+			starCancel.alpha = 0;
+			poundEnter.alpha = 0;
 		}
 
 		if (controls.BACK)
