@@ -2,16 +2,16 @@
 <TextureAtlas imagePath="menu_safe.png">
 	<!-- Created with Adobe Animate version 22.0.7.214 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="safe basic0000" x="50" y="50" width="344" height="93"/>
-	<SubTexture name="safe basic0001" x="50" y="50" width="344" height="93"/>
-	<SubTexture name="safe basic0002" x="50" y="50" width="344" height="93"/>
-	<SubTexture name="safe basic0003" x="50" y="50" width="344" height="93"/>
-	<SubTexture name="safe basic0004" x="50" y="50" width="344" height="93"/>
-	<SubTexture name="safe basic0005" x="50" y="50" width="344" height="93"/>
-	<SubTexture name="safe basic0006" x="50" y="50" width="344" height="93"/>
-	<SubTexture name="safe basic0007" x="50" y="50" width="344" height="93"/>
-	<SubTexture name="safe basic0008" x="50" y="50" width="344" height="93"/>
-	<SubTexture name="safe white0000" x="444" y="50" width="465" height="149"/>
-	<SubTexture name="safe white0001" x="444" y="50" width="465" height="149"/>
-	<SubTexture name="safe white0002" x="444" y="50" width="465" height="149"/>
+	<SubTexture name="safe basic0000" x="48" y="50" width="344" height="93"/>
+	<SubTexture name="safe basic0001" x="48" y="50" width="344" height="93"/>
+	<SubTexture name="safe basic0002" x="48" y="50" width="344" height="93"/>
+	<SubTexture name="safe basic0003" x="48" y="50" width="344" height="93"/>
+	<SubTexture name="safe basic0004" x="48" y="50" width="344" height="93"/>
+	<SubTexture name="safe basic0005" x="48" y="50" width="344" height="93"/>
+	<SubTexture name="safe basic0006" x="48" y="50" width="344" height="93"/>
+	<SubTexture name="safe basic0007" x="48" y="50" width="344" height="93"/>
+	<SubTexture name="safe basic0008" x="48" y="50" width="344" height="93"/>
+	<SubTexture name="safe white0000" x="440" y="60" width="465" height="149"/>
+	<SubTexture name="safe white0001" x="440" y="60" width="465" height="149"/>
+	<SubTexture name="safe white0002" x="440" y="60" width="465" height="149"/>
 </TextureAtlas>

@@ -11,27 +11,27 @@ using StringTools;
 
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Hidden achievement
-		["Drinkin' on a Friday Night",	"Drink the beer on the main menu... on a Friday.",		 true],		//0
-		["Dungeon Raided",				"Beat Week 1 on any difficulty. Thanks andrew",			false],		//1
+		["Freaky on a Friday Night",	"Play on a Friday... Night",		 					true],		//0
+		["Tavern Initiate",				"Beat Week 1 on any difficulty.",						false],		//1
 		["The Bigger They Are...",		"Beat Week 1 on Hard with no Misses.",					false],		//2
 		["Tim's Got the Shotgun", 		"Beat Week 2 on any difficulty.",						false],		//3
 		["Thumbs Down",					"Beat Week 2 on Hard with no Misses.",					false],		//4
 		["We Made Heaven",				"Beat Week 3 on any difficulty.",						false],		//5	
 		["Too Much of Heaven",			"Beat Week 3 on Hard with no Misses.",					false],		//6
-		["[week 4 comp]",				"Beat Week 4 on any difficulty.",						false],		//7	
+		["Two Pointer",					"Beat Week 4 on any difficulty.",						false],		//7	
 		["Quad City King",				"Beat Week 4 on Hard with no Misses.",					false],		//8
-		["[week 5 comp]",				"Beat Week 5 on any difficulty.",						false],		//9	
+		["GREEN LIGHT",					"Beat Week 5 on any difficulty.",						false],		//9	
 		["Dizasta",						"Beat Week 5 on Hard with no Misses.",					false],		//10
-		["[week 6 comp]",				"Beat Week 6 on any difficulty.",						false],		//11	
+		["Getting Your Feet Wet",		"Beat Week 6 on any difficulty.",						false],		//11	
 		["Bless the Rain",				"Beat Week 6 on Hard with no Misses.",					false],		//12
 		["[week 7 clear]",				"Beat Week 7 on any difficulty.",						false],		//13	
 		["[week 7 nomiss]",				"Beat Week 7 on Hard with no Misses.",					false],		//14
-		["[week 8 clear]",				"Beat Week 8 on any difficulty.",						false],		//15	
+		["Boned",						"Beat Week 8 on any difficulty.",						false],		//15	
 		["Rattled",						"Beat Week 8 on Hard with no Misses.",					false],		//16
-		["[week 9 clear]",				"Beat Week 9 on any difficulty.",						false],		//17	
-		["[week 9 nomiss]",				"Beat Week 9 on Hard with no Misses.",					false],		//18
-		["Fresh out of the bag",		"Beat Week 10 on any difficulty.",						false],		//19	
-		["[week 10 nomiss]",			"Beat Week 10 on Hard with no Misses.",					false],		//20
+		["Dungeon... Raided",			"Beat Week 9 on any difficulty.",						false],		//17	
+		["Dethroned",					"Beat Week 9 on Hard with no Misses.",					false],		//18
+		["Fresh Out The Bag",			"Beat Week 10 on any difficulty.",						false],		//19	
+		["Usurped",						"Beat Week 10 on Hard with no Misses.",					false],		//20
 		["[week 11 clear]",				"Beat Week 11 on any difficulty.",						false],		//21	
 		["Case Closed",					"Beat Week 11 on Hard with no Misses.",					false],		//22
 		["[week 12 clear]",				"Beat Week 12 on any difficulty.",						false],		//23	
@@ -43,9 +43,11 @@ class Achievements {
 		["Hyperactive",					"Finish a Song without going Idle.",					false],		//29
 		["Just the Two of Us",			"Finish a Song pressing only two keys.",				false],		//30
 		["Toaster Gamer",				"Have you tried to run the game on a toaster?",			false],		//31
-		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",		 true],		//32
-		["A bit sussy!",				"See a suspicious looking board in the tutorial stage.", true],		//33
-		["Achieve Enlightenment",		"...",													 true]		//34
+		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",		true],		//32
+		["A bit sussy!",				"See a suspicious looking board in the tutorial stage.",true],		//33
+		["Oh Yeah.",					"See Heaven's hidden face.",							true],		//34
+		["It's Time To Slam!",			"See Charles's true face.",								true],		//35
+		["Achieve Enlightenment",		"...",													true]		//36
 	];
 
 	public static var achievementsUnlocked:Array<Dynamic> = [ //Save string and Achievement tag + is it unlocked?
@@ -83,7 +85,9 @@ class Achievements {
 		['toastie', false],				//31
 		['debugger', false], 			//32
 		['amogus', false],				//33
-		['freebie', false]				//34
+		['heavenFace', false],			//34
+		['charlesFace', false],			//35
+		['freebie', false]				//36
 	];
 
 	public static var henchmenDeath:Int = 0;

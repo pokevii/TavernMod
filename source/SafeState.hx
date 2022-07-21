@@ -170,7 +170,7 @@ class SafeState extends MusicBeatState
 		safeText = new FlxText(695, 150, 250, "", 32);
 		safeText.setFormat(Paths.font("lcd.ttf"), 80, FlxColor.LIME, LEFT);
 		safeText.autoSize = true;
-		//safeText.wordWrap = true;
+		safeText.wordWrap = false;
 		add(safeText);
 
 		super.create();

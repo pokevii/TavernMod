@@ -11,7 +11,7 @@
 	<SubTexture name="freeplay basic0006" x="50" y="50" width="430" height="91"/>
 	<SubTexture name="freeplay basic0007" x="50" y="50" width="430" height="91"/>
 	<SubTexture name="freeplay basic0008" x="50" y="50" width="430" height="91"/>
-	<SubTexture name="freeplay white0000" x="50" y="191" width="576" height="163"/>
-	<SubTexture name="freeplay white0001" x="50" y="191" width="576" height="163"/>
-	<SubTexture name="freeplay white0002" x="50" y="191" width="576" height="163"/>
+	<SubTexture name="freeplay white0000" x="50" y="200" width="576" height="163"/>
+	<SubTexture name="freeplay white0001" x="50" y="200" width="576" height="163"/>
+	<SubTexture name="freeplay white0002" x="50" y="200" width="576" height="163"/>
 </TextureAtlas>
