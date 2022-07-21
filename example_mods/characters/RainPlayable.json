@@ -1,69 +1,68 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				-3,
 				-1
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "RainIdle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "RainIdle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				1,
 				-1
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "RainLeftNoteMISS",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "RainLeftNoteMISS"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				1,
 				10
 			],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "RainRightNoteMISS",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "RainRightNoteMISS"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-2,
 				19
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "RainUpNoteMISS",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "RainUpNoteMISS"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-30
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "RainDownNoteMISS",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "RainDownNoteMISS"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				1,
 				10
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "RainLeftNote",
+			"anim": "singLEFT",
 			"indices": [
 				0,
 				1,
@@ -79,17 +78,17 @@
 				11,
 				12,
 				13
-			]
+			],
+			"name": "RainLeftNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				14
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "RainRightNote",
+			"anim": "singRIGHT",
 			"indices": [
 				0,
 				1,
@@ -105,17 +104,17 @@
 				11,
 				12,
 				13
-			]
+			],
+			"name": "RainRightNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-30
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "RainDownNote",
+			"anim": "singDOWN",
 			"indices": [
 				0,
 				1,
@@ -131,17 +130,17 @@
 				11,
 				12,
 				13
-			]
+			],
+			"name": "RainDownNote"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-2,
 				20
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "RainUpNote",
+			"anim": "singUP",
 			"indices": [
 				0,
 				1,
@@ -157,7 +156,8 @@
 				11,
 				12,
 				13
-			]
+			],
+			"name": "RainUpNote"
 		}
 	],
 	"no_antialiasing": false,
@@ -167,7 +167,7 @@
 		150
 	],
 	"healthicon": "icon-rain",
-	"flip_x": false,
+	"flip_x": true,
 	"healthbar_colors": [
 		115,
 		0,
