@@ -17,19 +17,33 @@ import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxSave;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.app.Application;
+
 
 using StringTools;
 
 class SafeState extends MusicBeatState
 {
+	public static var undeadUnlocked:Bool = false;
+	public static var freshUnlocked:Bool = false;
+	public static var madmanUnlocked:Bool = false;
+	public static var letspubUnlocked:Bool = false;
+
+	var testing:Bool = true;
+
 	var bg:FlxSprite;
 	var fresh:FlxSprite;
 	var madMan:FlxSprite;
 	var dota2:FlxSprite;
 	var timRain:FlxSprite;
+
+	var freshNote:FlxSprite;
+	var undeadNote:FlxSprite;
+	var letspubNote:FlxSprite;
+	var madManNote:FlxSprite;
 
 	var freshComb:String = "6185198";
 	var madManComb:String = "2242015";
@@ -89,6 +103,18 @@ class SafeState extends MusicBeatState
 		safeDoorClosed.alpha = 1;
 		add(safeDoorClosed);
 
+		undeadNote = new FlxSprite(30, 20).loadGraphic(Paths.image('safe/undeadNote'));
+		add(undeadNote);
+
+		freshNote = new FlxSprite(1075, 15).loadGraphic(Paths.image('safe/abaddreamNote'));
+		add(freshNote);
+
+		letspubNote = new FlxSprite(70, 540).loadGraphic(Paths.image('safe/letspubNote'));
+		add(letspubNote);
+		
+		madManNote = new FlxSprite(1050, 520).loadGraphic(Paths.image('safe/madManNote'));
+		add(madManNote);
+
 		test = new FlxSprite(0, 0).loadGraphic(Paths.image('notes/download'));
 
 		starCancel = new FlxSprite(691, 474).loadGraphic(Paths.image('safe/starCancel'));
@@ -141,8 +167,10 @@ class SafeState extends MusicBeatState
 
 		safeDoorOpen = new BGSprite('safe/safeDoor', 160, 5, 1, 1, ['doorOpen0'], false);
 
-		safeText = new FlxText(700, 100, 0, "", 32);
+		safeText = new FlxText(695, 150, 250, "", 32);
 		safeText.setFormat(Paths.font("lcd.ttf"), 80, FlxColor.LIME, LEFT);
+		safeText.autoSize = true;
+		//safeText.wordWrap = true;
 		add(safeText);
 
 		super.create();
@@ -150,9 +178,32 @@ class SafeState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		//trace(undeadUnlocked);
 		// safeDoorOpen.alpha -= 0.01;
+		safeText.size = 72;
 		safeDoorOpen.y += 1;
 		doorTimer--;
+
+		if (undeadUnlocked) {
+			undeadNote.alpha = 1;
+		} else {
+			undeadNote.alpha = 0;
+		}
+		if (freshUnlocked) {
+			freshNote.alpha = 1;
+		} else {
+			freshNote.alpha = 0;
+		}
+		if (madmanUnlocked) {
+			madManNote.alpha = 1;
+		} else {
+			madManNote.alpha = 0;
+		}
+		if (letspubUnlocked) {
+			letspubNote.alpha = 1;
+		} else {
+			letspubNote.alpha = 0;
+		}
 
 		if (safeText.text != "") {
 			starCancel.alpha = 1;
@@ -173,12 +224,11 @@ class SafeState extends MusicBeatState
 			sh1.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
 				sh1.alpha = 0;
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "1";
 			}
 		}
@@ -191,11 +241,11 @@ class SafeState extends MusicBeatState
 			sh2.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "2";
 			}
 		}
@@ -208,11 +258,11 @@ class SafeState extends MusicBeatState
 			sh3.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "3";
 			}
 		}
@@ -225,11 +275,11 @@ class SafeState extends MusicBeatState
 			sh4.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "4";
 			}
 		}
@@ -242,11 +292,11 @@ class SafeState extends MusicBeatState
 			sh5.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "5";
 			}
 		}
@@ -259,11 +309,11 @@ class SafeState extends MusicBeatState
 			sh6.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "6";
 			}
 		}
@@ -276,11 +326,11 @@ class SafeState extends MusicBeatState
 			sh7.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "7";
 			}
 		}
@@ -293,11 +343,11 @@ class SafeState extends MusicBeatState
 			sh8.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "8";
 			}
 		}
@@ -310,11 +360,11 @@ class SafeState extends MusicBeatState
 			sh9.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "9";
 			}
 		}
@@ -327,11 +377,11 @@ class SafeState extends MusicBeatState
 			sh0.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/selected'), 1);
 				safeText.text += "0";
 			}
 		}
@@ -345,11 +395,11 @@ class SafeState extends MusicBeatState
 			shStar.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				// release sound here
+				FlxG.sound.play(Paths.sound('safe/cancel'), 1);
 				safeText.text = "";
 			}
 		}
@@ -363,28 +413,50 @@ class SafeState extends MusicBeatState
 			shPound.alpha = 0.5;
 			if (FlxG.mouse.pressed)
 			{
-				// press sound here
+
 			}
 			else if (FlxG.mouse.justReleased)
 			{
-				trace(safeText.text); // release sound here
+				trace(safeText.text); FlxG.sound.play(Paths.sound('safe/selected'), 1);
+
 				switch (safeText.text)
 				{
 					// Undead song unlock
 					case '26':
-						openSafe('chrome');
+						selectUnlock('undead');
+						undeadUnlocked = testing;
+						FlxG.save.data.undeadUnlocked = undeadUnlocked;
+						FlxG.sound.play(Paths.sound('secretSound'), 0.7);
+						FlxG.sound.play(Paths.sound('safe/safeOpen'), 1);
+						FlxG.save.flush();
 						trace('opening safe');
 					// Fresh song unlock
 					case '6185198':
-						openSafe('chrome');
+						selectUnlock('a-bad-dream');
+						freshUnlocked = testing;
+						FlxG.sound.play(Paths.sound('secretSound'), 0.7);
+						FlxG.sound.play(Paths.sound('safe/safeOpen'), 1);
+						FlxG.save.data.freshUnlocked = freshUnlocked;
+						FlxG.save.flush();
 					// Lets Pub song unlock
 					case '792013':
-						openSafe('chrome');
+						selectUnlock('lets-pub');
+						letspubUnlocked = testing;
+						FlxG.save.data.letspubUnlocked = letspubUnlocked;
+						FlxG.sound.play(Paths.sound('secretSound'), 0.7);
+						FlxG.sound.play(Paths.sound('safe/safeOpen'), 1);
+						FlxG.save.flush();
 					// Madman song unlock
 					case '2242015':
-						openSafe('chrome');
+						selectUnlock('chrome');
+						madmanUnlocked = testing;
+						FlxG.sound.play(Paths.sound('secretSound'), 0.7);
+						FlxG.sound.play(Paths.sound('safe/safeOpen'), 1);
+						FlxG.save.data.madmanUnlocked = madmanUnlocked;
+						FlxG.save.flush();
 					default:
 						safeText.text = "";
+						FlxG.sound.play(Paths.sound('safe/wrongcomb'), 1);
 						correctComb = false;
 				}
 			}
@@ -392,11 +464,6 @@ class SafeState extends MusicBeatState
 			if (safeDoorOpen.animation.finished)
 			{
 				selectUnlock(selectedSong);
-			}
-
-			if (selectedSong == 'undead')
-			{
-				('undead');
 			}
 
 			trace(safeDoorOpen.animation.finished);
@@ -412,7 +479,7 @@ class SafeState extends MusicBeatState
 	{
 		var hard:Int = 1;
 
-		var songNameAndDif:String = Highscore.formatSong(selectedSong, hard);
+		var songNameAndDif:String = Highscore.formatSong(name, hard);
 
 		PlayState.isStoryMode = false;
 		PlayState.isFreeplay = false;
@@ -437,5 +504,22 @@ class SafeState extends MusicBeatState
 		safeText.text = "";
 		trace("safe opened");
 	}
+
+	//i think this works i just wanna wait until everything else is done before testing
+	//but this should load the notes on startup if you've already unlocked them
+	/*public function loadNotes():Void {
+		if (FlxG.save.data.freshUnlocked != null) {
+			freshUnlocked = FlxG.save.data.freshUnlocked;
+		}
+		if (FlxG.save.data.undeadUnlocked != null) {
+			undeadUnlocked = FlxG.save.data.undeadUnlocked;
+		}
+		if (FlxG.save.data.letspubUnlocked != null) {
+			letspubUnlocked = FlxG.save.data.undeadUnlocked;
+		}
+		if (FlxG.save.data.madmanUnlocked != null) {
+			madmanUnlocked = FlxG.save.data.madmanUnlocked;
+		}
+	}*/
 }
 // [file_contents,assets/data//blammed.json]

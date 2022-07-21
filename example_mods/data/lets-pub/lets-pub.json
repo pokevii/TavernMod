@@ -1,14 +1,13 @@
 {
 	"song": {
 		"sectionLengths": [],
-		"player1": "Blockhead",
-		"player2": "Jayce",
+		"player1": "BlockheadRimLight",
+		"player2": "JayceRimLight",
 		"notes": [
 			{
 				"sectionNotes": [],
 				"lengthInSteps": 16,
 				"typeOfSection": 0,
-				"bpm": 160,
 				"mustHitSection": true
 			},
 			{
@@ -484,12 +483,12 @@
 			}
 		],
 		"player3": "gf-speaker",
-		"song": "lets pub",
+		"song": "Lets Pub",
 		"stage": "tavern_night",
 		"validScore": true,
 		"sections": 0,
 		"needsVoices": true,
 		"speed": 1,
-		"bpm": 160
+		"bpm": 120
 	}
 }
