@@ -1,22 +1,48 @@
 {
-	"songs": [
-		["Senpai", "senpai-pixel", [255, 120, 191]],
-		["Roses", "senpai-pixel", [255, 120, 191]],
-		["Thorns", "spirit-pixel", [255, 120, 191]]
+	"storyName": "Rain",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"freeplayColor": [
+		146,
+		113,
+		253
 	],
-
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": false,
 	"weekCharacters": [
-		"senpai",
+		"dad",
 		"bf",
 		"gf"
 	],
-	"weekBackground": "school",
-
-	"storyName": "hating simulator ft. moawling",
-	"weekBefore": "week5",
-	"weekName": "Week 6",
-	"startUnlocked": true,
-
-	"hideStoryMode": false,
-	"hideFreeplay": false
+	"songs": [
+		[
+			"Water",
+			"icon-rain",
+			[
+				215,
+				0,
+				15
+			]
+		],
+		[
+			"Typhoon",
+			"icon-rainp2",
+			[
+				215,
+				0,
+				15
+			]
+		],
+		[
+			"Bookworm",
+			"icon-rainp3",
+			[
+				215,
+				0,
+				15
+			]
+		]
+	],
+	"weekName": "Rain's Week"
 }

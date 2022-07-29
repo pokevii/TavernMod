@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="TimFNFGunThrow.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="TimGunThrowAnimation0000" x="0" y="0" width="568" height="515" pivotX="20.2" pivotY="252.85" frameX="-20" frameY="-271" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0001" x="0" y="0" width="568" height="515" frameX="-20" frameY="-271" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0002" x="588" y="0" width="569" height="512" frameX="-23" frameY="-273" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0003" x="588" y="0" width="569" height="512" frameX="-23" frameY="-273" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0004" x="0" y="0" width="568" height="515" frameX="-20" frameY="-271" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0005" x="1177" y="0" width="569" height="535" frameX="-15" frameY="-254" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0006" x="1766" y="0" width="562" height="541" frameX="-12" frameY="-252" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0007" x="2348" y="0" width="563" height="541" frameX="-12" frameY="-252" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0008" x="2348" y="0" width="563" height="541" frameX="-12" frameY="-252" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0009" x="2931" y="0" width="555" height="545" frameX="-7" frameY="-249" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0010" x="3506" y="0" width="538" height="545" frameX="-7" frameY="-249" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0011" x="0" y="565" width="528" height="545" frameX="-7" frameY="-249" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0012" x="0" y="565" width="528" height="545" frameX="-7" frameY="-249" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0013" x="0" y="565" width="528" height="545" frameX="-7" frameY="-249" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0014" x="548" y="565" width="528" height="545" frameX="-7" frameY="-249" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0015" x="1096" y="565" width="528" height="545" frameX="-7" frameY="-249" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0016" x="1644" y="565" width="528" height="545" frameX="-7" frameY="-249" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0017" x="2192" y="565" width="537" height="545" frameX="-7" frameY="-249" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0018" x="2749" y="565" width="542" height="794" frameX="-18" frameY="0" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0019" x="3311" y="565" width="676" height="733" frameX="0" frameY="-62" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0020" x="0" y="1379" width="738" height="609" frameX="-26" frameY="-184" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0021" x="758" y="1379" width="668" height="519" frameX="-43" frameY="-274" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0022" x="1446" y="1379" width="716" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0023" x="2182" y="1379" width="716" height="506" frameX="-43" frameY="-290" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0024" x="2918" y="1379" width="719" height="502" frameX="-43" frameY="-293" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0025" x="2918" y="1379" width="719" height="502" frameX="-43" frameY="-293" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0026" x="0" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0027" x="0" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0028" x="0" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0029" x="0" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0030" x="0" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0031" x="0" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0032" x="0" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0033" x="0" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0034" x="732" y="2008" width="712" height="510" frameX="-43" frameY="-286" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0035" x="732" y="2008" width="712" height="510" frameX="-43" frameY="-286" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0036" x="1464" y="2008" width="712" height="510" frameX="-43" frameY="-286" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0037" x="1464" y="2008" width="712" height="510" frameX="-43" frameY="-286" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0038" x="2196" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+	<SubTexture name="TimGunThrowAnimation0039" x="2928" y="2008" width="712" height="509" frameX="-43" frameY="-287" frameWidth="764" frameHeight="796"/>
+</TextureAtlas>

@@ -1,0 +1,63 @@
+{
+	"position": [
+		130,
+		-20
+	],
+	"dialogue_pos": "left",
+	"scale": 1.25,
+	"image": "SnakeDialogue_Assets",
+	"animations": [
+		{
+			"idle_offsets": [
+				-1,
+				-11
+			],
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_name": "Snake Dialogue Normal0000",
+			"loop_name": "Snake Dialogue Normal"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "confused",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Snake Dialogue Confused",
+			"idle_name": "Snake Dialogue Confused0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "shush",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Snake Dialogue Shush",
+			"idle_name": "Snake Dialogue Shush0000"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "heaven",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Snake Dialogue Heaven",
+			"idle_name": "Snake Dialogue Heaven0000"
+		}
+	]
+}

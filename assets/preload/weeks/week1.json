@@ -1,22 +1,48 @@
 {
-	"songs": [
-		["Bopeebo", "dad", [146, 113, 253]],
-		["Fresh", "dad", [146, 113, 253]],
-		["Dad Battle", "dad", [146, 113, 253]]
+	"storyName": "Ordinary Green boy",
+	"hideFreeplay": false,
+	"weekBackground": "tavern_outside",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		76,
+		250,
+		76
 	],
-
+	"startUnlocked": true,
+	"songs": [
+		[
+			"Bread and Circuses",
+			"jayce",
+			[
+				76,
+				250,
+				76
+			]
+		],
+		[
+			"Chrome",
+			"jayce",
+			[
+				76,
+				250,
+				76
+			]
+		],
+		[
+			"Amalgamation",
+			"jayce",
+			[
+				76,
+				250,
+				76
+			]
+		]
+	],
+	"hideStoryMode": false,
 	"weekCharacters": [
-		"dad",
-		"bf",
+		"Jayce",
+		"Blockhead",
 		"gf"
 	],
-	"weekBackground": "stage",
-
-	"storyName": "Daddy Dearest",
-	"weekBefore": "tutorial",
-	"weekName": "Week 1",
-	"startUnlocked": true,
-
-	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekName": "Jayce's Week"
 }

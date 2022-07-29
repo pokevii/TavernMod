@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				36
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "TimLeftNote",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-28,
+				-24
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "TimDownNote"
+		},
+		{
+			"offsets": [
+				-15,
+				71
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "TimUpNote"
+		},
+		{
+			"offsets": [
+				-5,
+				-10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "TimRightNote"
+		},
+		{
+			"offsets": [
+				-17,
+				-10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "TimGunHoldingIdle"
+		},
+		{
+			"offsets": [
+				157,
+				273
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "gun_throw",
+			"indices": [],
+			"name": "TimGunThrowAnimation"
+		},
+		{
+			"offsets": [
+				24,
+				18
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "gun_fire",
+			"indices": [],
+			"name": "TimFiringHisGun"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/TimGunFNF",
+	"position": [
+		40,
+		350
+	],
+	"healthicon": "timgun",
+	"flip_x": false,
+	"healthbar_colors": [
+		60,
+		60,
+		60
+	],
+	"camera_position": [
+		-20,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

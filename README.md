@@ -5,9 +5,9 @@ This creates an executable in a new folder called "export", so your first time r
 
 ---
 
-Artists: Adz, DeadFromHeaven, LuigiGoesHard69
+Artists: Adz, DeadFromHeaven, Luggi
 
-Programmers: Pokevii
+Programmers: Pokevii, Luggi
 
-Music: LuigiGoesHard69, Jayce
+Music: Luggi, Jayce
 

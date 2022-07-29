@@ -1,0 +1,30 @@
+{
+	"storyName": "your new eek",
+	"hideFreeplay": true,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": false,
+	"songs": [
+		[
+			"undying rage",
+			"dad",
+			[
+				255,
+				20,
+				0
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"weekName": "madman song"
+}

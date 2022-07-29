@@ -448,7 +448,7 @@ class SafeState extends MusicBeatState
 						FlxG.save.flush();
 					// Madman song unlock
 					case '2242015':
-						selectUnlock('chrome');
+						selectUnlock('undying-rage');
 						madmanUnlocked = testing;
 						FlxG.sound.play(Paths.sound('secretSound'), 0.7);
 						FlxG.sound.play(Paths.sound('safe/safeOpen'), 1);
@@ -522,4 +522,3 @@ class SafeState extends MusicBeatState
 		}
 	}*/
 }
-// [file_contents,assets/data//blammed.json]

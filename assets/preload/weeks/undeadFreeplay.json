@@ -1,20 +1,14 @@
 {
 	"storyName": "Your New Week",
-	"hideFreeplay": false,
+	"hideFreeplay": true,
 	"weekBackground": "stage",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": true,
-	"weekCharacters": [
-		"dad",
-		"bf",
-		"gf"
-	],
 	"songs": [
 		[
 			"Undead",
@@ -25,6 +19,12 @@
 				253
 			]
 		]
+	],
+	"hideStoryMode": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
 	],
 	"weekName": "allegedly"
 }

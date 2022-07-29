@@ -785,18 +785,21 @@ class PlayState extends MusicBeatState
 					pRght.scale.set(xscale, yscale);
 					add(pRght);
 
-					var interior:BGSprite = new BGSprite('pyramid/HeavenBG_Interior', xpos, ypos, 0.97, 0.97);
+					var interior:BGSprite = new BGSprite('pyramid/HeavenBG_Interior', xpos, ypos, 1, 1);
 					interior.scale.set(xscale, yscale);
 					add(interior);
 
-					var torch:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorTorch', xpos + 1120, ypos + 760, 0.97, 0.97, ['Background Torch Animations0'],
+					var torch:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorTorch', xpos + 1120, ypos + 760, 1, 1, ['Background Torch Animations0'],
 						true);
 					torch.scale.set(xscale, yscale);
 					add(torch);
 
-					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 75, ypos + 60, 0.97, 0.97);
+					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 75, ypos + 60, 1, 1);
 					bench.scale.set(xscale, yscale);
 					add(bench);
+
+					var speaker:BGSprite = new BGSprite('pyramid/BlockSpeaker_Assets', xpos + 2350, ypos + 900, 1, 1, ['Block Speaker Anim0'], true);
+					add(speaker);
 				}
 
 			case 'stadium': // TAVERN Charles Stage
@@ -1361,6 +1364,11 @@ class PlayState extends MusicBeatState
 					startVideo('week5-intro');
 				case 'water':
 					startVideo('week6-intro');
+
+				case 'veiled':
+					startDialogue(dialogueJson);
+				case 'parched':
+					startDialogue(dialogueJson);
 
 				default:
 					startCountdown();

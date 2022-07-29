@@ -1,22 +1,48 @@
 {
-	"songs": [
-		["Spookeez", "spooky", [34, 51, 68]],
-		["South", "spooky", [34, 51, 68]],
-		["Monster", "monster", [34, 51, 68]]
+	"storyName": "doomed from the start",
+	"hideFreeplay": false,
+	"weekBackground": "tavern_outside",
+	"freeplayColor": [
+		80,
+		80,
+		133
 	],
-
+	"weekBefore": "week1",
+	"startUnlocked": true,
 	"weekCharacters": [
-		"spooky",
-		"bf",
+		"TimFNF",
+		"Blockhead",
 		"gf"
 	],
-	"weekBackground": "halloween",
-
-	"storyName": "Spooky Month",
-	"weekBefore": "week1",
-	"weekName": "Week 2",
-	"startUnlocked": true,
-
+	"songs": [
+		[
+			"Home",
+			"tim",
+			[
+				80,
+				80,
+				93
+			]
+		],
+		[
+			"w2s2",
+			"tim",
+			[
+				80,
+				80,
+				93
+			]
+		],
+		[
+			"Sawed",
+			"timgun",
+			[
+				80,
+				80,
+				93
+			]
+		]
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekName": "Tim's Week"
 }

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SnakeDialogue_Assets.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Snake Dialogue Confused0000" x="0" y="0" width="672" height="458" frameX="0" frameY="-11" frameWidth="681" frameHeight="469"/>
+	<SubTexture name="Snake Dialogue Confused0001" x="0" y="0" width="672" height="458" frameX="0" frameY="-11" frameWidth="681" frameHeight="469"/>
+	<SubTexture name="Snake Dialogue Confused0002" x="677" y="0" width="664" height="466" frameX="-10" frameY="-3" frameWidth="681" frameHeight="469"/>
+	<SubTexture name="Snake Dialogue Confused0003" x="677" y="0" width="664" height="466" frameX="-10" frameY="-3" frameWidth="681" frameHeight="469"/>
+	<SubTexture name="Snake Dialogue Confused0004" x="1346" y="0" width="679" height="469" frameX="-2" frameY="0" frameWidth="681" frameHeight="469"/>
+	<SubTexture name="Snake Dialogue Confused0005" x="1346" y="0" width="679" height="469" frameX="-2" frameY="0" frameWidth="681" frameHeight="469"/>
+	<SubTexture name="Snake Dialogue Heaven0000" x="0" y="474" width="673" height="479" frameX="0" frameY="-9" frameWidth="679" frameHeight="488"/>
+	<SubTexture name="Snake Dialogue Heaven0001" x="0" y="474" width="673" height="479" frameX="0" frameY="-9" frameWidth="679" frameHeight="488"/>
+	<SubTexture name="Snake Dialogue Heaven0002" x="678" y="474" width="667" height="488" frameX="-12" frameY="0" frameWidth="679" frameHeight="488"/>
+	<SubTexture name="Snake Dialogue Heaven0003" x="678" y="474" width="667" height="488" frameX="-12" frameY="0" frameWidth="679" frameHeight="488"/>
+	<SubTexture name="Snake Dialogue Heaven0004" x="1350" y="474" width="668" height="482" frameX="-7" frameY="-6" frameWidth="679" frameHeight="488"/>
+	<SubTexture name="Snake Dialogue Heaven0005" x="1350" y="474" width="668" height="482" frameX="-7" frameY="-6" frameWidth="679" frameHeight="488"/>
+	<SubTexture name="Snake Dialogue Normal0000" x="0" y="967" width="650" height="477" frameX="-1" frameY="-5" frameWidth="651" frameHeight="482"/>
+	<SubTexture name="Snake Dialogue Normal0001" x="0" y="967" width="650" height="477" frameX="-1" frameY="-5" frameWidth="651" frameHeight="482"/>
+	<SubTexture name="Snake Dialogue Normal0002" x="655" y="967" width="643" height="481" frameX="-5" frameY="-1" frameWidth="651" frameHeight="482"/>
+	<SubTexture name="Snake Dialogue Normal0003" x="655" y="967" width="643" height="481" frameX="-5" frameY="-1" frameWidth="651" frameHeight="482"/>
+	<SubTexture name="Snake Dialogue Normal0004" x="1303" y="967" width="648" height="482" frameX="0" frameY="0" frameWidth="651" frameHeight="482"/>
+	<SubTexture name="Snake Dialogue Normal0005" x="1303" y="967" width="648" height="482" frameX="0" frameY="0" frameWidth="651" frameHeight="482"/>
+	<SubTexture name="Snake Dialogue Shush0000" x="0" y="1454" width="685" height="463" frameX="-3" frameY="0" frameWidth="688" frameHeight="463"/>
+	<SubTexture name="Snake Dialogue Shush0001" x="0" y="1454" width="685" height="463" frameX="-3" frameY="0" frameWidth="688" frameHeight="463"/>
+	<SubTexture name="Snake Dialogue Shush0002" x="690" y="1454" width="669" height="461" frameX="-5" frameY="-2" frameWidth="688" frameHeight="463"/>
+	<SubTexture name="Snake Dialogue Shush0003" x="690" y="1454" width="669" height="461" frameX="-5" frameY="-2" frameWidth="688" frameHeight="463"/>
+	<SubTexture name="Snake Dialogue Shush0004" x="1364" y="1454" width="684" height="461" frameX="0" frameY="-2" frameWidth="688" frameHeight="463"/>
+	<SubTexture name="Snake Dialogue Shush0005" x="1364" y="1454" width="684" height="461" frameX="0" frameY="-2" frameWidth="688" frameHeight="463"/>
+</TextureAtlas>

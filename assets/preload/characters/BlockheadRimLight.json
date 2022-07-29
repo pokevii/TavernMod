@@ -1,0 +1,195 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BlockheadIdle0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				-17
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BlockheadLeftNote0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-27,
+				-29
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "BlockheadDownNote0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-27,
+				73
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "BlockheadUpNote0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				26,
+				9
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BlockheadRightNote0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-5
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BlockheadLeftNoteMiss0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-25,
+				-25
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "BlockheadDownNoteMiss0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-34,
+				48
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "BlockheadUpNoteMiss0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-24,
+				12
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BlockheadRightNoteMiss0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				6
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BlockheadPeace0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				15,
+				54
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "BlockheadDeath0",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-120,
+				18
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "Smoke cloud idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				188
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "Respawn0",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				26,
+				9
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "BlockheadRightNote0",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				187
+			],
+			"anim": "scared",
+			"fps": 24,
+			"name": "BlockheadScared0",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BlockheadRimLightV22",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "blockhead",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		0,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

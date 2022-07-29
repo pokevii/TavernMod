@@ -1,20 +1,30 @@
 {
-	"songs": [
-		["Tutorial", "gf", [146, 113, 253]]
+	"storyName": "faceoff against the 1x1 speaker",
+	"hideFreeplay": false,
+	"weekBackground": "tavern_outside",
+	"freeplayColor": [
+		146,
+		113,
+		253
 	],
-
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
 	"weekCharacters": [
-		"",
-		"bf",
+		"gf-speaker",
+		"Blockhead",
 		"gf"
 	],
-	"weekBackground": "stage",
-
-	"storyName": "",
-	"weekBefore": "tutorial",
-	"weekName": "Tutorial",
-	"startUnlocked": true,
-
+	"songs": [
+		[
+			"Tutorial",
+			"speaker",
+			[
+				46,
+				33,
+				53
+			]
+		]
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekName": "Tutorial"
 }

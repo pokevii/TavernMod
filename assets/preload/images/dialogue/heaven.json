@@ -1,0 +1,89 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		120,
+		-20
+	],
+	"scale": 1.25,
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "Annoyed",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Heaven Dialogue Annoyed0001",
+			"loop_name": "Heaven Dialogue Annoyed"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "Commanding",
+			"loop_offsets": [
+				-15,
+				7
+			],
+			"idle_name": "v0001Heaven Dialogue Commanding0000",
+			"loop_name": "Heaven Dialogue Commanding"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "Disappointed",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Heaven Dialogue Disappointed0000",
+			"loop_name": "Heaven Dialogue Disappointed"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "Happy",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Heaven Dialogue Happy0000",
+			"loop_name": "Heaven Dialogue Happy"
+		},
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"anim": "Kind",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Heaven Dialogue Kind0000",
+			"loop_name": "Heaven Dialogue Kind"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "talk",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Heaven Dialogue Normal",
+			"idle_name": "Heaven Dialogue Normal0000"
+		}
+	],
+	"image": "HeavenDialogue_Assets"
+}

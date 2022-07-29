@@ -1,22 +1,48 @@
 {
-	"songs": [
-		["Pico", "pico", [148, 22, 83]],
-		["Philly Nice", "pico", [148, 22, 83]],
-		["Blammed", "pico", [148, 22, 83]]
+	"storyName": "Your New Week",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
 	],
-
+	"startUnlocked": true,
 	"weekCharacters": [
-		"pico",
+		"dad",
 		"bf",
 		"gf"
 	],
-	"weekBackground": "philly",
-
-	"storyName": "PICO",
-	"weekBefore": "week2",
-	"weekName": "Week 3",
-	"startUnlocked": true,
-
+	"songs": [
+		[
+			"veiled",
+			"icon-heaven",
+			[
+				46,
+				133,
+				255
+			]
+		],
+		[
+			"parched",
+			"icon-heaven",
+			[
+				46,
+				133,
+				255
+			]
+		],
+		[
+			"blammed",
+			"icon-heaven_snake",
+			[
+				46,
+				133,
+				255
+			]
+		]
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekName": "Custom Week"
 }
