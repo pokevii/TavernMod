@@ -1,11 +1,60 @@
 {
 	"dialogue": [
 		{
+			"expression": "Happy",
+			"text": "Whew! Haven't sang in a good while. I figured the long rest would've made me rusty.",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "heaven"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bh",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "feep?"
+		},
+		{
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",
 			"expression": "talk",
-			"text": "deez nuts"
+			"text": "Nope, not yet! One more at least. I'm in a good mood now since you so nicely decided to stay."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bh",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "...bop..."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "heaven",
+			"boxState": "normal",
+			"expression": "Kind",
+			"text": "Hey, I thought you'd be a bit happier! Since you're in such a rush, one more time is good enough for me."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bh",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "bweep?!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "heaven",
+			"boxState": "normal",
+			"expression": "Kind",
+			"text": "Yeah! I'll give you the letter once we're done, then you can hurry on out."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "heaven",
+			"boxState": "normal",
+			"expression": "Commanding",
+			"text": "However, don't start thinking this one's gonna be any easier."
 		}
 	]
 }

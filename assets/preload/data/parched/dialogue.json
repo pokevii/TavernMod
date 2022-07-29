@@ -1,11 +1,67 @@
 {
 	"dialogue": [
 		{
+			"expression": "talk",
+			"text": "Welcome! Would you like to check in or check out?",
+			"boxState": "normal",
+			"speed": 0.05,
+			"portrait": "heaven"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bh",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "......????"
+		},
+		{
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",
 			"expression": "talk",
-			"text": "ur mother"
+			"text": "Yes, this is a hotel! Didn't you see the sign out front?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bh",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "beep, bop bep."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "heaven",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "*sigh*... You're like the 6th person in a row to ask that! Come on, stay awhile!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bh",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "*shakes head*"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "heaven",
+			"boxState": "normal",
+			"expression": "Commanding",
+			"text": "Oh no- if you want it, you're GONNA have to stay and rap against me- or you can just leave."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bh",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "...blep."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "heaven",
+			"boxState": "normal",
+			"expression": "Happy",
+			"text": "Rap battle it is!"
 		}
 	]
 }
