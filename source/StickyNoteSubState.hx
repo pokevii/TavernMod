@@ -30,9 +30,14 @@ class StickyNoteSubState extends MusicBeatSubstate
 	var letsPub:FlxSprite;
 	var timRain:FlxSprite;
 
+	var freshBool:Bool = false;
+	var madmanBool:Bool = false;
+	var letsPubBool:Bool = false;
+	var timRainBool:Bool = false;
+
 	var sad:FlxSprite;
 
-	public function new(note:String)
+	public function new(note:String, spong:Int)
 	{
 		super();
 
@@ -64,31 +69,41 @@ class StickyNoteSubState extends MusicBeatSubstate
 		letsPub.alpha = 0;
 		timRain.alpha = 0;
 
-		add(sad);
+		if (spong == 1 || spong ==  3 || spong ==  4 || spong ==  8) {
+			add(sad);
+		}
 		add(fresh);
 		add(madMan);
 		add(letsPub);
 		add(timRain);
 
 		if (note == "fresh") {
-			fresh.alpha = 1;
+			fresh.alpha = 0;
+			freshBool = true;
 		} else {
 			fresh.alpha = 0;
+			freshBool = false;
 		}
 		if (note == "madMan") {
-			madMan.alpha = 1;
+			madMan.alpha = 0;
+			madmanBool = true;
 		} else {
 			madMan.alpha = 0;
+			madmanBool = false;
 		}
 		if (note == "letsPub") {
-			letsPub.alpha = 1;
+			letsPub.alpha = 0;
+			letsPubBool = true;
 		} else {
 			letsPub.alpha = 0;
+			letsPubBool = false;
 		}
 		if (note == "timRain") {
-			timRain.alpha = 1;
+			timRain.alpha = 0;
+			timRainBool = true;
 		} else {
 			timRain.alpha = 0;
+			timRainBool = false;
 		}
     }
 
@@ -97,6 +112,23 @@ class StickyNoteSubState extends MusicBeatSubstate
 		if (FlxG.sound.music.volume < 0.7)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+		}
+
+
+		if (freshBool && fresh.alpha < 1) {
+			fresh.alpha += 0.01;
+		} 
+
+		if (madmanBool && madMan.alpha < 1) {
+			madMan.alpha += 0.01;
+		}
+
+		if (letsPubBool && letsPub.alpha < 1) {
+			letsPub.alpha += 0.01;
+		}
+
+		if (timRainBool && timRain.alpha < 1) {
+			timRain.alpha += 0.01;
 		}
 
 		sad.alpha -= 0.01;

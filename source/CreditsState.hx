@@ -68,6 +68,7 @@ class CreditsState extends MusicBeatState
 	var creditsFrame:FlxSprite;
 	var descText:FlxText;
 	var intendedColor:Int;
+	var spong:Int;
 	var colorTween:FlxTween;
 
 	override function create()
@@ -76,6 +77,9 @@ class CreditsState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
+
+		spong = FlxG.random.int(1, 99);
+		trace(spong);
 
 		bg = new FlxSprite().loadGraphic(Paths.image('creditsBg'));
 
@@ -202,8 +206,11 @@ class CreditsState extends MusicBeatState
 			note = "fresh";
 			if (FlxG.mouse.pressed && isNote == false) {
 				isNote = true;
-				openSubState(new StickyNoteSubState(note));
-				FlxG.sound.play(Paths.sound('vine'), 0.7);
+				openSubState(new StickyNoteSubState(note, spong));
+				FlxG.sound.play(Paths.sound('stickyNote'), 1);
+				if (spong == 8) {
+					FlxG.sound.play(Paths.sound('vine'), 0.7);
+				}
 			}
 		} else {
 			isNote = false;
@@ -213,8 +220,11 @@ class CreditsState extends MusicBeatState
 			madmanHover.alpha = 1;
 			note = "madMan";
 			if (FlxG.mouse.pressed && isNote == false) {
-				openSubState(new StickyNoteSubState(note));
-				FlxG.sound.play(Paths.sound('vine'), 0.7);
+				openSubState(new StickyNoteSubState(note, spong));
+				FlxG.sound.play(Paths.sound('stickyNote'), 1);
+				if (spong == 4) {
+					FlxG.sound.play(Paths.sound('vine'), 0.7);
+				}
 				isNote = true;
 			}
 		} else {
@@ -225,8 +235,11 @@ class CreditsState extends MusicBeatState
 			letsPubHover.alpha = 1;
 			note = "letsPub";
 			if (FlxG.mouse.pressed && isNote == false) {
-				openSubState(new StickyNoteSubState(note));
-				FlxG.sound.play(Paths.sound('vine'), 0.7);
+				openSubState(new StickyNoteSubState(note, spong));
+				FlxG.sound.play(Paths.sound('stickyNote'), 1);
+				if (spong == 3) {
+					FlxG.sound.play(Paths.sound('vine'), 0.7);
+				}
 				isNote = true;
 			}
 		} else {
@@ -237,8 +250,11 @@ class CreditsState extends MusicBeatState
 			timRainHover.alpha = 1;
 			note = "timRain";
 			if (FlxG.mouse.pressed && isNote == false) {
-				openSubState(new StickyNoteSubState(note));
-				FlxG.sound.play(Paths.sound('vine'), 0.7);
+				openSubState(new StickyNoteSubState(note, spong));
+				FlxG.sound.play(Paths.sound('stickyNote'), 1);
+				if (spong == 1) {
+					FlxG.sound.play(Paths.sound('vine'), 0.7);
+				}
 				isNote = true;
 			}
 		} else {
