@@ -1,38 +1,38 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "TimGunThrowAnimation0",
+			"anim": "idle",
 			"indices": [
 				0,
 				1
-			]
+			],
+			"name": "TimGunThrowAnimation0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "throw",
+			"loop": false,
 			"fps": 24,
-			"name": "TimGunThrowAnimation0",
-			"indices": []
+			"anim": "throw",
+			"indices": [],
+			"name": "TimGunThrowAnimation0"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/TimFNFGunThrow",
 	"position": [
-		-20,
-		80
+		-180,
+		25
 	],
-	"healthicon": "tim_gun",
+	"healthicon": "tim",
 	"flip_x": false,
 	"healthbar_colors": [
 		60,

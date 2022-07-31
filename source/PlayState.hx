@@ -262,6 +262,8 @@ class PlayState extends MusicBeatState
 	var boyfriendIdled:Bool = false;
 	var sawAmogus:Bool = false;
 
+	var test:Int;
+
 	// Lua shit
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
 
@@ -715,7 +717,7 @@ class PlayState extends MusicBeatState
 
 			case 'tavern_night': // TAVERN Jayce stage
 				{
-					defaultCamZoom = 0.7;
+					defaultCamZoom = 0.6;
 					var x:Int = -600;
 					var y:Int = -460;
 
@@ -4775,27 +4777,24 @@ class PlayState extends MusicBeatState
 			{
 				switch (arrayIDs[i])
 				{
-					case 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12:
-						if (isStoryMode
-							&& campaignMisses + songMisses < 1
-							&& CoolUtil.difficultyString() == 'HARD'
-							&& storyPlaylist.length <= 1
-							&& WeekData.getWeekFileName() == ('week' + arrayIDs[i])
-							&& !changedDifficulty
-							&& !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i * 2]);
-							return arrayIDs[i * 2];
-						}
-						else if (isStoryMode
-							&& storyPlaylist.length <= 1
-							&& WeekData.getWeekFileName() == ('week' + arrayIDs[i])
-							&& !usedPractice
-							&& campaignMisses + songMisses >= 1)
+					case 2 | 4 | 6 | 8 | 10 | 12: // no misses? //FIX THIS LATER AFTER IT UNLOCKS THE GAME SOFT LOCKS AS IT JUST LOOPS UNLOCKING THE ACHIEVEMENT - REMINDER FOR LUGGI  FROM LUGGI - 
+						if (isStoryMode	&& campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && WeekData.getWeekFileName() == ('week' + arrayIDs[Std.int(i/2)])	&& !changedDifficulty && !usedPractice)
 						{
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
+					case 1 | 3 | 5 | 7 | 9 | 11:	
+						if (isStoryMode	&& storyPlaylist.length <= 1 && WeekData.getWeekFileName() == ('week' + arrayIDs[i - 1]) && !usedPractice)
+						{
+							if (i == 0) {
+								Achievements.unlockAchievement(arrayIDs[1]);
+								return arrayIDs[1];
+							} else if (i > 0) {
+								Achievements.unlockAchievement(arrayIDs[i]);
+								return arrayIDs[i];
+							}
+						}
+
 					case 25:
 						if (ratingPercent < 0.2 && !practiceMode && !cpuControlled)
 						{

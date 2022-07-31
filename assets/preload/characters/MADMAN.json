@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "MadManIdle"
+		},
+		{
+			"offsets": [
+				80,
+				-65
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MadManRightNote"
+		},
+		{
+			"offsets": [
+				-10,
+				-240
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MadmanDownNote"
+		},
+		{
+			"offsets": [
+				187,
+				7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MadmanLeftNote"
+		},
+		{
+			"offsets": [
+				36,
+				190
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "MadmanUpNote"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MADMAN",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-madman",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		0,
+		0
+	],
+	"camera_position": [
+		-60,
+		50
+	],
+	"sing_duration": 4,
+	"scale": 0.9
+}

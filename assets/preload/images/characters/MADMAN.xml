@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MADMAN.png">
+	<!-- Created with Adobe Animate version 22.0.4.185 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MadManIdle0000" x="0" y="0" width="385" height="682" pivotX="4.55" pivotY="0" frameX="-7" frameY="-27" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0001" x="425" y="0" width="392" height="683" frameX="0" frameY="-26" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0002" x="857" y="0" width="387" height="694" frameX="-1" frameY="-16" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0003" x="1284" y="0" width="386" height="690" frameX="-2" frameY="-20" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0004" x="1710" y="0" width="381" height="711" frameX="-4" frameY="0" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0005" x="2131" y="0" width="380" height="710" frameX="-5" frameY="-1" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0006" x="2551" y="0" width="381" height="709" frameX="-4" frameY="-2" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0007" x="2972" y="0" width="382" height="711" frameX="-3" frameY="0" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0008" x="3394" y="0" width="380" height="708" frameX="-5" frameY="-3" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0009" x="2131" y="0" width="380" height="710" frameX="-5" frameY="-1" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0010" x="3814" y="0" width="381" height="709" frameX="-4" frameY="-2" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0011" x="4235" y="0" width="382" height="711" frameX="-3" frameY="0" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0012" x="4657" y="0" width="380" height="708" frameX="-5" frameY="-3" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManIdle0013" x="5077" y="0" width="380" height="708" frameX="-5" frameY="-3" frameWidth="392" frameHeight="711"/>
+	<SubTexture name="MadManRightNote0000" x="5497" y="0" width="668" height="631" pivotX="1.2" pivotY="0" frameX="-8" frameY="-3" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0001" x="6205" y="0" width="668" height="632" frameX="-9" frameY="-2" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0002" x="6913" y="0" width="662" height="635" frameX="-1" frameY="0" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0003" x="0" y="751" width="662" height="634" frameX="0" frameY="-1" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0004" x="702" y="751" width="662" height="632" frameX="-1" frameY="-3" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0005" x="1404" y="751" width="662" height="635" frameX="0" frameY="0" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0006" x="2106" y="751" width="662" height="635" frameX="-1" frameY="0" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0007" x="2808" y="751" width="662" height="634" frameX="-1" frameY="-1" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0008" x="3510" y="751" width="662" height="632" frameX="0" frameY="-3" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0009" x="4212" y="751" width="662" height="635" frameX="-1" frameY="0" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0010" x="4914" y="751" width="662" height="635" frameX="0" frameY="0" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0011" x="5616" y="751" width="662" height="634" frameX="-1" frameY="-1" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0012" x="6318" y="751" width="662" height="632" frameX="-1" frameY="-3" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadManRightNote0013" x="7020" y="751" width="662" height="635" frameX="0" frameY="0" frameWidth="677" frameHeight="635"/>
+	<SubTexture name="MadmanDownNote0000" x="7722" y="751" width="445" height="451" pivotX="8.2" pivotY="1.8" frameX="0" frameY="-22" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0001" x="0" y="1426" width="501" height="489" frameX="0" frameY="-26" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0002" x="541" y="1426" width="506" height="528" frameX="-8" frameY="-1" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0003" x="1087" y="1426" width="517" height="537" frameX="-8" frameY="0" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0004" x="1644" y="1426" width="530" height="546" frameX="-8" frameY="0" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0005" x="2214" y="1426" width="538" height="552" frameX="-8" frameY="-1" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0006" x="2792" y="1426" width="543" height="555" frameX="-8" frameY="-1" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0007" x="3375" y="1426" width="547" height="559" frameX="-8" frameY="0" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0008" x="3962" y="1426" width="550" height="559" frameX="-8" frameY="0" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0009" x="4552" y="1426" width="437" height="458" frameX="-8" frameY="-1" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0010" x="5029" y="1426" width="437" height="458" frameX="-8" frameY="-1" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0011" x="5506" y="1426" width="435" height="459" frameX="-8" frameY="0" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0012" x="5981" y="1426" width="440" height="459" frameX="-8" frameY="0" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanDownNote0013" x="4552" y="1426" width="437" height="458" frameX="-8" frameY="-1" frameWidth="558" frameHeight="559"/>
+	<SubTexture name="MadmanLeftNote0000" x="6461" y="1426" width="586" height="721" pivotX="29.05" pivotY="3.1"/>
+	<SubTexture name="MadmanLeftNote0001" x="7087" y="1426" width="579" height="719" frameX="-7" frameY="-2" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0002" x="0" y="2187" width="557" height="718" frameX="-29" frameY="-3" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0003" x="597" y="2187" width="554" height="716" frameX="-32" frameY="-5" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0004" x="1191" y="2187" width="545" height="717" frameX="-41" frameY="-4" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0005" x="1776" y="2187" width="552" height="716" frameX="-34" frameY="-5" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0006" x="0" y="2187" width="557" height="718" frameX="-29" frameY="-3" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0007" x="597" y="2187" width="554" height="716" frameX="-32" frameY="-5" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0008" x="1191" y="2187" width="545" height="717" frameX="-41" frameY="-4" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0009" x="1776" y="2187" width="552" height="716" frameX="-34" frameY="-5" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0010" x="0" y="2187" width="557" height="718" frameX="-29" frameY="-3" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0011" x="597" y="2187" width="554" height="716" frameX="-32" frameY="-5" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0012" x="1191" y="2187" width="545" height="717" frameX="-41" frameY="-4" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanLeftNote0013" x="1776" y="2187" width="552" height="716" frameX="-34" frameY="-5" frameWidth="586" frameHeight="721"/>
+	<SubTexture name="MadmanUpNote0000" x="2368" y="2187" width="431" height="917" pivotX="1.9" pivotY="8.45" frameX="-2" frameY="0" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0001" x="2839" y="2187" width="429" height="917" frameX="-4" frameY="0" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0002" x="3308" y="2187" width="436" height="910" frameX="-1" frameY="-8" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0003" x="3784" y="2187" width="437" height="911" frameX="0" frameY="-7" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0004" x="4261" y="2187" width="436" height="908" frameX="-1" frameY="-10" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0005" x="4737" y="2187" width="436" height="910" frameX="-1" frameY="-8" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0006" x="3308" y="2187" width="436" height="910" frameX="-1" frameY="-8" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0007" x="3784" y="2187" width="437" height="911" frameX="0" frameY="-7" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0008" x="4261" y="2187" width="436" height="908" frameX="-1" frameY="-10" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0009" x="4737" y="2187" width="436" height="910" frameX="-1" frameY="-8" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0010" x="3308" y="2187" width="436" height="910" frameX="-1" frameY="-8" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0011" x="3784" y="2187" width="437" height="911" frameX="0" frameY="-7" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0012" x="4261" y="2187" width="436" height="908" frameX="-1" frameY="-10" frameWidth="437" frameHeight="918"/>
+	<SubTexture name="MadmanUpNote0013" x="4737" y="2187" width="436" height="910" frameX="-1" frameY="-8" frameWidth="437" frameHeight="918"/>
+</TextureAtlas>

@@ -2,29 +2,47 @@
 	"storyName": "Your New Week",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
 	"songs": [
 		[
-			"blammed",
+			"parched",
 			"icon-heaven",
 			[
 				46,
 				133,
 				255
 			]
+		],
+		[
+			"veiled",
+			"heaven",
+			[
+				46,
+				133,
+				255
+			]
+		],
+		[
+			"blammed",
+			"dad",
+			[
+				46,
+				133,
+				255
+			]
 		]
-	],
-	"hideStoryMode": false,
-	"weekCharacters": [
-		"dad",
-		"bf",
-		"gf"
 	],
 	"weekName": "Custom Week"
 }

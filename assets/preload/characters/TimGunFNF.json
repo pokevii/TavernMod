@@ -3,8 +3,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-20,
-				36
+				-16,
+				40
 			],
 			"anim": "singLEFT",
 			"fps": 24,
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				-15,
-				71
+				-10,
+				80
 			],
 			"loop": true,
 			"fps": 24,
@@ -57,19 +57,8 @@
 		},
 		{
 			"offsets": [
-				157,
-				273
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "gun_throw",
-			"indices": [],
-			"name": "TimGunThrowAnimation"
-		},
-		{
-			"offsets": [
 				24,
-				18
+				19
 			],
 			"loop": false,
 			"fps": 24,
@@ -81,8 +70,8 @@
 	"no_antialiasing": false,
 	"image": "characters/TimGunFNF",
 	"position": [
-		40,
-		350
+		-93,
+		297
 	],
 	"healthicon": "timgun",
 	"flip_x": false,
@@ -92,7 +81,7 @@
 		60
 	],
 	"camera_position": [
-		-20,
+		-40,
 		0
 	],
 	"sing_duration": 6.1,

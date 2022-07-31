@@ -1,68 +1,69 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				-3,
 				-1
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "RainIdle"
+			"fps": 24,
+			"name": "RainIdle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				1,
 				-1
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "RainLeftNoteMISS"
+			"fps": 24,
+			"name": "RainLeftNoteMISS",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				1,
 				10
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "RainRightNoteMISS"
+			"fps": 24,
+			"name": "RainRightNoteMISS",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-2,
 				19
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "RainUpNoteMISS"
+			"fps": 24,
+			"name": "RainUpNoteMISS",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-30
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "RainDownNoteMISS"
+			"fps": 24,
+			"name": "RainDownNoteMISS",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				1,
 				10
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
+			"fps": 24,
+			"name": "RainLeftNote",
 			"indices": [
 				0,
 				1,
@@ -78,17 +79,17 @@
 				11,
 				12,
 				13
-			],
-			"name": "RainLeftNote"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				14
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RainRightNote",
 			"indices": [
 				0,
 				1,
@@ -104,17 +105,17 @@
 				11,
 				12,
 				13
-			],
-			"name": "RainRightNote"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-30
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
+			"fps": 24,
+			"name": "RainDownNote",
 			"indices": [
 				0,
 				1,
@@ -130,17 +131,17 @@
 				11,
 				12,
 				13
-			],
-			"name": "RainDownNote"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-2,
 				20
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
+			"fps": 24,
+			"name": "RainUpNote",
 			"indices": [
 				0,
 				1,
@@ -156,15 +157,14 @@
 				11,
 				12,
 				13
-			],
-			"name": "RainUpNote"
+			]
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/RainFnF2-Playable",
 	"position": [
-		-150,
-		150
+		20,
+		250
 	],
 	"healthicon": "icon-rain",
 	"flip_x": true,
@@ -174,7 +174,7 @@
 		15
 	],
 	"camera_position": [
-		20,
+		10,
 		90
 	],
 	"sing_duration": 4,

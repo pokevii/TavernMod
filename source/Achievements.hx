@@ -10,7 +10,7 @@ import flixel.text.FlxText;
 using StringTools;
 
 class Achievements {
-	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Hidden achievement
+	public static var achievementsStuff:Array<Dynamic> = [ // Name, Description, Hidden achievement
 		["Freaky on a Friday Night",	"Play on a Friday... Night",		 					true],		//0
 		["Tavern Initiate",				"Beat Week 1 on any difficulty.",						false],		//1
 		["The Bigger They Are...",		"Beat Week 1 on Hard with no Misses.",					false],		//2
@@ -21,21 +21,21 @@ class Achievements {
 		["Two Pointer",					"Beat Week 4 on any difficulty.",						false],		//7	
 		["Quad City King",				"Beat Week 4 on Hard with no Misses.",					false],		//8
 		["GREEN LIGHT",					"Beat Week 5 on any difficulty.",						false],		//9	
-		["Dizasta",						"Beat Week 5 on Hard with no Misses.",					false],		//10
+		["BLACK LIGHT",					"Beat Week 5 on Hard with no Misses.",					false],		//10
 		["Getting Your Feet Wet",		"Beat Week 6 on any difficulty.",						false],		//11	
 		["Bless the Rain",				"Beat Week 6 on Hard with no Misses.",					false],		//12
-		["[week 7 clear]",				"Beat Week 7 on any difficulty.",						false],		//13	
-		["[week 7 nomiss]",				"Beat Week 7 on Hard with no Misses.",					false],		//14
+		["Whiplash",					"Beat Week 7 on any difficulty.",						false],		//13	
+		["Rhapsody in Red",				"Beat Week 7 on Hard with no Misses.",					false],		//14
 		["Boned",						"Beat Week 8 on any difficulty.",						false],		//15	
 		["Rattled",						"Beat Week 8 on Hard with no Misses.",					false],		//16
 		["Dungeon... Raided",			"Beat Week 9 on any difficulty.",						false],		//17	
 		["Dethroned",					"Beat Week 9 on Hard with no Misses.",					false],		//18
 		["Fresh Out The Bag",			"Beat Week 10 on any difficulty.",						false],		//19	
 		["Usurped",						"Beat Week 10 on Hard with no Misses.",					false],		//20
-		["[week 11 clear]",				"Beat Week 11 on any difficulty.",						false],		//21	
+		["Purged",						"Beat Week 11 on any difficulty.",						false],		//21	
 		["Case Closed",					"Beat Week 11 on Hard with no Misses.",					false],		//22
-		["[week 12 clear]",				"Beat Week 12 on any difficulty.",						false],		//23	
-		["Pubstar",						"Beat Week 12 on Hard with no Misses.",					false],		//24
+		["Pubstar",						"Beat Week 12 on any difficulty.",						false],		//23	
+		["Pubstomp",					"Beat Week 12 on Hard with no Misses.",					false],		//24
 		["What a Funkin' Disaster!",	"Complete a Song with a rating lower than 20%.",		false],		//25
 		["Perfectionist",				"Complete a Song with a rating of 100%.",				false],		//26
 		["Roadkill Enthusiast",			"Watch the Henchmen die over 100 times.",				false],		//27
