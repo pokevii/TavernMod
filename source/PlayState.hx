@@ -667,6 +667,7 @@ class PlayState extends MusicBeatState
 
 			case 'tutorial': // TAVERN Week 0 tutorial stage
 				{
+					setBlockheadVars();
 					// offset and scale adjustment variables
 					var x:Int = -480; // negative x = left, positive x = right
 					var y:Int = -430; // negative y = up, positive y = down
@@ -746,6 +747,7 @@ class PlayState extends MusicBeatState
 
 			case 'cabin': // TAVERN Tim stage
 				{
+					setBlockheadVars();					
 					defaultCamZoom = 0.8;
 					var x:Int = -500;
 					var y:Int = -900;

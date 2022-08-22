@@ -1,0 +1,74 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "snake",
+			"boxState": "normal",
+			"expression": "heaven",
+			"text": "Hey! What the- ACK!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "snake",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Are me and my boyssssssssss interrupting ssssssssssssomething?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "Snake",
+			"boxState": "normal",
+			"expression": "heaven",
+			"text": "When I said I was having a rap battle this was NOT what I had in mind! Let me g- AH!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "snake",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "A wrap battle, hmmmmmmm? Sssssssssounds like I've won already."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bh",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "bep beep bepsss"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "snake",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "H-huh? What? What are you sssssaying?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "snake",
+			"boxState": "normal",
+			"expression": "heaven",
+			"text": "B-Block boy! Keep doing your thing! Charm the snake so it'll let me go!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "snake",
+			"boxState": "normal",
+			"expression": "shush",
+			"text": "Ssssssssssshh!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "snake",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "A sssssssssnake charmer, huh? ...Let'sssssee you try."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bh",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "beowp!"
+		}
+	]
+}

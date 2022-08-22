@@ -33,7 +33,7 @@ class CreditsState extends MusicBeatState
 		['Jayce',				'jayce',		'Main Musician',				'https://www.youtube.com/channel/UCKpBWqM_jiXJyum5YcsWlyg',		0xFFC4C4C4],
 		['Adz', 				'adz',			'Character Animator/Artist, Background & Panel Arist',		'https://twitter.com/AdzDuffRain',	0xFFC4C4C4],
 		['DeadFromHeaven',		'dead',			'Week 3 Artist & Musician',							'https://twitter.com/DeadFromHeaven',		0xFFC4C4C4],
-		['Zoey',				'zoey',			'Week 4 Musician',									'https://twitter.com/fuckimsotired',		0xFFC4C4C4],
+		['Sleepycap',			'zoey',			'Week 4 Musician',									'https://twitter.com/fuckimsotired',		0xFFC4C4C4],
 		[''],
 		['Psych Engine Team'],
 		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFC4C4C4],
