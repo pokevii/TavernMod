@@ -96,8 +96,21 @@ class Note extends FlxSprite
 						missHealth = 0.3;
 					}
 					hitCausesMiss = true;
+
 				case 'Gun Note':
-					//reloadNote('GUN');
+					reloadNote('GUN');
+					noteSplashTexture = 'HURTnoteSplashes';
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+
+				case 'Target Note':
+					mustPress;
+					reloadNote('TARGET');
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					
 				case 'No Animation':
 					noAnimation = true;
 			}

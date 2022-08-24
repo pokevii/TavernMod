@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GUNNOTE_assets.png">
+	<!-- Created with Adobe Animate version 22.0.4.185 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ShotgunDownNote0000" x="0" y="0" width="70" height="141" pivotX="0" pivotY="0"/>
+	<SubTexture name="ShotgunLeftNote0000" x="110" y="0" width="140" height="70" pivotX="35.2" pivotY="-35.2"/>
+	<SubTexture name="ShotgunRightNote0000" x="290" y="0" width="140" height="70" pivotX="35.2" pivotY="-35.2"/>
+	<SubTexture name="ShotgunUpNote0000" x="0" y="181" width="70" height="141" pivotX="0" pivotY="0"/>
+</TextureAtlas>

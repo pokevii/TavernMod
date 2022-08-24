@@ -1,69 +1,69 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-16,
 				40
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "TimLeftNote",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "TimLeftNote"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-28,
 				-24
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "TimDownNote"
+			"fps": 24,
+			"name": "TimDownNote",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-10,
 				80
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "TimUpNote"
+			"fps": 24,
+			"name": "TimUpNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-5,
 				-10
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "TimRightNote"
+			"fps": 24,
+			"name": "TimRightNote",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-17,
 				-10
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "TimGunHoldingIdle"
+			"fps": 24,
+			"name": "TimGunHoldingIdle",
+			"indices": []
 		},
 		{
 			"offsets": [
-				24,
-				19
+				0,
+				0
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "gun_fire",
 			"indices": [],
+			"fps": 24,
+			"anim": "gunFire",
+			"loop": false,
 			"name": "TimFiringHisGun"
 		}
 	],

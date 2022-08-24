@@ -4225,6 +4225,23 @@ class PlayState extends MusicBeatState
 					boyfriend.holdTimer = 0;
 				}
 
+				if (note.noteType == 'Target Note')
+					{
+						if (boyfriend.animOffsets.exists('scared'))
+							{
+								boyfriend.playAnim('scared', true);
+								boyfriend.specialAnim = true;
+								boyfriend.heyTimer = 0.6;
+							}
+		
+						if (dad.animOffsets.exists('gunFire'))
+							{
+								dad.playAnim('gunFire', true);
+								dad.specialAnim = true;
+								dad.heyTimer = 0.6;
+							}
+					}
+
 				if (note.noteType == 'Hey!')
 				{
 					if (boyfriend.animOffsets.exists('hey'))
