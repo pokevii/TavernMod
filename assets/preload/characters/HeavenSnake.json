@@ -3,7 +3,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				230,
+				231,
 				110
 			],
 			"anim": "idle",
@@ -36,7 +36,18 @@
 		{
 			"loop": false,
 			"offsets": [
-				138,
+				234,
+				158
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Snake Up Anim",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				139,
 				59
 			],
 			"anim": "singRIGHT",
@@ -46,78 +57,47 @@
 		},
 		{
 			"offsets": [
-				140,
-				127
+				240,
+				80
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
-			"anim": "singLEFT-loop",
-			"indices": [
-				0,
-				1,
-				2,
-				3
-			],
-			"name": "Snake Left Anim"
-		},
-		{
-			"offsets": [
-				139,
-				59
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"indices": [
-				0,
-				1,
-				2,
-				3
-			],
-			"name": "Snake Right Anim"
-		},
-		{
-			"offsets": [
-				236,
-				160
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singUP-loop",
-			"indices": [
-				0,
-				1,
-				2,
-				3
-			],
-			"name": "Snake Up Anim"
-		},
-		{
-			"offsets": [
-				124,
-				120
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singDOWN-loop",
-			"indices": [
-				0,
-				1,
-				2,
-				3
-			],
-			"name": "Snake Down Anim"
-		},
-		{
+			"anim": "singDOWN-alt",
 			"loop": false,
+			"name": "Snake Heaven Down Anim"
+		},
+		{
 			"offsets": [
-				236,
-				160
+				180,
+				115
 			],
-			"anim": "singUP",
+			"indices": [],
 			"fps": 24,
-			"name": "Snake Up Anim",
-			"indices": []
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "Snake Heaven Up Anim"
+		},
+		{
+			"offsets": [
+				250,
+				90
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "Snake Heaven Left Anim"
+		},
+		{
+			"offsets": [
+				180,
+				75
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "Snake Heaven Right Anim"
 		}
 	],
 	"no_antialiasing": false,
@@ -126,7 +106,7 @@
 		0,
 		0
 	],
-	"healthicon": "heaven_snake",
+	"healthicon": "icon-heaven_snake",
 	"flip_x": false,
 	"healthbar_colors": [
 		36,
