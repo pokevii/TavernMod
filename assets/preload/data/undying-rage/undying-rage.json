@@ -1,8 +1,8 @@
 {
 	"song": {
 		"sectionLengths": [],
-		"player1": "Blockhead",
-		"player2": "TimFNF",
+		"player1": "BlockheadMadMan",
+		"player2": "MADMAN",
 		"notes": [
 			{
 				"sectionNotes": [],
@@ -402,20 +402,39 @@
 			},
 			{
 				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 120,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 177.6
+			},
+			{
+				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"bpm": 120,
+				"bpm": 177.6,
 				"changeBPM": false,
 				"mustHitSection": true
 			}
 		],
 		"player3": "gf-speaker",
 		"song": "undying rage",
-		"stage": "tutorial",
+		"arrowSkin": "",
 		"validScore": true,
-		"sections": 0,
+		"stage": "betaCity",
 		"needsVoices": true,
+		"sections": 0,
 		"speed": 1,
 		"bpm": 177.6
 	}

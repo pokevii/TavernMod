@@ -927,6 +927,21 @@ class PlayState extends MusicBeatState
 					var table:BGSprite = new BGSprite('backstreets/part2/table', x, y, 1, 1);
 					add(table);
 				}
+
+			case 'betaCity': // MADMAN STAGE
+				{
+					defaultCamZoom = 0.6;
+					var x:Int = 0;
+					var y:Int = 0;
+		
+					var bg:BGSprite = new BGSprite('betaCity/betaCity', x, y, 1, 1);
+					var sky:BGSprite = new BGSprite('betaCity/redSky', x, y, 1, 1);
+
+					bg.scale.set(1.8, 1.8);
+					sky.scale.set(1.8, 1.8);
+					add(sky);
+					add(bg);
+				}
 		}
 
 		if (isPixelStage)
