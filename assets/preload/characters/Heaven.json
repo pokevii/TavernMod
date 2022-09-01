@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				27,
 				-1
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Heaven Down Anim",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Heaven Down Anim"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				14,
 				41
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Heaven Up Anim",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Heaven Up Anim"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				92,
 				1
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Heaven Left Anim",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Heaven Left Anim"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Heaven Idle Anim",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Heaven Idle Anim"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				2,
 				-10
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Heaven Right Anim",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Heaven Right Anim"
 		}
 	],
 	"no_antialiasing": false,
@@ -74,5 +74,5 @@
 		0
 	],
 	"sing_duration": 4,
-	"scale": 0.9
+	"scale": 1
 }

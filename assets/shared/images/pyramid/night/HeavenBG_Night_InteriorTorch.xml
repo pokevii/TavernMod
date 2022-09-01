@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="HeavenBG_Night_InteriorTorch.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="HeavenBG Night Torches0000" x="0" y="0" width="977" height="362" frameX="-11" frameY="-4" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0001" x="0" y="0" width="977" height="362" frameX="-11" frameY="-4" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0002" x="982" y="0" width="991" height="362" frameX="-11" frameY="-4" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0003" x="982" y="0" width="991" height="362" frameX="-11" frameY="-4" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0004" x="0" y="367" width="996" height="366" frameX="-5" frameY="0" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0005" x="0" y="367" width="996" height="366" frameX="-5" frameY="0" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0006" x="1001" y="367" width="997" height="366" frameX="0" frameY="0" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0007" x="1001" y="367" width="997" height="366" frameX="0" frameY="0" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0008" x="0" y="738" width="990" height="357" frameX="-1" frameY="-9" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0009" x="0" y="738" width="990" height="357" frameX="-1" frameY="-9" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0010" x="0" y="0" width="977" height="362" frameX="-11" frameY="-4" frameWidth="1002" frameHeight="366"/>
+	<SubTexture name="HeavenBG Night Torches0011" x="0" y="0" width="977" height="362" frameX="-11" frameY="-4" frameWidth="1002" frameHeight="366"/>
+</TextureAtlas>

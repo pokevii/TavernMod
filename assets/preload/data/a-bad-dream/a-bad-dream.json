@@ -1,8 +1,8 @@
 {
 	"song": {
 		"sectionLengths": [],
-		"player1": "Blockhead",
-		"player2": "Jayce",
+		"player1": "invis",
+		"player2": "invis",
 		"notes": [
 			{
 				"sectionNotes": [
@@ -2567,12 +2567,30 @@
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
 				"bpm": 150,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 150,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 150
 			},
 			{
 				"lengthInSteps": 16,
@@ -2584,12 +2602,12 @@
 				"mustHitSection": true
 			}
 		],
-		"player3": "gf",
+		"player3": "invis",
 		"song": "A Bad Dream",
+		"stage": "fresh",
 		"validScore": true,
-		"stage": "tutorial",
-		"needsVoices": false,
 		"sections": 0,
+		"needsVoices": false,
 		"speed": 2.8,
 		"bpm": 150
 	}

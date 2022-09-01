@@ -221,6 +221,8 @@ class PlayState extends MusicBeatState
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 	var bgGhouls:BGSprite;
 
+	var foregroundSnakes:FlxTypedGroup<BGSprite>;
+
 	var sil:BGSprite;
 	var tgb:BGSprite;
 
@@ -767,7 +769,7 @@ class PlayState extends MusicBeatState
 
 			case 'pyramid': // TAVERN Heaven stage
 				{
-					defaultCamZoom = 0.75;
+					defaultCamZoom = 0.7;
 					var xpos:Int = -900;
 					var ypos:Int = -550;
 					var xscale:Float = 1;
@@ -799,6 +801,88 @@ class PlayState extends MusicBeatState
 					add(torch);
 
 					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 75, ypos + 60, 1, 1);
+					bench.scale.set(xscale, yscale);
+					add(bench);
+
+					var speaker:BGSprite = new BGSprite('pyramid/BlockSpeaker_Assets', xpos + 2350, ypos + 900, 1, 1, ['Block Speaker Anim0'], true);
+					add(speaker);
+				}
+
+			case 'pyramid-sunset': // TAVERN Heaven Sunset Stage
+				{
+					defaultCamZoom = 0.75;
+					var xpos:Int = -900;
+					var ypos:Int = -550;
+					var xscale:Float = 1;
+					var yscale:Float = 1;
+
+					var bg:BGSprite = new BGSprite('pyramid/sunset/HeavenBG_Sunset_Sky', xpos + 100, ypos, 0.6, 0.6);
+					bg.scale.set(xscale, yscale);
+					add(bg);
+
+					var sand:BGSprite = new BGSprite('pyramid/sunset/HeavenBG_Sunset_SandHorizon', xpos + 100, ypos, 0.85, 0.85);
+					sand.scale.set(xscale, yscale);
+					add(sand);
+
+					var pLeft:BGSprite = new BGSprite('pyramid/sunset/HeavenBG_Sunset_PyramidL', xpos, ypos, 0.88, 0.88);
+					pLeft.scale.set(xscale, yscale);
+					add(pLeft);
+
+					var pRght:BGSprite = new BGSprite('pyramid/sunset/HeavenBG_Sunset_PyramidR', xpos, ypos, 0.88, 0.88);
+					pRght.scale.set(xscale, yscale);
+					add(pRght);
+
+					var interior:BGSprite = new BGSprite('pyramid/sunset/HeavenBG_Sunset_Interior', xpos, ypos, 1, 1);
+					interior.scale.set(xscale, yscale);
+					add(interior);
+
+					var torch:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorTorch', xpos + 1120, ypos + 760, 1, 1, ['Background Torch Animations0'],
+						true);
+					torch.scale.set(xscale, yscale);
+					add(torch);
+
+					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 75, ypos + 60, 1, 1);
+					bench.scale.set(xscale, yscale);
+					add(bench);
+
+					var speaker:BGSprite = new BGSprite('pyramid/BlockSpeaker_Assets', xpos + 2350, ypos + 900, 1, 1, ['Block Speaker Anim0'], true);
+					add(speaker);
+				}
+
+				case 'pyramid-night': // TAVERN Heaven Night Stage
+				{
+					defaultCamZoom = 0.75;
+					var xpos:Int = -900;
+					var ypos:Int = -550;
+					var xscale:Float = 1;
+					var yscale:Float = 1;
+
+					var bg:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_Sky', xpos + 850, ypos + 275, 0.6, 0.6, ['Background Sky Night0'], true);
+					bg.scale.set(xscale, yscale);
+					add(bg);
+
+					var sand:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_SandHorizon', xpos + 100, ypos, 0.85, 0.85);
+					sand.scale.set(xscale, yscale);
+					add(sand);
+
+					var pLeft:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_PyramidL', xpos, ypos, 0.88, 0.88);
+					pLeft.scale.set(xscale, yscale);
+					add(pLeft);
+
+					var pRght:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_PyramidR', xpos, ypos, 0.88, 0.88);
+					pRght.scale.set(xscale, yscale);
+					add(pRght);
+
+					var interior:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_Interior', xpos, ypos, 1, 1);
+					interior.scale.set(xscale, yscale);
+					add(interior);
+
+					var torch:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_InteriorTorch', xpos + 1120, ypos + 760, 1, 1, ['HeavenBG Night Torches0'],
+						true);
+					torch.scale.set(xscale, yscale);
+					add(torch);
+
+					var bench:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_InteriorBench', xpos + 75, ypos + 60, 1, 1);
 					bench.scale.set(xscale, yscale);
 					add(bench);
 
@@ -941,6 +1025,15 @@ class PlayState extends MusicBeatState
 					sky.scale.set(1.8, 1.8);
 					add(sky);
 					add(bg);
+				}
+
+			case 'fresh': // A BAD DREAM STAGE
+				{
+					defaultCamZoom = 1;
+					var x:Int = 0;
+					var y:Int = 0;
+
+					var bg:BGSprite = new BGSprite('menuDesat', x, y, 1, 1);
 				}
 		}
 
@@ -3407,6 +3500,8 @@ class PlayState extends MusicBeatState
 			case 'BG Freaks Expression':
 				if (bgGirls != null)
 					bgGirls.swapDanceType();
+
+			case 'TGB Lightning Flash':
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}

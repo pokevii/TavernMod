@@ -474,20 +474,38 @@
 			},
 			{
 				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 120,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 145
+			},
+			{
+				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"bpm": 120,
+				"bpm": 145,
 				"changeBPM": false,
 				"mustHitSection": true
 			}
 		],
-		"player3": "YisishiP2",
+		"player3": "YisishiP3",
 		"song": "snared",
-		"stage": "pyramid",
 		"validScore": true,
-		"sections": 0,
+		"stage": "pyramid-night",
 		"needsVoices": true,
+		"sections": 0,
 		"speed": 1,
 		"bpm": 145
 	}
