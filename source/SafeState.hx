@@ -167,7 +167,7 @@ class SafeState extends MusicBeatState
 
 		safeDoorOpen = new BGSprite('safe/safeDoor', 160, 5, 1, 1, ['doorOpen0'], false);
 
-		safeText = new FlxText(695, 150, 250, "", 32);
+		safeText = new FlxText(695, 160, 250, "", 32);
 		safeText.setFormat(Paths.font("lcd.ttf"), 80, FlxColor.LIME, LEFT);
 		safeText.autoSize = true;
 		safeText.wordWrap = false;
@@ -180,7 +180,7 @@ class SafeState extends MusicBeatState
 	{
 		//trace(undeadUnlocked);
 		// safeDoorOpen.alpha -= 0.01;
-		safeText.size = 72;
+		safeText.size = 56;
 		safeDoorOpen.y += 1;
 		doorTimer--;
 
@@ -406,6 +406,11 @@ class SafeState extends MusicBeatState
 		else
 		{
 			shStar.alpha = 0;
+		}
+
+		if (safeText.text.length > 8) {
+			FlxG.sound.play(Paths.sound('safe/cancel'), 1);
+			safeText.text = "";
 		}
 
 		if (FlxG.mouse.overlaps(shPound) && correctComb == false)
