@@ -223,8 +223,12 @@ class PlayState extends MusicBeatState
 
 	var foregroundSnakes:FlxTypedGroup<BGSprite>;
 
+	var thunderState:Int = 0;
+
 	var sil:BGSprite;
 	var tgb:BGSprite;
+	var tgbThunderSprite:BGSprite;
+	var whiteScare:BGSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -1005,11 +1009,24 @@ class PlayState extends MusicBeatState
 					var mainbuilding:BGSprite = new BGSprite('backstreets/part2/building', x, y, 0.95, 0.95);
 					add(mainbuilding);
 
-					tgb = new BGSprite('backstreets/part2/TGBStage2', x + 660, y + 890, 0.95, 0.95, ['TGBStage2COLOURED0']);
+					tgb = new BGSprite('backstreets/part3/TGBStage3', x + 660, y + 770, 0.95, 0.95, ['TGBStage3COLOURED0']);
 					add(tgb);
+
+					tgbThunderSprite = new BGSprite('backstreets/part3/TGBStage3', x + 660, y + 770, 0.95, 0.95, ['TGBStage3LIGHTNING0']);
+					add(tgbThunderSprite);
 
 					var table:BGSprite = new BGSprite('backstreets/part2/table', x, y, 1, 1);
 					add(table);
+
+					whiteScare = new BGSprite('backstreets/part3/whiteJumpscare', -270, -300, 0, 0);
+					whiteScare.scale.set(1.5, 1);
+					add(whiteScare);
+
+					if (!ClientPrefs.flashing) {
+						tgbThunderReset();
+					}
+
+					thunderState = 0;
 				}
 
 			case 'betaCity': // MADMAN STAGE
@@ -1472,6 +1489,10 @@ class PlayState extends MusicBeatState
 					startVideo('week1-intro');
 				case 'home':
 					startVideo('week2-intro');
+				case 'parched':
+					startVideo('week3-intro');
+				case 'breaktime':
+					startVideo('week4-intro');
 				case 'haze':
 					startVideo('week5-intro');
 				case 'water':
@@ -1480,6 +1501,8 @@ class PlayState extends MusicBeatState
 				case 'veiled':
 					startDialogue(dialogueJson);
 				case 'parched':
+					startDialogue(dialogueJson);
+				case 'snared':
 					startDialogue(dialogueJson);
 
 				default:
@@ -2515,6 +2538,22 @@ class PlayState extends MusicBeatState
 						heyTimer = 0;
 					}
 				}
+			case 'backstreets_drizzle':
+				if (!ClientPrefs.flashing)
+				{
+					switch(thunderState)
+					{
+						case 1:
+							whiteScare.y += 1;
+							whiteScare.alpha = 0.6;
+							tgbThunderSprite.visible = true;
+
+							if (whiteScare.y > -280)
+								{
+									tgbThunderReset();
+								}
+					}
+				}
 		}
 
 		if (!inCutscene)
@@ -3502,6 +3541,7 @@ class PlayState extends MusicBeatState
 					bgGirls.swapDanceType();
 
 			case 'TGB Lightning Flash':
+				tgbThunder();
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -4605,6 +4645,27 @@ class PlayState extends MusicBeatState
 			limoCorpseTwo.visible = false;
 		}
 	}
+
+	function tgbThunder():Void
+		{
+			if(!ClientPrefs.flashing && curStage == 'backstreets_drizzle')
+				{
+					if (thunderState < 1)
+						{
+							tgbThunderSprite.visible = false;
+							whiteScare.alpha = 0;
+							thunderState = 1;
+						}
+				}
+		}
+
+	function tgbThunderReset():Void
+		{
+			if (curStage == 'backstreets_drizzle') {
+				tgbThunderSprite.visible = false;
+				whiteScare.alpha = 0;
+			}
+		}
 
 	private var preventLuaRemove:Bool = false;
 
