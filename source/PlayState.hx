@@ -1485,12 +1485,13 @@ class PlayState extends MusicBeatState
 					if (daSong == 'roses')
 						FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
+					
 				case 'bread-and-circuses':
 					startVideo('week1-intro');
 				case 'home':
 					startVideo('week2-intro');
 				case 'parched':
-					startVideo('week3-intro');
+					videoANDdialogue(doof, 'week3-intro', 'parched');
 				case 'breaktime':
 					startVideo('week4-intro');
 				case 'haze':
@@ -1499,8 +1500,6 @@ class PlayState extends MusicBeatState
 					startVideo('week6-intro');
 
 				case 'veiled':
-					startDialogue(dialogueJson);
-				case 'parched':
 					startDialogue(dialogueJson);
 				case 'snared':
 					startDialogue(dialogueJson);
@@ -1785,6 +1784,69 @@ class PlayState extends MusicBeatState
 		});
 	}
 
+
+	function videoANDdialogue(?dialogueBox:DialogueBox, name:String, songName:String):Void
+	{
+		#if VIDEOS_ALLOWED
+		var foundFile:Bool = false;
+		var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
+		#if sys
+		if (FileSystem.exists(fileName))
+		{
+			foundFile = true;
+		}
+		#end
+	
+		if (!foundFile)
+		{
+			fileName = Paths.video(name);
+			#if sys
+			if (FileSystem.exists(fileName))
+			{
+			#else
+			if (OpenFlAssets.exists(fileName))
+			{
+			#end
+				foundFile = true;
+			}
+			} if (foundFile)
+			{
+				inCutscene = true;
+				var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+				bg.scrollFactor.set();
+				bg.cameras = [camHUD];
+				add(bg);
+	
+				(new FlxVideo(fileName)).finishCallback = function()
+				{
+					remove(bg);
+					if (endingSong)
+					{
+						endSong();
+					}
+					else
+					{
+						startDialogue(dialogueJson, songName);
+					}
+				}
+				return;
+			}
+			else
+			{
+				FlxG.log.warn('Couldnt find video file: ' + fileName);
+			}
+			#end
+			if (endingSong)
+			{
+				endSong();
+			}
+			else
+			{
+				startCountdown();
+			}
+	}
+
+		
 	var startTimer:FlxTimer;
 	var finishTimer:FlxTimer = null;
 
