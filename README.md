@@ -6,7 +6,7 @@ To run the mod, go to the root of the folder in File Explorer (usually named Tav
 This creates an executable in a new folder called "export", so your first time running this command will take a while in order to build the exe.
 
 To contribute files to the build install GitHub Desktop you can find it here: https://desktop.github.com/
-When you add/change/remove files commit the files to master and then push it. You'll need to ask Poke to be able to push files though.
+When you add/change/remove files commit the files to master and then push it. You'll need to ask Poke to be given permission to push files.
 
 ---
 
