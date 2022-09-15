@@ -13,37 +13,11 @@
 				0
 			],
 			"idle_offsets": [
-				-1,
-				-11
-			],
-			"loop_name": "BF LOOP",
-			"idle_name": "BF0"
-		},
-		{
-			"loop_offsets": [
-				5,
+				1,
 				0
 			],
-			"anim": "excited",
-			"idle_offsets": [
-				4,
-				-8
-			],
-			"loop_name": "BF EXCITED LOOP",
-			"idle_name": "BF EXCITED0"
-		},
-		{
-			"loop_offsets": [
-				0,
-				0
-			],
-			"anim": "pissed",
-			"idle_offsets": [
-				0,
-				0
-			],
-			"loop_name": "BF PISSED LOOP",
-			"idle_name": "BF PISSED0"
+			"loop_name": "HappySpeakMIC",
+			"idle_name": "HappySpeakMIC0002"
 		},
 		{
 			"loop_offsets": [
@@ -52,11 +26,50 @@
 			],
 			"anim": "shocked",
 			"idle_offsets": [
-				-6,
-				-11
+				-4,
+				0
 			],
-			"loop_name": "BF SHOCK LOOP",
-			"idle_name": "BF SHOCK0"
+			"loop_name": "SurprisedSpeakMIC",
+			"idle_name": "SurprisedSpeakMIC0003"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "smirk",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "SmirkSpeakMIC",
+			"idle_name": "SmirkSpeakMIC0005"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "scared",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "BlockheadScared",
+			"idle_name": "BlockheadScared0"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "confused",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "ConfusedSpeakMIC",
+			"idle_name": "ConfusedSpeakMIC0005"
 		}
 	],
 	"image": "BH_Dialogue"
