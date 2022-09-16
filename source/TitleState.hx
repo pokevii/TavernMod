@@ -415,7 +415,7 @@ class TitleState extends MusicBeatState
 		if (transitioning)
 		{
 			FlxG.camera.zoom *= zoomShit;
-			zoomShit *= 1.0005;
+			zoomShit *= 1.01;
 		}
 
 		super.update(elapsed);

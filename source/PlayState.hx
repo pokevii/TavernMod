@@ -3761,15 +3761,14 @@ class PlayState extends MusicBeatState
 		seenCutscene = false;
 
 		#if ACHIEVEMENTS_ALLOWED
-		if (achievementObj != null)
-		{
+		if(achievementObj != null) {
 			return;
-		}
-		else
-		{
-			var achieve:Int = checkForAchievement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]);
-			if (achieve > -1)
-			{
+		} else {
+			var achieve:String = checkForAchievement(['week1_beat', 'week1_nomiss', 'week2_beat', 'week2_nomiss', 'week3_beat', 'week3_nomiss', 'week4_beat', 'week4_nomiss',
+				'week5_beat', 'week5_nomiss', 'week6_beat', 'week6_nomiss', 'ur_bad',
+				'ur_good', 'hype', 'two_keys', 'toastie', 'debugger', 'sus', 'face1', 'face2', 'trick']);
+
+			if(achieve != null) {
 				startAchievement(achieve);
 				return;
 			}
@@ -3897,7 +3896,7 @@ class PlayState extends MusicBeatState
 	#if ACHIEVEMENTS_ALLOWED
 	var achievementObj:AchievementObject = null;
 
-	function startAchievement(achieve:Int)
+	function startAchievement(achieve:String)
 	{
 		achievementObj = new AchievementObject(achieve, camOther);
 		achievementObj.onFinish = achievementEnd;
@@ -4209,13 +4208,14 @@ class PlayState extends MusicBeatState
 					}
 				}
 
-				#if ACHIEVEMENTS_ALLOWED
-				var achieve:Int = checkForAchievement([11]); // change later -poke
-				if (achieve > -1)
-				{
-					startAchievement(achieve);
-				}
-				#end
+				// #if ACHIEVEMENTS_ALLOWED
+				// var achieve:Int = checkForAchievement([11]); // change later -poke
+				// if (achieve > -1)
+				// {
+				// 	startAchievement(achieve);
+				// }
+				// #end
+				//not sure what this is for so i will comment it out for now -luggi
 			}
 			else if (boyfriend.holdTimer > Conductor.stepCrochet * 0.001 * boyfriend.singDuration
 				&& boyfriend.animation.curAnim.name.startsWith('sing')
@@ -4677,14 +4677,11 @@ class PlayState extends MusicBeatState
 
 				#if ACHIEVEMENTS_ALLOWED
 				Achievements.henchmenDeath++;
-				var achieve:Int = checkForAchievement([10]); // change later -poke
-				if (achieve > -1)
-				{
+				FlxG.save.data.henchmenDeath = Achievements.henchmenDeath;
+				var achieve:String = checkForAchievement(['roadkill_enthusiast']);
+				if (achieve != null) {
 					startAchievement(achieve);
-				}
-				else
-				{
-					FlxG.save.data.henchmenDeath = Achievements.henchmenDeath;
+				} else {
 					FlxG.save.flush();
 				}
 				FlxG.log.add('Deaths: ' + Achievements.henchmenDeath);
@@ -5021,108 +5018,104 @@ class PlayState extends MusicBeatState
 	}
 
 	#if ACHIEVEMENTS_ALLOWED
-	private function checkForAchievement(arrayIDs:Array<Int>):Int
-	{
-		for (i in 0...arrayIDs.length)
+	private function checkForAchievement(achievesToCheck:Array<String> = null):String
 		{
-			if (!Achievements.achievementsUnlocked[arrayIDs[i]][1])
-			{
-				switch (arrayIDs[i])
-				{
-					case 2 | 4 | 6 | 8 | 10 | 12: // no misses? //FIX THIS LATER AFTER IT UNLOCKS THE GAME SOFT LOCKS AS IT JUST LOOPS UNLOCKING THE ACHIEVEMENT - REMINDER FOR LUGGI  FROM LUGGI - 
-						if (isStoryMode	&& campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && WeekData.getWeekFileName() == ('week' + arrayIDs[Std.int(i/2)])	&& !changedDifficulty && !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 1 | 3 | 5 | 7 | 9 | 11:	
-						if (isStoryMode	&& storyPlaylist.length <= 1 && WeekData.getWeekFileName() == ('week' + arrayIDs[i - 1]) && !usedPractice)
-						{
-							if (i == 0) {
-								Achievements.unlockAchievement(arrayIDs[1]);
-								return arrayIDs[1];
-							} else if (i > 0) {
-								Achievements.unlockAchievement(arrayIDs[i]);
-								return arrayIDs[i];
-							}
-						}
-
-					case 25:
-						if (ratingPercent < 0.2 && !practiceMode && !cpuControlled)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 26:
-						if (ratingPercent >= 1 && !usedPractice && !cpuControlled)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 27:
-						if (Achievements.henchmenDeath >= 100)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 28:
-						if (boyfriend.holdTimer >= 20 && !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 29:
-						if (!boyfriendIdled && !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 30:
-						if (!usedPractice)
-						{
-							var howManyPresses:Int = 0;
-							for (j in 0...keysPressed.length)
+			for (i in 0...achievesToCheck.length) {
+				var achievementName:String = achievesToCheck[i];
+				if(!Achievements.isAchievementUnlocked(achievementName) && !cpuControlled) {
+					var unlock:Bool = false;
+					switch(achievementName)
+					{
+						case 'week1_nomiss' | 'week2_nomiss' | 'week3_nomiss' | 'week4_nomiss' | 'week5_nomiss' | 'week6_nomiss':
+							if(isStoryMode && campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 							{
-								if (keysPressed[j])
-									howManyPresses++;
+								var weekName:String = WeekData.getWeekFileName();
+								switch(weekName) //I know this is a lot of duplicated code, but it's easier readable and you can add weeks with different names than the achievement tag
+								{// thank you for this -luggi
+									case 'week1':
+										if(achievementName == 'week1_nomiss') unlock = true;
+									case 'week2':
+										if(achievementName == 'week2_nomiss') unlock = true;
+									case 'week3':
+										if(achievementName == 'week3_nomiss') unlock = true;
+									case 'week4':
+										if(achievementName == 'week4_nomiss') unlock = true;
+									case 'week5':
+										if(achievementName == 'week5_nomiss') unlock = true;
+									case 'week6':
+										if(achievementName == 'week6_nomiss') unlock = true;
+								}
 							}
-
-							if (howManyPresses <= 2)
-							{
-								Achievements.unlockAchievement(arrayIDs[i]);
-								return arrayIDs[i];
+						case 'week1_beat' | 'week2_beat' | 'week3_beat' | 'week4_beat' | 'week5_beat' | 'week6_beat':
+							if (isStoryMode && storyPlaylist.length <= 1 && !usedPractice)
+								{
+								var weekName:String = WeekData.getWeekFileName();
+								switch(weekName)
+								{
+									case 'week1':
+										if(achievementName == 'week1_beat') unlock = true;
+									case 'week2':
+										if(achievementName == 'week2_beat') unlock = true;
+									case 'week3':
+										if(achievementName == 'week3_beat') unlock = true;
+									case 'week4':
+										if(achievementName == 'week4_beat') unlock = true;
+									case 'week5':
+										if(achievementName == 'week5_beat') unlock = true;
+									case 'week6':
+										if(achievementName == 'week6_beat') unlock = true;
+								}
 							}
-						}
-					case 31:
-						if (/*ClientPrefs.framerate <= 60 &&*/ ClientPrefs.lowQuality && !ClientPrefs.globalAntialiasing && !ClientPrefs.imagesPersist)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 32:
-						if (Paths.formatToSongPath(SONG.song) == 'test' && !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 33:
-						if (sawAmogus)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 34:
-						if (ClientPrefs.freebie)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
+						case 'ur_bad':
+							if(ratingPercent < 0.2 && !practiceMode) {
+								unlock = true;
+							}
+						case 'ur_good':
+							if(ratingPercent >= 1 && !usedPractice) {
+								unlock = true;
+							}
+						case 'roadkill_enthusiast':
+							if(Achievements.henchmenDeath >= 100) {
+								unlock = true;
+							}
+						case 'oversinging':
+							if(boyfriend.holdTimer >= 10 && !usedPractice) {
+								unlock = true;
+							}
+						case 'hype':
+							if(!boyfriendIdled && !usedPractice) {
+								unlock = true;
+							}
+						case 'two_keys':
+							if(!usedPractice) {
+								var howManyPresses:Int = 0;
+								for (j in 0...keysPressed.length) {
+									if(keysPressed[j]) howManyPresses++;
+								}
+	
+								if(howManyPresses <= 2) {
+									unlock = true;
+								}
+							}
+						case 'toastie':
+							if(/*ClientPrefs.framerate <= 60 &&*/ ClientPrefs.lowQuality && !ClientPrefs.globalAntialiasing) {
+								unlock = true;
+							}
+						case 'debugger':
+							if(Paths.formatToSongPath(SONG.song) == 'test' && !usedPractice) {
+								unlock = true;
+							}
+					}
+	
+					if(unlock) {
+						Achievements.unlockAchievement(achievementName);
+						return achievementName;
+					}
 				}
 			}
+			return null;
 		}
-		return -1;
-	}
-	#end
+		#end
 
 	private function setBlockheadVars()
 	{

@@ -85,13 +85,14 @@ class ClientPrefs {
 		FlxG.save.data.resetAchievements = resetAchievements;
 		FlxG.save.data.freebie = freebie;
 
-		var achieves:Array<String> = [];
-		for (i in 0...Achievements.achievementsUnlocked.length) {
-			if(Achievements.achievementsUnlocked[i][1]) {
-				achieves.push(Achievements.achievementsUnlocked[i][0]);
-			}
-		}
-		FlxG.save.data.achievementsUnlocked = achieves;
+		// var achieves:Array<String> = [];
+		// for (i in 0...Achievements.isAchievementUnlocked.length) {
+		// 	if(Achievements.isAchievementUnlocked[i][1]) {
+		// 		achieves.push(Achievements.isAchievementUnlocked[i][0]);
+		// 	}
+		// }
+		// FlxG.save.data.isAchievementUnlocked = achieves;
+		FlxG.save.data.achievementsMap = Achievements.achievementsMap;
 		FlxG.save.data.henchmenDeath = Achievements.henchmenDeath;
 		FlxG.save.flush();
 

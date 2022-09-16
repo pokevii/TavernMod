@@ -42,16 +42,16 @@ class AchievementsMenuState extends MusicBeatState
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 
-		trace("achievementsStuff length = " + Achievements.achievementsStuff.length);
+		Achievements.loadAchievements();
 		for (i in 0...Achievements.achievementsStuff.length) {
-			if(!Achievements.achievementsStuff[i][2] || Achievements.achievementsUnlocked[i][1]) {
+			if(!Achievements.achievementsStuff[i][3] || Achievements.achievementsMap.exists(Achievements.achievementsStuff[i][2])) {
 				options.push(Achievements.achievementsStuff[i]);
 				achievementIndex.push(i);
-				trace("Pushing on iteration " + i);
 			}
 		}
 
 		for (i in 0...options.length) {
+			var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][2];
 			var optionText:Alphabet = new Alphabet((100 * i), 0 + 210, '', false, false);
 			optionText.isMenuItem = true;
 			optionText.isAchievementMenu = true;
@@ -65,7 +65,7 @@ class AchievementsMenuState extends MusicBeatState
 			//optionText.targetY = 1;
 			grpOptions.add(optionText);
 
-			var icon:AttachedAchievement = new AttachedAchievement(optionText.x, optionText.y, achievementIndex[i]);
+			var icon:AttachedAchievement = new AttachedAchievement(optionText.x, optionText.y, achieveName);
 
 			icon.sprTracker = optionText;
 			achievementArray.push(icon);

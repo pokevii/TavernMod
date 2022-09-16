@@ -884,14 +884,17 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Reset All Achievements':
 						ClientPrefs.resetAchievements = !ClientPrefs.resetAchievements;
-						if(ClientPrefs.resetAchievements){
+						var achieve:Array<String> = ['week1_beat', 'week1_nomiss', 'week2_beat', 'week2_nomiss', 'week3_beat', 'week3_nomiss', 'week4_beat', 'week4_nomiss',
+						'week5_beat', 'week5_nomiss', 'week6_beat', 'week6_nomiss', 'ur_bad',
+						'ur_good', 'hype', 'two_keys', 'toastie', 'debugger', 'sus', 'face1', 'face2', 'trick'];
+						if(ClientPrefs.resetAchievements) {
 							trace("hopefully we are startin thisss");
+							Achievements.loadAchievements();
 							var achieves:Array<String> = [];
-							for(i in 0...Achievements.achievementsUnlocked.length){
-								Achievements.achievementsUnlocked[i][1] = false;
+							for (i in 0...Achievements.achievementsStuff.length) {
+								Achievements.lockAchievement(achieve[i]);
 							}
-							FlxG.save.data.achievementsUnlocked = achieves;
-							FlxG.save.flush();
+							ClientPrefs.saveSettings();
 							trace("save data fluished. hopefully achievements r gone");
 						} else {
 							trace("no bueno");
