@@ -705,6 +705,7 @@ class PlayState extends MusicBeatState
 				}
 			case 'tavern_outside':
 				{
+					setBlockheadVars();	
 					defaultCamZoom = 0.6;
 					var x:Int = -600;
 					var y:Int = -460;
@@ -724,6 +725,7 @@ class PlayState extends MusicBeatState
 
 			case 'tavern_night': // TAVERN Jayce stage
 				{
+					setBlockheadVars();	
 					defaultCamZoom = 0.6;
 					var x:Int = -600;
 					var y:Int = -460;
@@ -773,6 +775,7 @@ class PlayState extends MusicBeatState
 
 			case 'pyramid': // TAVERN Heaven stage
 				{
+					setBlockheadVars();	
 					defaultCamZoom = 0.7;
 					var xpos:Int = -900;
 					var ypos:Int = -550;
@@ -783,7 +786,7 @@ class PlayState extends MusicBeatState
 					bg.scale.set(xscale, yscale);
 					add(bg);
 
-					var sand:BGSprite = new BGSprite('pyramid/HeavenBG_SandHorizon', xpos + 100, ypos, 0.85, 0.85);
+					var sand:BGSprite = new BGSprite('pyramid/HeavenBG_SandHorizon', xpos + 110, ypos, 0.85, 0.85);
 					sand.scale.set(xscale, yscale);
 					add(sand);
 
@@ -810,11 +813,22 @@ class PlayState extends MusicBeatState
 
 					var speaker:BGSprite = new BGSprite('pyramid/BlockSpeaker_Assets', xpos + 2350, ypos + 900, 1, 1, ['Block Speaker Anim0'], true);
 					add(speaker);
+
+					var shadow:BGSprite = new BGSprite('pyramid/shadow', xpos + 1920, ypos + 1340, 1, 1);
+					shadow.scale.set(0.8, 1);
+					shadow.alpha = 0.9;
+					add(shadow);
+
+					var shadow2:BGSprite = new BGSprite('pyramid/shadow', xpos + 900, ypos + 1345, 1, 1);
+					shadow2.scale.set(0.6, 0.9);
+					shadow2.alpha = 0.9;
+					add(shadow2);
 				}
 
 			case 'pyramid-sunset': // TAVERN Heaven Sunset Stage
 				{
-					defaultCamZoom = 0.75;
+					setBlockheadVars();	
+					defaultCamZoom = 0.7;
 					var xpos:Int = -900;
 					var ypos:Int = -550;
 					var xscale:Float = 1;
@@ -845,23 +859,34 @@ class PlayState extends MusicBeatState
 					torch.scale.set(xscale, yscale);
 					add(torch);
 
-					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 75, ypos + 60, 1, 1);
+					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 80, ypos + 60, 1, 1);
 					bench.scale.set(xscale, yscale);
 					add(bench);
 
 					var speaker:BGSprite = new BGSprite('pyramid/BlockSpeaker_Assets', xpos + 2350, ypos + 900, 1, 1, ['Block Speaker Anim0'], true);
 					add(speaker);
+
+					var shadow:BGSprite = new BGSprite('pyramid/sunset/shadow', xpos + 1920, ypos + 1340, 1, 1);
+					shadow.scale.set(0.8, 1);
+					shadow.alpha = 0.5;
+					add(shadow);
+
+					var shadow2:BGSprite = new BGSprite('pyramid/sunset/shadow', xpos + 900, ypos + 1345, 1, 1);
+					shadow2.scale.set(0.6, 0.9);
+					shadow2.alpha = 0.5;
+					add(shadow2);
 				}
 
 				case 'pyramid-night': // TAVERN Heaven Night Stage
 				{
-					defaultCamZoom = 0.75;
+					setBlockheadVars();	
+					defaultCamZoom = 0.7;
 					var xpos:Int = -900;
 					var ypos:Int = -550;
 					var xscale:Float = 1;
 					var yscale:Float = 1;
 
-					var bg:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_Sky', xpos + 850, ypos + 275, 0.6, 0.6, ['Background Sky Night0'], true);
+					var bg:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_Sky', xpos + 850, ypos + 285, 0.6, 0.6, ['Background Sky Night0'], true);
 					bg.scale.set(xscale, yscale);
 					add(bg);
 
@@ -886,16 +911,27 @@ class PlayState extends MusicBeatState
 					torch.scale.set(xscale, yscale);
 					add(torch);
 
-					var bench:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_InteriorBench', xpos + 75, ypos + 60, 1, 1);
+					var bench:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_InteriorBench', xpos + 80, ypos + 60, 1, 1);
 					bench.scale.set(xscale, yscale);
 					add(bench);
 
 					var speaker:BGSprite = new BGSprite('pyramid/BlockSpeaker_Assets', xpos + 2350, ypos + 900, 1, 1, ['Block Speaker Anim0'], true);
 					add(speaker);
+
+					var shadow:BGSprite = new BGSprite('pyramid/night/shadow', xpos + 1920, ypos + 1340, 1, 1);
+					shadow.scale.set(0.8, 1);
+					shadow.alpha = 0.9;
+					add(shadow);
+
+					var shadow2:BGSprite = new BGSprite('pyramid/night/shadow', xpos + 950, ypos + 1325, 1, 1);
+					shadow2.scale.set(1.3, 1);
+					shadow2.alpha = 0.9;
+					add(shadow2);
 				}
 
 			case 'stadium': // TAVERN Charles Stage
 				{
+					setBlockheadVars();	
 					defaultCamZoom = 0.5;
 					var x:Int = -400;
 					var y:Int = 0;
@@ -923,6 +959,7 @@ class PlayState extends MusicBeatState
 
 			case 'city': // TAVERN Kodi Stage
 				{
+					setBlockheadVars();	
 					defaultCamZoom = 0.7;
 					var x:Int = 0;
 					var y:Int = 0;
@@ -962,6 +999,7 @@ class PlayState extends MusicBeatState
 
 			case 'backstreets': // TAVERN Rain stage 1
 				{
+					setBlockheadVars();	
 					defaultCamZoom = 0.7;
 					var x:Int = -1375;
 					var y:Int = -950;
@@ -990,6 +1028,7 @@ class PlayState extends MusicBeatState
 
 			case 'backstreets_drizzle': // TAVERN Rain stage 2
 				{
+					setBlockheadVars();	
 					defaultCamZoom = 0.7;
 					var x:Int = -1375;
 					var y:Int = -950;
@@ -5120,8 +5159,6 @@ class PlayState extends MusicBeatState
 	private function setBlockheadVars()
 	{
 		GameOverSubstate.deathSoundName = 'blockhead_loss_sfx';
-		GameOverSubstate.loopSoundName = 'gameOver-pixel';
-		GameOverSubstate.endSoundName = 'gameOverEnd-pixel';
 		GameOverSubstate.characterName = 'Blockhead';
 	}
 

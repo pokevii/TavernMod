@@ -690,7 +690,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide HUD',
 		'Hide Song Length',
 		'Flashing Lights',
-		'Reset All Achievements',
+		'Reset All Data',
 		'Camera Zooms',
 		'Freebie'
 		#if !mobile
@@ -882,9 +882,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Hide Song Length':
 						ClientPrefs.hideTime = !ClientPrefs.hideTime;
 
-					case 'Reset All Achievements':
+					case 'Reset All Data':
 						ClientPrefs.resetAchievements = !ClientPrefs.resetAchievements;
-						var achieve:Array<String> = ['week1_beat', 'week1_nomiss', 'week2_beat', 'week2_nomiss', 'week3_beat', 'week3_nomiss', 'week4_beat', 'week4_nomiss',
+						var achieve:Array<String> = ['friday_night_play', 'week1_beat', 'week1_nomiss', 'week2_beat', 'week2_nomiss', 'week3_beat', 'week3_nomiss', 'week4_beat', 'week4_nomiss',
 						'week5_beat', 'week5_nomiss', 'week6_beat', 'week6_nomiss', 'ur_bad',
 						'ur_good', 'hype', 'two_keys', 'toastie', 'debugger', 'sus', 'face1', 'face2', 'trick'];
 						if(ClientPrefs.resetAchievements) {
@@ -997,8 +997,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If checked, hides most HUD elements.";
 			case 'Hide Song Length':
 				daText = "If checked, the bar showing how much time is left\nwill be hidden.";
-			case 'Reset All Achievements':
-				daText = "If checked, all achievements will be locked.\nRequires restart.";
+			case 'Reset All Data':
+				daText = "If checked, all data will be lost and all achievements will be locked.\nRequires restart.";
 			case 'Freebie':
 				daText = "This one's more for me than it is for you.\nWe'll give you this one.";
 		}
@@ -1073,7 +1073,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.imagesPersist;
 					case 'Hide Song Length':
 						daValue = ClientPrefs.hideTime;
-					case 'Reset All Achievements':
+					case 'Reset All Data':
 						daValue = ClientPrefs.resetAchievements;
 					case 'Freebie':
 						daValue = ClientPrefs.freebie;

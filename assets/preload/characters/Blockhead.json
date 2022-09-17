@@ -123,7 +123,7 @@
 		},
 		{
 			"offsets": [
-				-120,
+				-240,
 				18
 			],
 			"loop": true,
@@ -131,17 +131,6 @@
 			"anim": "deathLoop",
 			"indices": [],
 			"name": "Smoke cloud idle"
-		},
-		{
-			"offsets": [
-				6,
-				188
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "deathConfirm",
-			"indices": [],
-			"name": "Respawn0"
 		},
 		{
 			"offsets": [
@@ -166,11 +155,39 @@
 				-1,
 				187
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "scared",
-			"loop": false,
+			"indices": [],
 			"name": "BlockheadScared0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				188
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "Respawn0",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
 		}
 	],
 	"no_antialiasing": false,
