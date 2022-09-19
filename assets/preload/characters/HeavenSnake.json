@@ -1,103 +1,114 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				231,
 				110
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Snake Idle Anim",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Snake Idle Anim"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				140,
 				127
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Snake Left Anim",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Snake Left Anim"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				124,
 				120
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Snake Down Anim",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Snake Down Anim"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				234,
 				158
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Snake Up Anim",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Snake Up Anim"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				139,
 				59
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Snake Right Anim",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Snake Right Anim"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				240,
 				80
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN-alt",
-			"loop": false,
-			"name": "Snake Heaven Down Anim"
+			"fps": 24,
+			"name": "Snake Heaven Down Anim",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				180,
 				115
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP-alt",
-			"loop": false,
-			"name": "Snake Heaven Up Anim"
+			"fps": 24,
+			"name": "Snake Heaven Up Anim",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				250,
 				90
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT-alt",
-			"loop": false,
-			"name": "Snake Heaven Left Anim"
+			"fps": 24,
+			"name": "Snake Heaven Left Anim",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				180,
 				75
 			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "Snake Heaven Right Anim",
+			"indices": []
+		},
+		{
+			"offsets": [
+				234,
+				157
+			],
 			"indices": [],
 			"fps": 24,
-			"anim": "singRIGHT-alt",
+			"anim": "singUP-secret",
 			"loop": false,
-			"name": "Snake Heaven Right Anim"
+			"name": "Snake Up Yara Anim"
 		}
 	],
 	"no_antialiasing": false,

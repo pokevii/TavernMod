@@ -267,6 +267,8 @@ class PlayState extends MusicBeatState
 	var boyfriendIdleTime:Float = 0.0;
 	var boyfriendIdled:Bool = false;
 	var sawAmogus:Bool = false;
+	var sawHeavenFace:Bool = false;
+	var sawCharlesFace:Bool = false;
 
 	var test:Int;
 
@@ -2776,6 +2778,7 @@ class PlayState extends MusicBeatState
 		else if (dad.curCharacter.startsWith('Charles') && healthBar.percent < 20)
 		{
 			iconP2.animation.curAnim.curFrame = 2;
+			sawCharlesFace = true;
 		}
 		else
 			iconP2.animation.curAnim.curFrame = 0;
@@ -3003,12 +3006,24 @@ class PlayState extends MusicBeatState
 					else if (!daNote.noAnimation)
 					{
 						var altAnim:String = "";
+						var secAnim:String = "";		
 
 						if (SONG.notes[Math.floor(curStep / 16)] != null)
 						{
 							if (SONG.notes[Math.floor(curStep / 16)].altAnim || daNote.noteType == 'Alt Animation')
 							{
 								altAnim = '-alt';
+							}
+
+							if (SONG.notes[Math.floor(curStep / 16)].secAnim || daNote.noteType == 'Secret Animation')
+							{
+								var secretChance:Int = FlxG.random.int(1, 99);
+								if (secretChance == 3) {
+									secAnim = '-secret';
+									sawHeavenFace = true;
+								} else {
+									secAnim = '';
+								}
 							}
 						}
 
@@ -3032,7 +3047,13 @@ class PlayState extends MusicBeatState
 						}
 						else
 						{
-							dad.playAnim(animToPlay + altAnim, true);
+							if (altAnim == '-alt') {
+								dad.playAnim(animToPlay + altAnim, true);
+							} else if (secAnim == '-secret') {
+								dad.playAnim(animToPlay + secAnim, true);
+							} else {
+								dad.playAnim(animToPlay, true);
+							}
 							// trace("dad playin anim " + animToPlay + altAnim);
 							dad.holdTimer = 0;
 						}
@@ -4332,6 +4353,10 @@ class PlayState extends MusicBeatState
 			if (daNote.noteType == 'Alt Animation')
 				daAlt = '-alt';
 
+			var daSec = '';
+			if (daNote.noteType == 'Secret Animation')
+				daSec = '-secret';
+
 			boyfriend.playAnim(animToPlay + daAlt, true);
 		}
 		callOnLuas('noteMiss', [
@@ -4440,6 +4465,10 @@ class PlayState extends MusicBeatState
 				if (note.noteType == 'Alt Animation')
 					daAlt = '-alt';
 
+				var daSec = '';
+				if (note.noteType == 'Secret Animation')
+					daSec = '-secret';
+
 				var animToPlay:String = '';
 				switch (Std.int(Math.abs(note.noteData)))
 				{
@@ -4461,12 +4490,20 @@ class PlayState extends MusicBeatState
 				else
 				{
 					// manual tweaking for blockhead's sing right notes (neanderthal implementation)
-					if (boyfriend.curCharacter.startsWith('Blockhead') && note.isSustainNote && animToPlay == 'singRIGHT')
+					if (boyfriend.curCharacter.startsWith('Blockhead') && note.isSustainNote)
 					{
-						trace("frameIndex = " + boyfriend.animation.frameIndex);
-						if (boyfriend.animation.frameIndex > 161)
-						{ // why 161 bruh?? it works though
-							boyfriend.playAnim('singRIGHT' + daAlt, true);
+						if (animToPlay == 'singRIGHT')	{
+							trace("frameIndex = " + boyfriend.animation.frameIndex);
+							if (boyfriend.animation.frameIndex > 161)
+							{ // why 161 bruh?? it works though
+								boyfriend.playAnim('singRIGHT' + daAlt, true);
+							}
+						} else if (animToPlay == 'singUP') {
+							trace("frameIndex = " + boyfriend.animation.frameIndex);
+							if (boyfriend.animation.frameIndex > 170)
+							{ // why 170 bruh?? it works though
+								boyfriend.playAnim('singUP' + daAlt, true);
+							}
 						}
 					}
 					else
@@ -5142,6 +5179,21 @@ class PlayState extends MusicBeatState
 							}
 						case 'debugger':
 							if(Paths.formatToSongPath(SONG.song) == 'test' && !usedPractice) {
+								unlock = true;
+							}
+
+						case 'sus':
+							if (sawAmogus) {
+								unlock = true;
+							}
+
+						case 'face1':
+							if (sawHeavenFace) {
+								unlock = true;
+							}
+
+						case 'face2':
+							if (sawCharlesFace) {
 								unlock = true;
 							}
 					}

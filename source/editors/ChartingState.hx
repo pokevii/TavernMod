@@ -60,7 +60,8 @@ class ChartingState extends MusicBeatState
 		'GF Sing',
 		'No Animation',
 		'Gun Note',
-		'Target Note'
+		'Target Note',
+		'Secret Animation'
 	];
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
 	private var noteTypeMap:Map<String, Null<Int>> = new Map<String, Null<Int>>();
@@ -585,6 +586,7 @@ class ChartingState extends MusicBeatState
 	var check_changeBPM:FlxUICheckBox;
 	var stepperSectionBPM:FlxUINumericStepper;
 	var check_altAnim:FlxUICheckBox;
+	var check_secAnim:FlxUICheckBox;
 
 	var sectionToCopy:Int = 0;
 	var notesCopied:Array<Dynamic>;
@@ -606,6 +608,10 @@ class ChartingState extends MusicBeatState
 		check_altAnim = new FlxUICheckBox(10, 60, null, null, "Alt Animation", 100);
 		check_altAnim.checked = _song.notes[curSection].altAnim;
 		check_altAnim.name = 'check_altAnim';
+
+		check_secAnim = new FlxUICheckBox(120, 60, null, null, 'Secret Animation', 100);
+		check_secAnim.checked = _song.notes[curSection].secAnim;
+		check_secAnim.name = 'check_secAnim';
 
 		check_changeBPM = new FlxUICheckBox(10, 90, null, null, 'Change BPM', 100);
 		check_changeBPM.checked = _song.notes[curSection].changeBPM;
@@ -694,6 +700,7 @@ class ChartingState extends MusicBeatState
 		tab_group_section.add(stepperSectionBPM);
 		tab_group_section.add(check_mustHitSection);
 		tab_group_section.add(check_altAnim);
+		tab_group_section.add(check_secAnim);
 		tab_group_section.add(check_changeBPM);
 		tab_group_section.add(copyButton);
 		tab_group_section.add(pasteButton);
@@ -1018,6 +1025,8 @@ class ChartingState extends MusicBeatState
 					FlxG.log.add('changed bpm shit');
 				case "Alt Animation":
 					_song.notes[curSection].altAnim = check.checked;
+				case "Sec Animation":
+					_song.notes[curSection].secAnim = check.checked;
 			}
 		}
 		else if (id == FlxUINumericStepper.CHANGE_EVENT && (sender is FlxUINumericStepper))
@@ -1677,6 +1686,7 @@ class ChartingState extends MusicBeatState
 		stepperLength.value = sec.lengthInSteps;
 		check_mustHitSection.checked = sec.mustHitSection;
 		check_altAnim.checked = sec.altAnim;
+		check_secAnim.checked = sec.secAnim;
 		check_changeBPM.checked = sec.changeBPM;
 		stepperSectionBPM.value = sec.bpm;
 
@@ -1901,7 +1911,8 @@ class ChartingState extends MusicBeatState
 			mustHitSection: true,
 			sectionNotes: [],
 			typeOfSection: 0,
-			altAnim: false
+			altAnim: false,
+			secAnim: false 
 		};
 
 		_song.notes.push(sec);
@@ -2108,7 +2119,8 @@ class ChartingState extends MusicBeatState
 				mustHitSection: false,
 				bpm: 0,
 				changeBPM: false,
-				altAnim: false
+				altAnim: false,
+				secAnim: false,
 			};
 			events.push(sex);
 		}
