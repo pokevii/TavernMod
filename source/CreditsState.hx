@@ -28,9 +28,9 @@ class CreditsState extends MusicBeatState
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
 		['Vs. Tavern Team'],
-		['Ridere',				'poke',			'Main Coder',						'https://www.youtube.com/watch?v=qTPQWMsFicE',				0xFFC4C4C4],
-		['Luggi',				'luggi',		'Main Musician, Coder, Background & Key Art Artist','https://twitter.com/LuigiFan54321',		0xFFC4C4C4],
-		['Jayce',				'jayce',		'Main Musician',				'https://www.youtube.com/channel/UCKpBWqM_jiXJyum5YcsWlyg',		0xFFC4C4C4],
+		['Ridere',				'poke',			'Lead Programmer and Charter',		'https://www.youtube.com/watch?v=qTPQWMsFicE',				0xFFC4C4C4],
+		['Luggi',				'luggi',		'Lead Musician, Coder, Background & Key Art Artist','https://twitter.com/LuigiFan54321',		0xFFC4C4C4],
+		['Jayce',				'jayce',		'Lead Musician',				'https://www.youtube.com/channel/UCKpBWqM_jiXJyum5YcsWlyg',		0xFFC4C4C4],
 		['Adz', 				'adz',			'Character Animator/Artist, Background & Panel Arist',		'https://twitter.com/AdzDuffRain',	0xFFC4C4C4],
 		['DeadFromHeaven',		'dead',			'Week 3 Artist & Musician',							'https://twitter.com/DeadFromHeaven',		0xFFC4C4C4],
 		['Sleepycap',			'zoey',			'Week 4 Musician',		'https://pbs.twimg.com/media/FA4Jy8YXMAMfeQj?format=png&name=small',	0xFFC4C4C4],
