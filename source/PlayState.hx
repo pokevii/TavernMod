@@ -280,10 +280,11 @@ class PlayState extends MusicBeatState
 	override public function create()
 	{
 		FlxG.mouse.visible = false;
-		#if MODS_ALLOWED
-		Paths.destroyLoadedImages(resetSpriteCache);
-		#end
-		resetSpriteCache = false;
+		// #if MODS_ALLOWED
+		// Paths.destroyLoadedImages(resetSpriteCache);
+		// #end
+		// resetSpriteCache = false;
+		Paths.clearStoredMemory();
 
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
@@ -1566,6 +1567,8 @@ class PlayState extends MusicBeatState
 		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		#end
 		super.create();
+		
+		Paths.clearUnusedMemory();
 	}
 
 	public function addTextToDebug(text:String)
@@ -1701,14 +1704,15 @@ class PlayState extends MusicBeatState
 	var dialogueCount:Int = 0;
 
 	// You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
-	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null):Void
+	// hopefully for the dialogue sound you can put a custom one
+	public function startDialogue(dialogueFile:DialogueFile, ?dialogueChar:String = 'dialogue', ?song:String = null):Void
 	{
 		// TO DO: Make this more flexible, maybe?
 		if (dialogueFile.dialogue.length > 0)
 		{
 			inCutscene = true;
-			CoolUtil.precacheSound('dialogue');
-			CoolUtil.precacheSound('dialogueClose');
+			CoolUtil.precacheSound(dialogueChar);
+			CoolUtil.precacheSound(dialogueChar + 'Close');
 			var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogueFile, song);
 			doof.scrollFactor.set();
 			if (endingSong)
@@ -4490,7 +4494,7 @@ class PlayState extends MusicBeatState
 				else
 				{
 					// manual tweaking for blockhead's sing right notes (neanderthal implementation)
-					if (boyfriend.curCharacter.startsWith('Blockhead') && note.isSustainNote)
+					if (boyfriend.curCharacter.startsWith('Blockhead') && note.isSustainNote )
 					{
 						if (animToPlay == 'singRIGHT')	{
 							trace("frameIndex = " + boyfriend.animation.frameIndex);
@@ -4504,6 +4508,8 @@ class PlayState extends MusicBeatState
 							{ // why 170 bruh?? it works though
 								boyfriend.playAnim('singUP' + daAlt, true);
 							}
+						} else {
+							boyfriend.playAnim(animToPlay + daAlt, true);
 						}
 					}
 					else

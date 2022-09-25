@@ -56,6 +56,9 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+		
 		#if (polymod && !html5)
 		if (sys.FileSystem.exists('mods/'))
 		{
@@ -415,7 +418,7 @@ class TitleState extends MusicBeatState
 		if (transitioning)
 		{
 			FlxG.camera.zoom *= zoomShit;
-			zoomShit *= 1.01;
+			zoomShit *= 1.005;
 		}
 
 		super.update(elapsed);
