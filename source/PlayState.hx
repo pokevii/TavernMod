@@ -811,7 +811,7 @@ class PlayState extends MusicBeatState
 					torch.scale.set(xscale, yscale);
 					add(torch);
 
-					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 75, ypos + 60, 1, 1);
+					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 88, ypos + 60, 1, 1);
 					bench.scale.set(xscale, yscale);
 					add(bench);
 
@@ -863,7 +863,7 @@ class PlayState extends MusicBeatState
 					torch.scale.set(xscale, yscale);
 					add(torch);
 
-					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 80, ypos + 60, 1, 1);
+					var bench:BGSprite = new BGSprite('pyramid/HeavenBG_InteriorBench', xpos + 88, ypos + 60, 1, 1);
 					bench.scale.set(xscale, yscale);
 					add(bench);
 
@@ -915,7 +915,7 @@ class PlayState extends MusicBeatState
 					torch.scale.set(xscale, yscale);
 					add(torch);
 
-					var bench:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_InteriorBench', xpos + 80, ypos + 60, 1, 1);
+					var bench:BGSprite = new BGSprite('pyramid/night/HeavenBG_Night_InteriorBench', xpos + 88, ypos + 60, 1, 1);
 					bench.scale.set(xscale, yscale);
 					add(bench);
 
@@ -1538,8 +1538,7 @@ class PlayState extends MusicBeatState
 				case 'home':
 					startVideo('week2-intro');
 				case 'parched':
-					//videoANDdialogue(doof, 'week3-intro', 'parched');
-					startDialogue(dialogueJson);
+					videoANDdialogue(doof, 'week3-intro', 'parched');
 				case 'breaktime':
 					startVideo('week4-intro');
 				case 'haze':
