@@ -5,9 +5,11 @@
 			"text": "Welcome! Would you like to check in or check out?",
 			"boxState": "normal",
 			"speed": 0.05,
-			"portrait": "heaven"
+			"portrait": "heaven",
+			"sound": "heaven"
 		},
 		{
+			"sound": "",
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
@@ -15,6 +17,7 @@
 			"text": "......????"
 		},
 		{
+			"sound": "heaven",
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",
@@ -22,6 +25,7 @@
 			"text": "Yes, this is a hotel! Didn't you see the sign out front?"
 		},
 		{
+			"sound": "",
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
@@ -29,6 +33,7 @@
 			"text": "beep, bop bep."
 		},
 		{
+			"sound": "heaven",
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",
@@ -36,6 +41,7 @@
 			"text": "*sigh*... You're like the 6th person in a row to ask that! Come on, stay awhile!"
 		},
 		{
+			"sound": "",
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
@@ -43,6 +49,7 @@
 			"text": "*shakes head*"
 		},
 		{
+			"sound": "heaven",
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",
@@ -50,6 +57,7 @@
 			"text": "Oh no- if you want it, you're GONNA have to stay and rap against me- or you can just leave."
 		},
 		{
+			"sound": "",
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
@@ -57,6 +65,7 @@
 			"text": "...blep."
 		},
 		{
+			"sound": "heaven",
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",

@@ -5,9 +5,11 @@
 			"text": "Whew! Haven't sang in a good while. I figured the long rest would've made me rusty.",
 			"boxState": "normal",
 			"speed": 0.05,
-			"portrait": "heaven"
+			"portrait": "heaven",
+			"sound": "heaven"
 		},
 		{
+			"sound": "",
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
@@ -15,6 +17,7 @@
 			"text": "feep?"
 		},
 		{
+			"sound": "heaven",
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",
@@ -22,6 +25,7 @@
 			"text": "Nope, not yet! One more at least. I'm in a good mood now since you so nicely decided to stay."
 		},
 		{
+			"sound": "",
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
@@ -29,6 +33,7 @@
 			"text": "...bop..."
 		},
 		{
+			"sound": "heaven",
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",
@@ -36,6 +41,7 @@
 			"text": "Hey, I thought you'd be a bit happier! Since you're in such a rush, one more time is good enough for me."
 		},
 		{
+			"sound": "",
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
@@ -43,13 +49,15 @@
 			"text": "bweep?!"
 		},
 		{
+			"sound": "heaven",
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",
 			"expression": "Kind",
-			"text": "Yeah! I'll give you the letter once we're done, then you can hurry on out."
+			"text": "Yeah! I'll give you my signature once we're done, then you can hurry on out."
 		},
 		{
+			"sound": "heaven",
 			"speed": 0.05,
 			"portrait": "heaven",
 			"boxState": "normal",

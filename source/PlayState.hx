@@ -1538,7 +1538,8 @@ class PlayState extends MusicBeatState
 				case 'home':
 					startVideo('week2-intro');
 				case 'parched':
-					videoANDdialogue(doof, 'week3-intro', 'parched');
+					//videoANDdialogue(doof, 'week3-intro', 'parched');
+					startDialogue(dialogueJson);
 				case 'breaktime':
 					startVideo('week4-intro');
 				case 'haze':
@@ -1710,14 +1711,14 @@ class PlayState extends MusicBeatState
 
 	// You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
 	// hopefully for the dialogue sound you can put a custom one
-	public function startDialogue(dialogueFile:DialogueFile, ?dialogueChar:String = 'dialogue', ?song:String = null):Void
+	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null):Void
 	{
 		// TO DO: Make this more flexible, maybe?
 		if (dialogueFile.dialogue.length > 0)
 		{
 			inCutscene = true;
-			CoolUtil.precacheSound(dialogueChar);
-			CoolUtil.precacheSound(dialogueChar + 'Close');
+			CoolUtil.precacheSound('dialogue');
+			CoolUtil.precacheSound('dialogueClose');
 			var doof:DialogueBoxPsych = new DialogueBoxPsych(dialogueFile, song);
 			doof.scrollFactor.set();
 			if (endingSong)

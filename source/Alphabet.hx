@@ -200,6 +200,20 @@ class Alphabet extends FlxSpriteGroup
 	var dialogueSound:FlxSound = null;
 	var consecutiveSpaces:Int = 0;
 
+	private static var soundDialog:String = null;
+	public static function setDialogueSound(name:String = '') {
+		if (name == null || name.trim() == '') {
+			name = 'dialogue';
+			soundDialog = name;
+		} else {
+			soundDialog = name;
+		}
+
+		if(soundDialog == null) {
+			soundDialog = 'dialogue';
+		}
+	}
+
 	var typeTimer:FlxTimer = null;
 	public function startTypedText(speed:Float):Void
 	{
@@ -208,12 +222,16 @@ class Alphabet extends FlxSpriteGroup
 
 		// trace(arrayShit);
 
+		if(soundDialog == null)	{
+			Alphabet.setDialogueSound();
+		}
+
 		if(speed <= 0) {
 			while(!finishedText) { 
 				timerCheck();
 			}
 			if(dialogueSound != null) dialogueSound.stop();
-			dialogueSound = FlxG.sound.play(Paths.sound('dialogue'));
+			dialogueSound = FlxG.sound.play(Paths.sound(soundDialog));
 		} else {
 			typeTimer = new FlxTimer().start(0.1, function(tmr:FlxTimer) {
 				typeTimer = new FlxTimer().start(speed, function(tmr:FlxTimer) {
@@ -311,7 +329,7 @@ class Alphabet extends FlxSpriteGroup
 
 				if(tmr != null) {
 					if(dialogueSound != null) dialogueSound.stop();
-					dialogueSound = FlxG.sound.play(Paths.sound('dialogue'));
+					dialogueSound = FlxG.sound.play(Paths.sound(soundDialog));
 				}
 
 				add(letter);
