@@ -226,6 +226,7 @@ class PlayState extends MusicBeatState
 	var thunderState:Int = 0;
 
 	var sil:BGSprite;
+	var blackout:FlxSprite;
 	var tgb:BGSprite;
 	var tgbThunderSprite:BGSprite;
 	var whiteScare:BGSprite;
@@ -958,6 +959,10 @@ class PlayState extends MusicBeatState
 					var bhShadow:BGSprite = new BGSprite('stadium/shadow', x + 1990, y + 570, 1, 1);
 					bhShadow.scale.set(0.8, 0.8);
 					add(bhShadow);
+
+					//Spotlight mechanic
+					blackout = new FlxSprite().makeGraphic(FlxG.width * 10, FlxG.height * 10, FlxColor.BLACK);
+					blackout.scrollFactor.set();
 				}
 
 			case 'city': // TAVERN Kodi Stage
@@ -3668,6 +3673,34 @@ class PlayState extends MusicBeatState
 
 			case 'TGB Lightning Flash':
 				tgbThunder();
+
+			case 'Toggle Spotlight':
+				if(curStage == 'stadium'){
+					var isOff:Int = Std.parseInt(value1);
+					var playSound:Int = Std.parseInt(value2);
+					
+					if(isOff == 1){
+						add(blackout);
+						blackout.setPosition(-1000, -1000);
+						blackout.scrollFactor.set();
+						strumLineNotes.kill();
+						notes.kill();
+					} else {
+						if(blackout != null){
+							remove(blackout);
+							strumLineNotes.revive();
+							notes.revive();
+						}
+						else trace ("Couldn't remove the blackout object in Toggle Spotlight.");
+					}
+
+					if(playSound == 1){
+						FlxG.sound.play(Paths.sound('spotlight'));
+					}
+				}
+				else{
+					trace("The event Toggle Spotlight was called, but the current stage is not stadium!");
+				}
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
