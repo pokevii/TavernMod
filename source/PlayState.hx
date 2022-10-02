@@ -689,7 +689,7 @@ class PlayState extends MusicBeatState
 					trace('Pingala value = ' + pingala);
 
 					// actual bg stuff
-					defaultCamZoom = 0.8;
+					defaultCamZoom = 0.6;
 					var bg:BGSprite = new BGSprite('tutorial/tutorial_week', x, y, 0.87, 0.87);
 					add(bg);
 
@@ -707,7 +707,7 @@ class PlayState extends MusicBeatState
 						add(unknownSubstance);
 					}
 				}
-			case 'tavern_outside':
+			case 'tavern_outside': // TAVERN Jayce stage
 				{
 					setBlockheadVars();	
 					defaultCamZoom = 0.6;
@@ -727,7 +727,7 @@ class PlayState extends MusicBeatState
 					add(bhShadow);
 				}
 
-			case 'tavern_night': // TAVERN Jayce stage
+			case 'tavern_night': // TAVERN Jayce stage Alt
 				{
 					setBlockheadVars();	
 					defaultCamZoom = 0.6;

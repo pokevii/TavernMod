@@ -1,20 +1,14 @@
 {
-	"storyName": "A Furry???",
+	"storyName": "kodi",
 	"hideFreeplay": false,
 	"weekBackground": "city",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": false,
-	"weekCharacters": [
-		"dad",
-		"Blockhead",
-		"gf"
-	],
 	"songs": [
 		[
 			"Haze",
@@ -43,6 +37,12 @@
 				232
 			]
 		]
+	],
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"dad",
+		"Blockhead",
+		"gf"
 	],
 	"weekName": "Kodi's Week"
 }

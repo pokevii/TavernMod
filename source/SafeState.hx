@@ -81,6 +81,9 @@ class SafeState extends MusicBeatState
 
 	override function create()
 	{
+		Paths.clearUnusedMemory();
+		Paths.clearStoredMemory();
+		
 		doorTimer = -1;
 		FlxG.mouse.visible = true;
 
