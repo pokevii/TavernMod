@@ -1060,16 +1060,16 @@ class PlayState extends MusicBeatState
 					add(tgb);
 
 					tgbThunderSprite = new BGSprite('backstreets/part3/TGBStage3', x + 660, y + 770, 0.95, 0.95, ['TGBStage3LIGHTNING0']);
-					add(tgbThunderSprite);
 
 					var table:BGSprite = new BGSprite('backstreets/part2/table', x, y, 1, 1);
 					add(table);
 
 					whiteScare = new BGSprite('backstreets/part3/whiteJumpscare', -270, -300, 0, 0);
 					whiteScare.scale.set(1.5, 1);
-					add(whiteScare);
 
 					if (ClientPrefs.flashing) {
+						add(tgbThunderSprite);
+						add(whiteScare);
 						tgbThunderReset();
 					}
 
