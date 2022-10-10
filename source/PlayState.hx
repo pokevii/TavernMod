@@ -1069,7 +1069,7 @@ class PlayState extends MusicBeatState
 					whiteScare.scale.set(1.5, 1);
 					add(whiteScare);
 
-					if (!ClientPrefs.flashing) {
+					if (ClientPrefs.flashing) {
 						tgbThunderReset();
 					}
 
@@ -2651,7 +2651,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 			case 'backstreets_drizzle':
-				if (!ClientPrefs.flashing)
+				if (ClientPrefs.flashing)
 				{
 					switch(thunderState)
 					{
@@ -4822,7 +4822,7 @@ class PlayState extends MusicBeatState
 
 	function tgbThunder():Void
 		{
-			if(!ClientPrefs.flashing && curStage == 'backstreets_drizzle')
+			if(ClientPrefs.flashing && curStage == 'backstreets_drizzle')
 				{
 					if (thunderState < 1)
 						{
