@@ -16,7 +16,7 @@ class Achievements {
 		["The Bigger They Are...",		"Beat Week 1 on Hard with no Misses.",		    'week1_nomiss',		false],		//2
 		["Tim's Got the Shotgun", 		"Beat Week 2 on any difficulty.",				  'week2_beat',		false],		//3
 		["Thumbs Down",					"Beat Week 2 on Hard with no Misses.",			'week2_nomiss',		false],		//4
-		["We Made Heaven",				"Beat Week 3 on any difficulty.",				  'week3_beat',		false],		//5	
+		["We Have Heaven",				"Beat Week 3 on any difficulty.",				  'week3_beat',		false],		//5	
 		["Too Much of Heaven",			"Beat Week 3 on Hard with no Misses.",			'week3_nomiss',		false],		//6
 		["Two Pointer",					"Beat Week 4 on any difficulty.",				  'week4_beat',		false],		//7	
 		["Quad City King",				"Beat Week 4 on Hard with no Misses.",			'week4_nomiss',		false],		//8

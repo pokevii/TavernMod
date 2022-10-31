@@ -1,15 +1,14 @@
 Heya! A lot of songs were actually collaborations between a couple of members of the team just because of circumstances, here are what specifically each member did for the tracks.
 
 Composition - Did the composition, duh!
-Instruments - Light composition changes + instrumentation!
 Arrangment - Changes to the composition and instrumentation!
 
 [===OTHER===]
 Open for Business (Menu Theme) - Composition: Luggi
-Break Time (Pause Theme) - Composition: Jayce | Instruments: Luggi
+Break Time (Pause Theme) - Composition: Jayce | Arrangment: Luggi
 
 [===WEEK 1===]
-Bread and Circuses - Composition: Jayce | Instruments: Luggi
+Bread and Circuses - Composition: Jayce | Arrangment: Luggi
 Chrome - Composition: Jayce | Arrangement: Luggi
 Amalgamation - Composition: Jayce | Arrangement: Luggi
 
@@ -19,9 +18,9 @@ W2S2 - Composition: Luggi
 Sawed - Composition: Luggi
 
 [===WEEK 3===]
-Parched - Composition: Jayce | Instruments: DeadFromHeaven
-Veiled - Composition: Jayce | Instruments: DeadFromHeaven
-Snared - Composition: Luggi | Instruments: DeadFromHeaven
+Parched - Composition: Jayce | Arrangment: DeadFromHeaven
+Veiled - Composition: Jayce | Arrangment: DeadFromHeaven
+Snared - Composition: Luggi | Arrangment: DeadFromHeaven
 
 [===WEEK 4===]
 Charles Song 1 - Composition: Luggi & Sleepycap
@@ -30,13 +29,13 @@ Endurance - Composition: Luggi & Sleepycap
 
 [===WEEK 5===]
 Haze - Composition: Luggi
-Trace - Composition: Jayce | Rearrangement: Luggi
+Trace - Composition: Jayce | Arrangment: Luggi
 Beam - Composition: Luggi
 
 [===WEEK 6===]
-Water - Composition: Jayce | Rearrangement: Luggi
-Typhoon - Composition: Jayce | Rearrangement: Luggi
-Book Worm - Composition: Jayce & Luggi
+Water - Composition: Jayce | Arrangment: Luggi
+Typhoon - Composition: Jayce | Arrangment: Luggi
+Bookworm - Composition: Jayce & Luggi
 
 {[====!!SPOILERS BELOW!!===]}
 {[====!!SPOILERS BELOW!!===]}
@@ -44,6 +43,6 @@ Book Worm - Composition: Jayce & Luggi
 
 [===UNLOCKABLES===]
 Undying Rage - Composition: Luggi
-The Undead, Allegedly - Composition: Jayce | Rearrangement: Luggi
+Undead - Composition: Jayce | Arrangment: Luggi
 A Bad Dream - Composition: Luggi
 Let's Pub - Composition: Jayce
