@@ -70,7 +70,13 @@ class CreditsState extends MusicBeatState
 	var intendedColor:Int;
 	var spong:Int;
 	var colorTween:FlxTween;
+	var bgTween:FlxTween;
+	var bgFrameTween:FlxTween;
 
+	var up:Bool;
+	var down:Bool;
+	var position:Int;
+	
 	override function create()
 	{
 		#if desktop
@@ -80,6 +86,8 @@ class CreditsState extends MusicBeatState
 
 		spong = FlxG.random.int(1, 99);
 		trace(spong);
+
+		position = 0;
 
 		bg = new FlxSprite().loadGraphic(Paths.image('creditsBg'));
 
@@ -169,25 +177,35 @@ class CreditsState extends MusicBeatState
 
 		if (upP)
 		{
-			bgNonHover.y += 210;
+			up = true;
+			down = false;
+			//bgNonHover.y += 210;
 			freshHover.y += 210;
 			madmanHover.y += 210;
 			letsPubHover.y += 210;
 			timRainHover.y += 210;
-			creditsFrame.y += 210;
+			//creditsFrame.y += 210;
+			tweenTest(up, down);
+			up = false;
+			down = true;
 			changeSelection(-1);
 		}
 		if (downP)
 		{
-			bgNonHover.y -= 210;
+			up = false;
+			down = true;
+			//bgNonHover.y -= 210;
 			freshHover.y -= 210;
 			madmanHover.y -= 210;
 			letsPubHover.y -= 210;
 			timRainHover.y -= 210;
-			creditsFrame.y -= 210;
+			//creditsFrame.y -= 210;
+			tweenTest(up, down);
+			up = true;
+			down = false;
 			changeSelection(1);
 		}
-
+		
 		if (controls.BACK)
 		{
 			if(colorTween != null) {
@@ -272,21 +290,27 @@ class CreditsState extends MusicBeatState
 			curSelected += change;
 			if (curSelected < 0) {
 				curSelected = creditsStuff.length - 1;
-				bgNonHover.y = -3600;
+				//bgNonHover.y = 0;
 				freshHover.y = -3600;
 				letsPubHover.y = -3600;
 				timRainHover.y = -3600;
 				madmanHover.y = 116;
-				creditsFrame.y = -3570;
+				//creditsFrame.y = 0;
+
+				bgTween = FlxTween.tween(bgNonHover, { x:0, y: -3600 }, 1);
+				bgFrameTween = FlxTween.tween(creditsFrame, { x:0, y: -3570 }, 1);
 				}
 			if (curSelected >= creditsStuff.length) {
 				curSelected = 0;
-				bgNonHover.y = 0;
+				//bgNonHover.y = 3600;
 				freshHover.y = 326;
 				letsPubHover.y = 439;
 				timRainHover.y = 1054;
 				madmanHover.y = 3718;
-				creditsFrame.y = 0;
+				//creditsFrame.y = 3570;
+
+				bgTween = FlxTween.tween(bgNonHover, { x:0, y: 0 }, 1);
+				bgFrameTween = FlxTween.tween(creditsFrame, { x:0, y: 0 }, 1);
 				}
 		} while(unselectableCheck(curSelected));
 
@@ -323,5 +347,18 @@ class CreditsState extends MusicBeatState
 
 	private function unselectableCheck(num:Int):Bool {
 		return creditsStuff[num].length <= 1;
+	}
+
+	function tweenTest(up:Bool, down:Bool) {
+
+		if (up && down == false) { // up
+			bgTween = FlxTween.tween(bgNonHover, { x:0, y: position += 105 }, 1);
+			bgFrameTween = FlxTween.tween(creditsFrame, { x:0, y: position += 105 }, 1);
+		} 
+		
+		if (up == false && down) { // down
+			bgTween = FlxTween.tween(bgNonHover, { x:0, y: position -= 105 }, 1);
+			bgFrameTween = FlxTween.tween(creditsFrame, { x:0, y: position -= 105 }, 1);
+		}
 	}
 }
