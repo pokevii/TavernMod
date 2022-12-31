@@ -8,6 +8,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
@@ -28,8 +29,8 @@ class CreditsState extends MusicBeatState
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
 		['Vs. Tavern Team'],
-		['Ridere',				'poke',			'Lead Programmer and Charter',		'https://www.youtube.com/watch?v=qTPQWMsFicE',				0xFFC4C4C4],
-		['Luggi',				'luggi',		'Lead Musician, Coder, Background & Key Art Artist','https://twitter.com/LuigiFan54321',		0xFFC4C4C4],
+		['Ridere',				'poke',			'Lead Programmer and Charter',					'https://twitter.com/VsTheTavern',				0xFFC4C4C4],
+		['Luggi',				'luggi',		'Lead Musician, Coder, Background & Key Art Artist','https://twitter.com/LuigiGoesHard69',		0xFFC4C4C4],
 		['Jayce',				'jayce',		'Lead Musician',				'https://www.youtube.com/channel/UCKpBWqM_jiXJyum5YcsWlyg',		0xFFC4C4C4],
 		['Adz', 				'adz',			'Character Animator/Artist, Background & Panel Arist',		'https://twitter.com/AdzDuffRain',	0xFFC4C4C4],
 		['DeadFromHeaven',		'dead',			'Week 3 Artist & Musician',							'https://twitter.com/DeadFromHeaven',		0xFFC4C4C4],
@@ -59,7 +60,8 @@ class CreditsState extends MusicBeatState
 	//bg is irrelevant but removing it will break some of the colour tween code
 	var bg:FlxSprite;
 
-	var bgNonHover:FlxSprite;
+	var creditsGrp:FlxTypedSpriteGroup<FlxSprite>;
+
 	var freshHover:FlxSprite;
 	var madmanHover:FlxSprite;
 	var letsPubHover:FlxSprite;
@@ -70,7 +72,13 @@ class CreditsState extends MusicBeatState
 	var intendedColor:Int;
 	var spong:Int;
 	var colorTween:FlxTween;
+	var bgTween:FlxTween;
+	var bgFrameTween:FlxTween;
 
+	var up:Bool;
+	var down:Bool;
+	var position:Int;
+	
 	override function create()
 	{
 		#if desktop
@@ -81,24 +89,25 @@ class CreditsState extends MusicBeatState
 		spong = FlxG.random.int(1, 99);
 		trace(spong);
 
+		position = 0;
+
+		creditsGrp = new FlxTypedSpriteGroup(0, 0, 20);
+
 		bg = new FlxSprite().loadGraphic(Paths.image('creditsBg'));
 
-		creditsFrame = new FlxSprite().loadGraphic(Paths.image('creditsFrame'));
+		creditsFrame = new FlxSprite(0, 0).loadGraphic(Paths.image('creditsFrame'));
 		creditsFrame.antialiasing = ClientPrefs.globalAntialiasing;
 
-		bgNonHover = new FlxSprite().loadGraphic(Paths.image('creditsBg'));
-		bgNonHover.antialiasing = ClientPrefs.globalAntialiasing;
-
-		freshHover = new FlxSprite(1067, 326).loadGraphic(Paths.image('freshHover'));
+		freshHover = new FlxSprite(1067, 388).loadGraphic(Paths.image('freshHover'));
 		freshHover.antialiasing = ClientPrefs.globalAntialiasing;
 
-		madmanHover = new FlxSprite(319, 3715).loadGraphic(Paths.image('madmanHover'));
+		madmanHover = new FlxSprite(319, 3777).loadGraphic(Paths.image('madmanHover'));
 		madmanHover.antialiasing = ClientPrefs.globalAntialiasing;
 
-		letsPubHover = new FlxSprite(613, 439).loadGraphic(Paths.image('letsPubHover'));
+		letsPubHover = new FlxSprite(613, 499).loadGraphic(Paths.image('letsPubHover'));
 		letsPubHover.antialiasing = ClientPrefs.globalAntialiasing;
 
-		timRainHover = new FlxSprite(440, 1055).loadGraphic(Paths.image('timRainHover'));
+		timRainHover = new FlxSprite(440, 1115).loadGraphic(Paths.image('timRainHover'));
 		timRainHover.antialiasing = ClientPrefs.globalAntialiasing;
 
 		freshHover.alpha = 0;
@@ -106,12 +115,13 @@ class CreditsState extends MusicBeatState
 		letsPubHover.alpha = 0;
 		timRainHover.alpha = 0;
 
-		add(bgNonHover);
-		add(letsPubHover);
-		add(freshHover);
-		add(madmanHover);
-		add(timRainHover);
-		add(creditsFrame);
+		creditsGrp.add(creditsFrame);
+		creditsGrp.add(letsPubHover);
+		creditsGrp.add(freshHover);
+		creditsGrp.add(madmanHover);
+		creditsGrp.add(timRainHover);
+
+		add(creditsGrp);
 
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
@@ -169,25 +179,35 @@ class CreditsState extends MusicBeatState
 
 		if (upP)
 		{
-			bgNonHover.y += 210;
-			freshHover.y += 210;
-			madmanHover.y += 210;
-			letsPubHover.y += 210;
-			timRainHover.y += 210;
-			creditsFrame.y += 210;
+			up = true;
+			down = false;
+			//bgNonHover.y += 210;
+			// freshHover.y += 210;
+			// madmanHover.y += 210;
+			// letsPubHover.y += 210;
+			// timRainHover.y += 210;
+			//creditsFrame.y += 210;
+			tweenTest(up, down);
+			up = false;
+			down = true;
 			changeSelection(-1);
 		}
 		if (downP)
 		{
-			bgNonHover.y -= 210;
-			freshHover.y -= 210;
-			madmanHover.y -= 210;
-			letsPubHover.y -= 210;
-			timRainHover.y -= 210;
-			creditsFrame.y -= 210;
+			up = false;
+			down = true;
+			//bgNonHover.y -= 210;
+			// freshHover.y -= 210;
+			// madmanHover.y -= 210;
+			// letsPubHover.y -= 210;
+			// timRainHover.y -= 210;
+			//creditsFrame.y -= 210;
+			tweenTest(up, down);
+			up = true;
+			down = false;
 			changeSelection(1);
 		}
-
+		
 		if (controls.BACK)
 		{
 			if(colorTween != null) {
@@ -199,7 +219,7 @@ class CreditsState extends MusicBeatState
 		if(controls.ACCEPT) {
 			CoolUtil.browserLoad(creditsStuff[curSelected][3]);
 		}
-
+		
 		//remember to add boolean to use in mouse click
 		if (FlxG.mouse.overlaps(freshHover)) {
 			freshHover.alpha = 1;
@@ -272,21 +292,27 @@ class CreditsState extends MusicBeatState
 			curSelected += change;
 			if (curSelected < 0) {
 				curSelected = creditsStuff.length - 1;
-				bgNonHover.y = -3600;
-				freshHover.y = -3600;
-				letsPubHover.y = -3600;
-				timRainHover.y = -3600;
-				madmanHover.y = 116;
-				creditsFrame.y = -3570;
+				//bgNonHover.y = 0;
+				// freshHover.y = -3182;
+				// letsPubHover.y = -3071;
+				// timRainHover.y = -2455;
+				// madmanHover.y = 207;
+				//creditsFrame.y = 0;
+
+				position = -3570;
+				bgFrameTween = FlxTween.tween(creditsGrp, { x: 0, y: -3570 }, 1);
 				}
 			if (curSelected >= creditsStuff.length) {
 				curSelected = 0;
-				bgNonHover.y = 0;
-				freshHover.y = 326;
-				letsPubHover.y = 439;
-				timRainHover.y = 1054;
-				madmanHover.y = 3718;
-				creditsFrame.y = 0;
+				//bgNonHover.y = 3600;
+				// freshHover.y = 388;
+				// letsPubHover.y = 499;
+				// timRainHover.y = 1115;
+				// madmanHover.y = 3777;
+				//creditsFrame.y = 3570;
+
+				position = 0;
+				bgFrameTween = FlxTween.tween(creditsGrp, { x: 0, y: 0 }, 1);
 				}
 		} while(unselectableCheck(curSelected));
 
@@ -323,5 +349,16 @@ class CreditsState extends MusicBeatState
 
 	private function unselectableCheck(num:Int):Bool {
 		return creditsStuff[num].length <= 1;
+	}
+
+	function tweenTest(up:Bool, down:Bool) {
+
+		if (up && down == false) { // up
+			bgFrameTween = FlxTween.tween(creditsGrp, { x:0, y: position += 210 }, 1);
+		} 
+		
+		if (up == false && down) { // down
+			bgFrameTween = FlxTween.tween(creditsGrp, { x:0, y: position -= 210 }, 1);
+		}
 	}
 }
