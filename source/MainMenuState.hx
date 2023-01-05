@@ -1,5 +1,6 @@
 package;
 
+import Achievements;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -46,6 +47,9 @@ class MainMenuState extends MusicBeatState
 
 	var testFreebie:Bool = false;
 
+	var bgCheck:Int = 0;
+	var bgName:String = "";
+
 	override function create()
 	{
 		#if desktop
@@ -70,14 +74,30 @@ class MainMenuState extends MusicBeatState
 
 		//drawing
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		var bg:FlxSprite = new FlxSprite(-40).loadGraphic(Paths.image('menuBG'));
+
+		bgCheck = FlxG.random.int(0, 2);
+
+		switch(bgCheck) {
+			case 0:
+				bgName = "menuBH";
+			case 1:
+				bgName = "menuBF";
+			case 2:
+				if(Achievements.isAchievementUnlocked('week1_beat')) {
+					bgName = 'menuJ';
+				} else {
+					bgName = 'menuBH';
+				}
+		}
+
+		var bg:FlxSprite = new FlxSprite(-40).loadGraphic(Paths.image(bgName));
 		bg.scrollFactor.set(0, 0);
 		bg.setGraphicSize(Std.int(bg.width * 0.70));
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 
-		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
+		magenta = new FlxSprite(-80).loadGraphic(Paths.image(bgName + 'Desat'));
 		magenta.scrollFactor.set(0, yScroll);
 		magenta.setGraphicSize(Std.int(magenta.width * 0.7));
 		magenta.updateHitbox();
