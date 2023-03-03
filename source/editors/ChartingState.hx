@@ -169,7 +169,9 @@ class ChartingState extends MusicBeatState
 
 	var waveformSprite:FlxSprite;
 	var gridLayer:FlxTypedGroup<FlxSprite>;
-
+	var bgCheck:Int = 0;
+	var bgName:String = "";
+	
 	override function create()
 	{
 		#if MODS_ALLOWED
@@ -180,6 +182,20 @@ class ChartingState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Chart Editor", StringTools.replace(PlayState.SONG.song, '-', ' '));
 		#end
+
+		bgCheck = FlxG.random.int(0, 2);
+		switch(bgCheck) {
+			case 0:
+				bgName = "menuBH";
+			case 1:
+				bgName = "menuBF";
+			case 2:
+				if(Achievements.isAchievementUnlocked('week1_beat')) {
+					bgName = 'menuJ';
+				} else {
+					bgName = 'menuBH';
+				}
+		}
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.scrollFactor.set();

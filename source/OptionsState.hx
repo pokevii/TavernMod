@@ -35,13 +35,28 @@ class OptionsState extends MusicBeatState
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
+	var bgCheck:Int = 0;
+	var bgName:String = "";
 
 	override function create() {
 		#if desktop
 		DiscordClient.changePresence("Options Menu", null);
 		#end
+		bgCheck = FlxG.random.int(0, 2);
+		switch(bgCheck) {
+			case 0:
+				bgName = "menuBH";
+			case 1:
+				bgName = "menuBF";
+			case 2:
+				if(Achievements.isAchievementUnlocked('week1_beat')) {
+					bgName = 'menuJ';
+				} else {
+					bgName = 'menuBH';
+				}
+		}
 
-		menuBG = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		menuBG = new FlxSprite().loadGraphic(Paths.image(bgName + 'Desat'));
 		menuBG.color = 0xFFea71fd;
 		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
 		menuBG.updateHitbox();
