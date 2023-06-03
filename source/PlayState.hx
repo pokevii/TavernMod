@@ -1031,7 +1031,7 @@ class PlayState extends MusicBeatState
 					add(tgb);
 
 					var table:BGSprite = new BGSprite('backstreets/part1/table', x, y, 1, 1);
-					add(table);
+					add(table);	
 				}
 
 			case 'backstreets_drizzle': // TAVERN Rain stage 2
@@ -1059,7 +1059,7 @@ class PlayState extends MusicBeatState
 					tgb = new BGSprite('backstreets/part3/TGBStage3', x + 660, y + 770, 0.95, 0.95, ['TGBStage3COLOURED0']);
 					add(tgb);
 
-					tgbThunderSprite = new BGSprite('backstreets/part3/TGBStage3', x + 660, y + 770, 0.95, 0.95, ['TGBStage3LIGHTNING0']);
+					tgbThunderSprite = new BGSprite('backstreets/part3/TGBStage3', x + 660, y + 770, 0.95, 0.95, ['TGBStage3LIGHTNING0']); 
 
 					var table:BGSprite = new BGSprite('backstreets/part2/table', x, y, 1, 1);
 					add(table);
@@ -1312,15 +1312,16 @@ class PlayState extends MusicBeatState
 
 		if (curStage == 'backstreets_drizzle')
 		{
-			var rainParticles:FlxTypedEmitter<FlxParticle> = new FlxEmitter(-600, -600, 500);
+			var rainParticles:FlxTypedEmitter<FlxParticle> = new FlxEmitter(-1300, -600);
+			rainParticles.width = 2300.0;
 			rainParticles.launchMode = FlxEmitterMode.SQUARE;
-			// rainParticles.velocity.set(0, 1200, 0, -300, 0, 0, 2000, 2000);
+			//rainParticles.velocity.set(0, 1200, 0, -300, 0, 0, 2000, 2000);
 			rainParticles.makeParticles(12, 18, FlxColor.CYAN, 1000);
-			// rainParticles.velocity.set(50, 40, 60, 80, -400, -600, 400, 600);
+			rainParticles.lifespan.set(15.0);
 			rainParticles.acceleration.set(100, 0, 600, 600, 800, 800, 1200, 1200);
-			rainParticles.lifespan.set(7.0);
 			add(rainParticles);
-			rainParticles.start(false, 0.05);
+			
+			dad.curCharacter.startsWith("RainP3") ? rainParticles.start(false, 0.02) : rainParticles.start(false, 0.05);
 		}
 
 		// startCountdown();
@@ -4838,6 +4839,7 @@ class PlayState extends MusicBeatState
 			if (curStage == 'backstreets_drizzle') {
 				tgbThunderSprite.visible = false;
 				whiteScare.alpha = 0;
+				thunderState = 0;
 			}
 		}
 
