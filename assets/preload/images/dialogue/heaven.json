@@ -26,10 +26,10 @@
 			],
 			"anim": "Commanding",
 			"loop_offsets": [
-				-15,
-				7
+				0,
+				0
 			],
-			"idle_name": "v0001Heaven Dialogue Commanding0000",
+			"idle_name": "Heaven Dialogue Commanding0001",
 			"loop_name": "Heaven Dialogue Commanding"
 		},
 		{

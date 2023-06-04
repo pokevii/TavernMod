@@ -13,7 +13,7 @@
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
-			"expression": "talk",
+			"expression": "shocked",
 			"text": "......????"
 		},
 		{
@@ -29,7 +29,7 @@
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
-			"expression": "talk",
+			"expression": "shocked",
 			"text": "beep, bop bep."
 		},
 		{
@@ -45,7 +45,7 @@
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
-			"expression": "talk",
+			"expression": "scared",
 			"text": "*shakes head*"
 		},
 		{
@@ -61,7 +61,7 @@
 			"speed": 0.05,
 			"portrait": "bh",
 			"boxState": "normal",
-			"expression": "talk",
+			"expression": "scared",
 			"text": "...blep."
 		},
 		{

@@ -352,12 +352,17 @@ class CreditsState extends MusicBeatState
 	}
 
 	function tweenTest(up:Bool, down:Bool) {
+		if(bgFrameTween != null){
+			if(bgFrameTween.finished == false){
+				bgFrameTween.cancel();
+			}
+		}
 
-		if (up && down == false) { // up
+		if (up && !down) { // up
 			bgFrameTween = FlxTween.tween(creditsGrp, { x:0, y: position += 210 }, 1);
 		} 
 		
-		if (up == false && down) { // down
+		if (!up && down) { // down
 			bgFrameTween = FlxTween.tween(creditsGrp, { x:0, y: position -= 210 }, 1);
 		}
 	}
