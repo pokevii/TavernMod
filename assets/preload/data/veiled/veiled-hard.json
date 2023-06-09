@@ -2396,23 +2396,43 @@
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"secAnim": false,
 				"bpm": 130,
 				"changeBPM": false,
-				"secAnim": false,
 				"mustHitSection": true
 			},
 			{
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"secAnim": false,
 				"bpm": 130,
 				"changeBPM": false,
-				"secAnim": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"secAnim": false,
+				"bpm": 130,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"secAnim": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 130
 			},
 			{
 				"lengthInSteps": 16,
@@ -2430,7 +2450,7 @@
 		"song": "veiled",
 		"validScore": true,
 		"needsVoices": true,
-		"stage": "pyramid",
+		"stage": "pyramid-sunset",
 		"speed": 2.3,
 		"bpm": 130
 	}
