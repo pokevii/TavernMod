@@ -118,6 +118,7 @@ class PlayState extends MusicBeatState
 	public static var SONG:SwagSong = null;
 	public static var isStoryMode:Bool = false;
 	public static var isFreeplay:Bool = false;
+	public static var isSafe:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
@@ -1097,7 +1098,9 @@ class PlayState extends MusicBeatState
 					var x:Int = 0;
 					var y:Int = 0;
 
-					var bg:BGSprite = new BGSprite('menuDesat', x, y, 1, 1);
+					var bg:BGSprite = new BGSprite('preview', 215, 725, 1.5, 1.5);
+					bg.scale.set(1.4, 1.4);
+					add(bg);
 				}
 		}
 
@@ -3972,7 +3975,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 			}
-			else
+			else if (isFreeplay)
 			{
 				trace('WENT BACK TO FREEPLAY??');
 				cancelFadeTween();
@@ -3986,6 +3989,21 @@ class PlayState extends MusicBeatState
 				usedPractice = false;
 				changedDifficulty = false;
 				cpuControlled = false;
+			}
+			else if (isSafe)
+			{
+				trace('WENT BACK TO SAFE!!');
+				cancelFadeTween();
+				CustomFadeTransition.nextCamera = camOther;
+				if (FlxTransitionableState.skipNextTransIn)
+				{
+					CustomFadeTransition.nextCamera = null;
+				}
+				MusicBeatState.switchState(new SafeState());
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				usedPractice = false;
+				changedDifficulty = false;
+				cpuControlled = false;				
 			}
 			transitioning = true;
 		}

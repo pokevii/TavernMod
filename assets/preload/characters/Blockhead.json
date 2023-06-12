@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				-1,
-				-17
+				5,
+				-13
 			],
 			"loop": false,
 			"fps": 24,
@@ -36,7 +36,7 @@
 		{
 			"offsets": [
 				-27,
-				73
+				77
 			],
 			"loop": false,
 			"fps": 24,
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				26,
-				9
+				3,
+				18
 			],
 			"loop": false,
 			"fps": 24,
@@ -57,8 +57,8 @@
 		},
 		{
 			"offsets": [
-				0,
-				-5
+				4,
+				1
 			],
 			"loop": false,
 			"fps": 24,
@@ -68,8 +68,8 @@
 		},
 		{
 			"offsets": [
-				-25,
-				-25
+				-26,
+				-30
 			],
 			"loop": false,
 			"fps": 24,
@@ -79,8 +79,8 @@
 		},
 		{
 			"offsets": [
-				-34,
-				48
+				-37,
+				54
 			],
 			"loop": false,
 			"fps": 24,
@@ -90,8 +90,8 @@
 		},
 		{
 			"offsets": [
-				-24,
-				12
+				-45,
+				20
 			],
 			"loop": false,
 			"fps": 24,
@@ -134,24 +134,6 @@
 		},
 		{
 			"offsets": [
-				26,
-				9
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"indices": [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5
-			],
-			"name": "BlockheadRightNote0"
-		},
-		{
-			"offsets": [
 				-1,
 				187
 			],
@@ -187,6 +169,24 @@
 				13,
 				14,
 				15
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				2,
+				19
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "BlockheadRightNote0",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],

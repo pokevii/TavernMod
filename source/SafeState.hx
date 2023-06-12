@@ -491,6 +491,7 @@ class SafeState extends MusicBeatState
 
 		PlayState.isStoryMode = false;
 		PlayState.isFreeplay = false;
+		PlayState.isSafe = true;
 		PlayState.storyDifficulty = hard;
 		PlayState.SONG = Song.loadFromJson(songNameAndDif, name); // either a direct string or a weird fuckign variable will idk
 

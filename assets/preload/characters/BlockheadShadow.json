@@ -1,136 +1,147 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "BlockheadIdle0"
-		},
-		{
-			"offsets": [
-				-1,
-				-17
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "BlockheadLeftNote0"
+			"name": "BlockheadIdle0",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				5,
+				-13
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BlockheadLeftNote0",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				-27,
 				-29
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "BlockheadDownNote0"
+			"fps": 24,
+			"name": "BlockheadDownNote0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-27,
-				73
+				77
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "BlockheadUpNote0"
+			"fps": 24,
+			"name": "BlockheadUpNote0",
+			"indices": []
 		},
 		{
-			"offsets": [
-				26,
-				9
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				3,
+				18
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "BlockheadRightNote0"
+			"fps": 24,
+			"name": "BlockheadRightNote0",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				-5
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				4,
+				1
+			],
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "BlockheadLeftNoteMiss0"
+			"fps": 24,
+			"name": "BlockheadLeftNoteMiss0",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-25,
-				-25
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-26,
+				-30
+			],
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "BlockheadDownNoteMiss0"
+			"fps": 24,
+			"name": "BlockheadDownNoteMiss0",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-34,
-				48
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-37,
+				54
+			],
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "BlockheadUpNoteMiss0"
-		},
-		{
-			"offsets": [
-				-24,
-				12
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "BlockheadRightNoteMiss0"
+			"name": "BlockheadUpNoteMiss0",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				-45,
+				20
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BlockheadRightNoteMiss0",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				6,
 				6
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "hey",
-			"indices": [],
-			"name": "BlockheadPeace0"
+			"fps": 24,
+			"name": "BlockheadPeace0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				15,
 				54
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "firstDeath",
-			"indices": [],
-			"name": "BlockheadDeath0"
+			"fps": 24,
+			"name": "BlockheadDeath0",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
-				-120,
+				-240,
 				18
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "deathLoop",
-			"indices": [],
-			"name": "Smoke cloud idle"
+			"fps": 24,
+			"name": "Smoke cloud idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				187
+			],
+			"anim": "scared",
+			"fps": 24,
+			"name": "BlockheadScared0",
+			"indices": []
 		},
 		{
 			"offsets": [
@@ -140,13 +151,30 @@
 			"loop": false,
 			"fps": 24,
 			"anim": "deathConfirm",
-			"indices": [],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			],
 			"name": "Respawn0"
 		},
 		{
 			"offsets": [
-				26,
-				9
+				2,
+				19
 			],
 			"loop": true,
 			"fps": 24,
@@ -160,17 +188,6 @@
 				5
 			],
 			"name": "BlockheadRightNote0"
-		},
-		{
-			"offsets": [
-				-1,
-				187
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "scared",
-			"indices": [],
-			"name": "BlockheadScared0"
 		}
 	],
 	"no_antialiasing": false,

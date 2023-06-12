@@ -14,8 +14,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-1,
-				-17
+				5,
+				-13
 			],
 			"anim": "singLEFT",
 			"fps": 24,
@@ -37,7 +37,7 @@
 			"loop": false,
 			"offsets": [
 				-27,
-				73
+				77
 			],
 			"anim": "singUP",
 			"fps": 24,
@@ -47,8 +47,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				26,
-				9
+				3,
+				18
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
@@ -58,8 +58,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				0,
-				-5
+				4,
+				1
 			],
 			"anim": "singLEFTmiss",
 			"fps": 24,
@@ -69,8 +69,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-25,
-				-25
+				-26,
+				-30
 			],
 			"anim": "singDOWNmiss",
 			"fps": 24,
@@ -80,8 +80,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-34,
-				48
+				-37,
+				54
 			],
 			"anim": "singUPmiss",
 			"fps": 24,
@@ -91,8 +91,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-24,
-				12
+				-45,
+				20
 			],
 			"anim": "singRIGHTmiss",
 			"fps": 24,
@@ -124,42 +124,13 @@
 		{
 			"loop": true,
 			"offsets": [
-				-120,
+				-240,
 				18
 			],
 			"anim": "deathLoop",
 			"fps": 24,
 			"name": "Smoke cloud idle",
 			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				6,
-				188
-			],
-			"anim": "deathConfirm",
-			"fps": 24,
-			"name": "Respawn0",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				26,
-				9
-			],
-			"anim": "singRIGHT-loop",
-			"fps": 24,
-			"name": "BlockheadRightNote0",
-			"indices": [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5
-			]
 		},
 		{
 			"loop": false,
@@ -171,6 +142,52 @@
 			"fps": 24,
 			"name": "BlockheadScared0",
 			"indices": []
+		},
+		{
+			"offsets": [
+				6,
+				188
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "Respawn0"
+		},
+		{
+			"offsets": [
+				2,
+				19
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			],
+			"name": "BlockheadRightNote0"
 		}
 	],
 	"no_antialiasing": false,
