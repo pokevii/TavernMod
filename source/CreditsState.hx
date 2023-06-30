@@ -29,7 +29,7 @@ class CreditsState extends MusicBeatState
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
 		['Vs. Tavern Team'],
-		['Ridere',				'poke',			'Lead Programmer and Charter',					'https://twitter.com/VsTheTavern',				0xFFC4C4C4],
+		['Saki',				'saki',			'Lead Programmer and Charter',					'https://twitter.com/VsTheTavern',				0xFFC4C4C4],
 		['Luggi',				'luggi',		'Lead Musician, Coder, Background & Key Art Artist','https://twitter.com/LuigiGoesHard69',		0xFFC4C4C4],
 		['Jayce',				'jayce',		'Lead Musician',				'https://www.youtube.com/channel/UCKpBWqM_jiXJyum5YcsWlyg',		0xFFC4C4C4],
 		['Adz', 				'adz',			'Character Animator/Artist, Background & Panel Arist',		'https://twitter.com/AdzDuffRain',	0xFFC4C4C4],
