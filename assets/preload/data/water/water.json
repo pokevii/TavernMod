@@ -2661,7 +2661,7 @@
 		"validScore": true,
 		"sections": 0,
 		"needsVoices": true,
-		"speed": 1.6,
+		"speed": 2,
 		"bpm": 120
 	}
 }

@@ -4221,7 +4221,7 @@
 		"validScore": true,
 		"needsVoices": true,
 		"stage": "city",
-		"speed": 2.5,
+		"speed": 2.2,
 		"bpm": 165
 	}
 }
