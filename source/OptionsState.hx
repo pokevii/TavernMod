@@ -23,6 +23,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import flixel.input.keyboard.FlxKey;
 import flixel.graphics.FlxGraphic;
+import flash.system.System;
 import Controls;
 import Achievements;
 
@@ -909,8 +910,11 @@ class PreferencesSubstate extends MusicBeatSubstate
 							for (i in 0...Achievements.achievementsStuff.length) {
 								Achievements.lockAchievement(achieve[i]);
 							}
+							ClientPrefs.resetAchievements = false;
 							ClientPrefs.saveSettings();
 							trace("save data fluished. hopefully achievements r gone");
+							System.exit(0);
+
 						} else {
 							trace("no bueno");
 						}
@@ -1013,11 +1017,18 @@ class PreferencesSubstate extends MusicBeatSubstate
 			case 'Hide Song Length':
 				daText = "If checked, the bar showing how much time is left\nwill be hidden.";
 			case 'Reset All Data':
-				daText = "If checked, all data will be lost and all achievements will be locked.\nRequires restart.";
+				daText = "If checked, all data will be lost and all achievements will be locked.\nWill restart your game.";
 			case 'Freebie':
-				daText = "This one's more for me than it is for you.\nWe'll give you this one.";
+				daText = "";
 		}
 		descText.text = daText;
+
+		//Shittiest way to do this but I'm rushin rn dont judge me
+		if(options[curSelected] == 'Reset All Data'){
+			descText.setFormat(Paths.font("vcr.ttf"), 36, FlxColor.RED, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		} else {
+			descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		}
 
 		var bullShit:Int = 0;
 

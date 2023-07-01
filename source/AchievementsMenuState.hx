@@ -26,6 +26,7 @@ class AchievementsMenuState extends MusicBeatState
 	private var achievementIndex:Array<Int> = [];
 	private var descText:FlxText;
 	private var titleText:FlxText;
+	var visibleAchievements = Achievements.getVisibleCount() - 1;
 
 	override function create() {
 		#if desktop
@@ -44,11 +45,16 @@ class AchievementsMenuState extends MusicBeatState
 
 		Achievements.loadAchievements();
 		for (i in 0...Achievements.achievementsStuff.length) {
-			if(!Achievements.achievementsStuff[i][3] || Achievements.achievementsMap.exists(Achievements.achievementsStuff[i][2])) {
+			if(Achievements.achievementsStuff[i][3] && Achievements.isAchievementUnlocked(Achievements.achievementsStuff[i][2])){
+				options.push(Achievements.achievementsStuff[i]);
+				achievementIndex.push(i);
+			}
+			else if(!Achievements.achievementsStuff[i][3] || Achievements.achievementsMap.exists(Achievements.achievementsStuff[i][2])) {
 				options.push(Achievements.achievementsStuff[i]);
 				achievementIndex.push(i);
 			}
 		}
+
 
 		for (i in 0...options.length) {
 			var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][2];
@@ -133,8 +139,11 @@ class AchievementsMenuState extends MusicBeatState
 			curSelected[1] = Std.int(options.length / 10);
 		}
 
-		
 		var index = curSelected[0] + (10*curSelected[1]);
+		if(index > visibleAchievements){
+			curSelected[0] = visibleAchievements % 10;
+			index = visibleAchievements;
+		}
 		trace("Index: " + index + " || curSelected[0] == " + curSelected[0] + " || curSelected[1] == " + curSelected[1]);
 
 		while (curSelected[0] * curSelected[1] > index){

@@ -28,6 +28,7 @@ import flixel.effects.particles.FlxEmitter;
 import flixel.effects.particles.FlxParticle;
 import flixel.graphics.atlas.FlxAtlas;
 import flixel.graphics.frames.FlxAtlasFrames;
+import flixel.graphics.FlxGraphic;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxMath;
@@ -1235,14 +1236,6 @@ class PlayState extends MusicBeatState
 			case 'schoolEvil':
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069); // nice
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
-
-				/*case 'backstreets_drizzle':
-					var rainParticles:FlxTypedEmitter<FlxParticle> = new FlxEmitter(-500, -500, 500);
-					rainParticles.makeParticles(12, 12, FlxColor.CYAN, 1000);
-					// rainParticles.velocity.set(50, 40, 60, 80, -400, -600, 400, 600);
-					rainParticles.acceleration.set(0, 0, 0, 0, 400, 400, 800, 800);
-					add(rainParticles);
-					rainParticles.start(false, 0.15); */
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); // Checks for json/Psych Engine dialogue
@@ -1315,11 +1308,14 @@ class PlayState extends MusicBeatState
 
 		if (curStage == 'backstreets_drizzle')
 		{
+			var particleImage = Paths.returnGraphic('backstreets/RainDrop1');
 			var rainParticles:FlxTypedEmitter<FlxParticle> = new FlxEmitter(-1300, -600);
 			rainParticles.width = 2300.0;
 			rainParticles.launchMode = FlxEmitterMode.SQUARE;
 			//rainParticles.velocity.set(0, 1200, 0, -300, 0, 0, 2000, 2000);
-			rainParticles.makeParticles(12, 18, FlxColor.CYAN, 1000);
+			//rainParticles.makeParticles(12, 18, FlxColor.CYAN, 1000);
+			rainParticles.angularVelocity.set(-11);
+			rainParticles.loadParticles(particleImage, 1000, 16, false, true);
 			rainParticles.lifespan.set(15.0);
 			rainParticles.acceleration.set(100, 0, 600, 600, 800, 800, 1200, 1200);
 			add(rainParticles);

@@ -184,7 +184,7 @@ class MainMenuState extends MusicBeatState
 			var achieveID:Int = Achievements.getAchievementIndex('trick');
 			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][1])) {
 				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][1], true);
-				giveAchievement('trick');
+				giveAchievement('trick');	
 				ClientPrefs.saveSettings();
 			}
 		}
@@ -197,6 +197,7 @@ class MainMenuState extends MusicBeatState
 	// Unlocks "Freaky on a Friday Night" achievement
 	function giveAchievement(achName:String) {
 		add(new AchievementObject(achName, camAchievement));
+		Achievements.unlockAchievement(achName);	//i think this is new lol
 		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 		trace('Giving achievement' + achName);
 	}

@@ -89,6 +89,22 @@ class Achievements {
 			}
 		}
 	}
+
+	public static function getVisibleCount():Int{
+		var visible:Int = 0;
+		for(i in 0...achievementsStuff.length){
+			if(achievementsStuff[i][3]){
+				trace("oh we're checking " + achievementsStuff[i][2]);
+				if(isAchievementUnlocked(achievementsStuff[i][2])){
+					trace("its good");
+					visible++;
+				}
+			}
+			else visible++;
+		}
+		trace(visible);
+		return visible;
+	}
 }
 
 class AttachedAchievement extends FlxSprite {
