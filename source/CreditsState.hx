@@ -33,7 +33,7 @@ class CreditsState extends MusicBeatState
 		['Luggi',				'luggi',		'Lead Musician, Coder, Background & Key Art Artist','https://twitter.com/LuigiGoesHard69',		0xFFC4C4C4],
 		['Jayce',				'jayce',		'Lead Musician',				'https://www.youtube.com/channel/UCKpBWqM_jiXJyum5YcsWlyg',		0xFFC4C4C4],
 		['Adz', 				'adz',			'Character Animator/Artist, Background & Panel Arist',		'https://twitter.com/AdzDuffRain',	0xFFC4C4C4],
-		['DeadFromHeaven',		'dead',			'Week 3 Artist & Musician',							'https://twitter.com/DeadFromHeaven',		0xFFC4C4C4],
+		['DeadFromHeaven',		'dead',			'Week 3 Artist & Musician',							'https://www.youtube.com/@DeadFromHeaven',		0xFFC4C4C4],
 		['Sleepycap',			'zoey',			'Week 4 Musician',		'https://pbs.twimg.com/media/FA4Jy8YXMAMfeQj?format=png&name=small',	0xFFC4C4C4],
 		[''],
 		['Psych Engine Team'],
