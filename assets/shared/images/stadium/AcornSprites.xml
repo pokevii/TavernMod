@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="AcornSprites.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="AcornCakeBG0000" x="0" y="0" width="547" height="648" pivotX="5.35" pivotY="0" frameX="0" frameY="-18" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0001" x="0" y="0" width="547" height="648" frameX="0" frameY="-18" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0002" x="607" y="0" width="542" height="655" frameX="-3" frameY="-12" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0003" x="607" y="0" width="542" height="655" frameX="-3" frameY="-12" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0004" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0005" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0006" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0007" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0008" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0009" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0010" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0011" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0012" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+	<SubTexture name="AcornCakeBG0013" x="1209" y="0" width="537" height="667" frameX="-5" frameY="0" frameWidth="547" frameHeight="667"/>
+</TextureAtlas>

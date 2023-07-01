@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ZoeySprites.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ZoeyBG0000" x="0" y="0" width="254" height="546" pivotX="2" pivotY="0" frameX="0" frameY="-14" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0001" x="0" y="0" width="254" height="546" frameX="0" frameY="-14" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0002" x="314" y="0" width="253" height="558" frameX="0" frameY="-9" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0003" x="314" y="0" width="253" height="558" frameX="0" frameY="-9" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0004" x="627" y="0" width="251" height="560" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0005" x="627" y="0" width="251" height="560" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0006" x="938" y="0" width="251" height="567" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0007" x="938" y="0" width="251" height="567" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0008" x="627" y="0" width="251" height="560" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0009" x="627" y="0" width="251" height="560" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0010" x="938" y="0" width="251" height="567" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0011" x="938" y="0" width="251" height="567" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0012" x="627" y="0" width="251" height="560" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+	<SubTexture name="ZoeyBG0013" x="627" y="0" width="251" height="560" frameX="0" frameY="0" frameWidth="254" frameHeight="567"/>
+</TextureAtlas>

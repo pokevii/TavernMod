@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="RBSprites.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="RBBG0000" x="0" y="0" width="625" height="601" pivotX="6.1" pivotY="0" frameX="0" frameY="-23" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0001" x="0" y="0" width="625" height="601" frameX="0" frameY="-23" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0002" x="685" y="0" width="619" height="615" frameX="-3" frameY="-8" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0003" x="685" y="0" width="619" height="615" frameX="-3" frameY="-8" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0004" x="1364" y="0" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0005" x="0" y="683" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0006" x="673" y="683" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0007" x="673" y="683" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0008" x="0" y="683" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0009" x="1346" y="683" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0010" x="0" y="1366" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0011" x="1346" y="683" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0012" x="1346" y="683" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+	<SubTexture name="RBBG0013" x="1346" y="683" width="613" height="623" frameX="-6" frameY="0" frameWidth="625" frameHeight="624"/>
+</TextureAtlas>

@@ -947,8 +947,21 @@ class PlayState extends MusicBeatState
 					add(floor);
 					var chair:BGSprite = new BGSprite('stadium/Chairs', x + 255, y - 650, 1, 1);
 					add(chair);
-					var audience:BGSprite = new BGSprite('stadium/CharlesAudience', x + 550, y - 925, 1, 1);
-					add(audience);
+
+					// var audience:BGSprite = new BGSprite('stadium/CharlesAudience', x + 550, y - 925, 1, 1);
+					// add(audience);
+					var acorn:BGSprite = new BGSprite('stadium/AcornSprites', 1690, y - 955, 1, 1, ['AcornCakeBG0'], true);
+					add(acorn);
+					
+					var rb:BGSprite = new BGSprite('stadium/RBSprites', 350, y - 900, 1, 1, ['RBBG0'], true);
+					add(rb);
+
+					var zoey:BGSprite = new BGSprite('stadium/ZoeySprites', x + 1800, y - 790, 1, 1, ['ZoeyBG0'], true);
+					add(zoey);
+
+					var kobe:BGSprite = new BGSprite('stadium/KobeOnlySprites', x + 470, y - 645, 1, 1, ['NalandKobe0'], true);
+					add(kobe);
+
 					var stage:BGSprite = new BGSprite('stadium/Stage', x - 1000, y - 1050, 1, 1);
 					add(stage);
 					var hoop:BGSprite = new BGSprite('stadium/BasketBallHoop', x + 1200, y - 950, 1, 1);
