@@ -1017,7 +1017,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			case 'Hide Song Length':
 				daText = "If checked, the bar showing how much time is left\nwill be hidden.";
 			case 'Reset All Data':
-				daText = "If checked, all data will be lost and all achievements will be locked.\nWill restart your game.";
+				daText = "If checked, all data will be lost and all achievements will be locked.\nWill close your game to properly erase the data.";
 			case 'Freebie':
 				daText = "";
 		}

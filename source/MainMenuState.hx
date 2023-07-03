@@ -90,11 +90,10 @@ class MainMenuState extends MusicBeatState
 				}
 		}
 
-		var bg:FlxSprite = new FlxSprite(-40).loadGraphic(Paths.image(bgName));
+		var bg:FlxSprite = new FlxSprite(190, 80).loadGraphic(Paths.image(bgName));
 		bg.scrollFactor.set(0, 0);
-		bg.setGraphicSize(Std.int(bg.width * 0.70));
+		bg.setGraphicSize(Std.int(bg.width * 0.7));
 		bg.updateHitbox();
-		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 
 		magenta = new FlxSprite(-80).loadGraphic(Paths.image(bgName + 'Desat'));
