@@ -1,156 +1,157 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "BlockheadIdle0",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "BlockheadIdle0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				5,
 				-13
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "BlockheadLeftNote0",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BlockheadLeftNote0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-27,
 				-29
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "BlockheadDownNote0",
-			"indices": []
+			"indices": [],
+			"name": "BlockheadDownNote0"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-27,
-				77
+				-36,
+				29
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "BlockheadUpNote0",
-			"indices": []
+			"indices": [],
+			"name": "BlockheadUpNote0"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				3,
-				18
+				5,
+				14
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "BlockheadRightNote0",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BlockheadRightNote0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				4,
 				1
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "BlockheadLeftNoteMiss0",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "BlockheadLeftNoteMiss0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-26,
 				-30
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "BlockheadDownNoteMiss0",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BlockheadDownNoteMiss0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-37,
 				54
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "BlockheadUpNoteMiss0",
-			"indices": []
+			"indices": [],
+			"name": "BlockheadUpNoteMiss0"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-45,
-				20
+				-42,
+				16
 			],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "BlockheadRightNoteMiss0",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BlockheadRightNoteMiss0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				6,
 				6
 			],
-			"anim": "hey",
+			"loop": false,
 			"fps": 24,
-			"name": "BlockheadPeace0",
-			"indices": []
+			"anim": "hey",
+			"indices": [],
+			"name": "BlockheadPeace0"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				15,
 				54
 			],
-			"anim": "firstDeath",
+			"loop": false,
 			"fps": 24,
-			"name": "BlockheadDeath0",
-			"indices": []
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BlockheadDeath0"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-240,
 				18
 			],
-			"anim": "deathLoop",
+			"loop": true,
 			"fps": 24,
-			"name": "Smoke cloud idle",
-			"indices": []
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "Smoke cloud idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-1,
 				187
 			],
-			"anim": "scared",
+			"loop": false,
 			"fps": 24,
-			"name": "BlockheadScared0",
-			"indices": []
+			"anim": "scared",
+			"indices": [],
+			"name": "BlockheadScared0"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				6,
 				188
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "Respawn0",
 			"indices": [
 				0,
 				1,
@@ -168,17 +169,17 @@
 				13,
 				14,
 				15
-			],
-			"name": "Respawn0"
+			]
 		},
 		{
+			"loop": true,
 			"offsets": [
 				2,
 				19
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "BlockheadRightNote0",
 			"indices": [
 				0,
 				1,
@@ -186,8 +187,7 @@
 				3,
 				4,
 				5
-			],
-			"name": "BlockheadRightNote0"
+			]
 		}
 	],
 	"no_antialiasing": false,
@@ -197,7 +197,7 @@
 		350
 	],
 	"healthicon": "blockhead",
-	"flip_x": true,
+	"flip_x": false,
 	"healthbar_colors": [
 		0,
 		0,
